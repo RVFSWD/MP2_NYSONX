@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-weight: 800;
+}
+
+p {
+    font-weight: 500;
+}
+
+body {
+    background-color: #fff;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* tesla1-content ################################ */
+
+.tesla1-content {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px 0px;
+}
+
+.tesla1-content h3 {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    font-family: Ubuntu;
+    font-weight: 1000;
+}
+
+.tesla1-content h4 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    /* font-family: Ubuntu;
+    font-weight: 1000; */
+}
+
+.tesla1-content h5 {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    /* font-family: Ubuntu;
+    font-weight: 1000; */
+}
+
+/* tesla1 - section ############################## */
+
+.tesla1-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #212529;
+    padding: 20px 10px;
+    margin: 10px 0px;
+}
+
+.tesla1-section .tesla1-image img {
+    border-radius: 5px;
+    position: relative;
+    /* background: url(./Models/images/tesla1_v3.jpg) no-repeat center center/cover;
+    position: relative;
+    height: 80vh;
+    width: 100vw;   */
+}
+
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+
+    /* padding: 20px 50px;
+    margin: 5px 100px; */
+
+.tesla1-section .tesla1-row {
+    margin: 0px 10px;
+    padding: 20px 0px;  
+}
+
+.tesla1-section h3 {
+    color: #fff;
+    font-size: 25px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.tesla1-section h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.tesla1-section hr {
+    color: #fff;
+    width: 70%;
+}
+
+.tesla1-btn {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 5px 0px;
+    height: 100%;
+}
+
+.tesla1-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+}
+/* 
+ .tesla1-caption::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  } */
+  
+  /* .tesla1-caption * {
+    z-index: 10;
+  }  */
+
+
+/* tesla1details1 ###################################### */
+
+.tesla1details-section {
+    /* background-color: #e1e0dc; */
+    padding: 20px 10px;
+    margin: 0px;
+}
+
+.tesla1details-section .tesla1details-row {
+    margin: 0px 20px;
+    padding: 20px 100px;
+    
+}
+
+.tesla1details-section h2 {
+    color: #17b890;
+    font-size: 25px;
+    padding-bottom: 5px;
+    /* margin-left: 140px; */
+}
+
+.tesla1details-section p {
+    font-size: 15px;
+    padding-bottom: 5px;
+    /* margin-right: 50px; */
+}
+
+.tesla1details-btn {
+    width: 70%;
+    margin-left: 0px;
+    /* display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 5px 0px; */
+}
+
+/* tesla1-specs ###################################### */
+
+.tesla1-specs {
+    background-color: #e1e0dc;
+    padding: 20px 10px;
+    margin: 0px;
+}
+
+.tesla1-specs .tesla1-specs-row {
+    margin: 0px 50px;
+    padding: 50px 10px;
+    
+}
+
+.tesla1-specs h2 {
+    color: #17b890;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+
+.tesla1-specs p {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+
+/* tesla2 - section ##############################  */ 
+
+.tesla2-specs {
+    background-color: #212529;
+    padding: 20px 10px;
+    margin: 0px;
+}
+
+.tesla2-specs .tesla2-row {
+    margin: 0px 100px;
+    padding: 20px 10px;
+    
+    
+}
+
+.tesla2-specs h1 {
+    color: #fff;
+    font-size: 25px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+/* .caption-section h6 {
+    font-size: 20px;
+    padding-bottom: 10px;
+} */
+
+.tesla2-specs h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.tesla2-specs hr {
+    color: #fff;
+    width: 70%;
+}
+
+.tesla2-btn {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 5px 0px;
+}

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-weight: 800;
+}
+
+p {
+    font-weight: 500;
+}
+
+body {
+    background-color: #fff;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* lucid1-content ################################ */
+
+.lucid1-content {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px 0px;
+}
+
+.lucid1-content h3 {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    font-family: Ubuntu;
+    font-weight: 1000;
+}
+
+.lucid1-content h4 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    /* font-family: Ubuntu;
+    font-weight: 1000; */
+}
+
+.lucid1-content h5 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    /* font-family: Ubuntu;
+    font-weight: 1000; */
+}
+
+/* rivian1 - section - image ############################## */
+
+.lucid1-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #e1e0dc;
+    padding: 30px 10px;
+    margin: 0px 0px;
+}
+
+.lucid1-section .lucid1-image img {
+    border-radius: 5px;
+    position: relative;
+    /* background: url(./Models/images/tesla1_v3.jpg) no-repeat center center/cover;
+    position: relative;
+    height: 80vh;
+    width: 100vw;   */
+}
+
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+
+    /* padding: 20px 50px;
+    margin: 5px 100px; */
+
+.lucid1-section .lucid1-row {
+    margin: 0px 10px;
+    padding: 20px 0px;  
+}
+
+.lucid1-section h3 {
+    color: #fff;
+    font-size: 25px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.lucid1-section h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.lucid1-section hr {
+    color: #fff;
+    width: 70%;
+}
+
+.lucid1-btn {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 5px 0px;
+    height: 100%;
+}
+
+.lucid1-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+}

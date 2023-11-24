@@ -1,0 +1,38 @@
+/* Events-cards  */
+
+.events-showcase {
+    margin: 10px auto 60px;
+}
+
+.events-showcase2 {
+    margin: 10px auto 60px;
+}
+
+.events-showcase .text-center h2 {
+    font-size: 35px;
+}
+
+.events-showcase .text-center p {
+    font-size: 17px;
+}
+
+/* .events-main {
+    background-color: black;
+} */
+
+
+.events-row {
+    padding-top: 5px;
+}
+
+.events-image .card-body h4 {
+    color: black;
+    font-size: 25px;
+    margin: 20px auto;
+}
+
+.events-image .card-body p {
+    color: black;
+    font-size: 17px;
+    margin: 20px auto;
+}
