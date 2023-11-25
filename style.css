@@ -406,7 +406,7 @@ body {
     padding: 230px 270px;
     background:
         linear-gradient(1deg, rgba(0, 0, 0, 0.20) 31.5%, rgba(255, 255, 255, 0.00) 161.38%),
-        url(/map.png),
+        url(./Models images/map.png),
         linear-gradient(3deg, #000000 15.85%, rgba(0, 0, 0, 0.00) 88.73%);
     background-position: center;
     background-size: cover;
@@ -490,7 +490,7 @@ body {
     padding: 230px 270px;
     background:
         linear-gradient(1deg, rgba(0, 0, 0, 0.20) 31.5%, rgba(255, 255, 255, 0.00) 161.38%),
-        url(/20230421_Brian-Chorski_Malibu_5728_FINAL_dq1wqr.jpg),
+        url(./Models images/20230421_Brian-Chorski_Malibu_5728_FINAL_dq1wqr.jpg),
         linear-gradient(3deg, #000000 15.85%, rgba(0, 0, 0, 0.00) 88.73%);
     background-position: center;
     background-size: cover;
