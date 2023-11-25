@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">
+    <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.18/web.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>NYSONX | Storage</title>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NYSONX</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item dropdown">  
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Models</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="./nysonxbrand.html">NYSONX Brand</a>  
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./models_tesla.html">Tesla</a>  
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./models_rivian.html">Rivian</a>  
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./models_lucid.html">Lucid</a>  
+                      </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Charging</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="">Station</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="">Charging Calculator</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Energy</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="">Home Energy</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="">Commercial</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="">Green Energy Project</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-items">
+                    <a href="./store.html" class="nav-link">Store</a>
+                </li>
+              </ul>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="join-button nav-items">
+                    <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
+                </li>
+              </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<section class="e-home" id="e-home">
+        <div class="">
+          <div class="e.cont" id="e.cont">
+            <h1>FIND YOUR <br>
+                NEAREST STATION</h1>
+          </div>
+        </div>
+</section>
+<section class="e-station container text-center" id="e-station">
+    <div class="row justify-content-evenly">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <div class="row">
+    <div class="col-sm-4">
+        <span class="num" id="value" data-val="1000">000</span> + <br>
+        <span class="text">In Counting</span>
+    </div>
+    <div class="col-sm-4">
+        <span class="num" data-val="30000">30,000</span> <br>
+        <span class="text">Goal before 2029</span>
+    </div>
+    </div>
+</div>
+</div>
+</section>
+<section>
+<div class="map">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+        <div id="map" style="margin-left: 20px; width: 1400px; height: 800px"></div>
+</div>
+</section>
+<br>
+<section class="e-drivee">
+    <div class="">
+        <div class="e-drive" id="e-drive">
+          <h1>Everywhere you go, <br>
+            we’re here for you.</h1> <br>
+            <p>We do not stick to one location only; <br>
+                everyone has the freedom to travel around the Philippines.</p>
+        </div>
+      </div>
+</section>
+<br>
+<br>
+<section class="Estimation">
+    <div class="">
+        <div class="e-Estimation" id="e-Estimation">
+          <h1>Charge Estimation</h1> <br>
+            <p>Using the Supercharger, <br>
+                we can recharge up to 250 miles in 
+                10 minutes.</p>
+        </div>
+      </div>
+</section>
+<br>
+<br>
+<section>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="/20230421_Brian-Chorski_Malibu_5728_FINAL_dq1wqr.jpg" class="d-block w-90" style="border-radius: 94px;
+            " alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/Untitled (1320 x 900 px).png" class="d-block w-90" style="border-radius: 94px;
+            " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/map.png" class="d-block w-90" style="border-radius: 94px;
+            " alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</section>
+<br>
+<br>
+<section class="c-Estimation">
+    <div class="">
+        <div class="cost-Estimation" id="cost-Estimation">
+          <h1>Cost Estimation Calculator</h1> <br>
+            <p>₱14.30 per kWh, Low-cost solution</p>
+        </div>
+      </div>
+</section>
+<section class="selection">
+  <img id="selectedImage" src="/energ/4.png" alt="Selected Image" />
+  <div class="spacebetween container">
+    <div class="row g-2">
+      <div class="col-md">
+        <div class="form-floating result">
+          <label for="costPerKwh"> </label>
+              <input type="number" id="costPerKwh" placeholder="Enter cost per kWh" required>
+        </div>
+      </div>
+        <div class="col-md costPerKwh">
+          <div class="form-floating result">
+            <label for="result"></label>
+              <input type="text" id="result" placeholder="Ammount" readonly>
+          </div>
+        </div>
+    <div class="row g-2">
+          <div class="col-md">
+            <div class="form-floating distance">
+              <p>Km driven </p>
+              <input id="distance" class="multi-range" type="range" min="0" max="300" step="1" value="0" oninput="updateDistanceDisplay()">
+              <input type="text" id="distanceDisplay" readonly>
+              <label for="distance" placeholder="Distance"> </label>
+            </div>
+          </div>
+            <div class="col-md costPerKwh">
+              <div class="form-floating result">
+                <label for="picDD"></label>
+          <select id="picDD" class="form-select">
+              <option value="0">Rivian</option>
+              <option value="1">Tesla</option>
+              <option value="2">Lusid</option>
+              <option value="3">Kia</option>
+              </div>
+            </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="note">
+    <h3>*Please note that the provided price is an estimation and may be subject to change depending on various factors</h3>
+  </div>
+</section>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script> 
+<script>
+const ACCESS_TOKEN = 'pk.eyJ1IjoiamFkZXRpbmRveSIsImEiOiJjbHBhNTJlNm4wMzNxMmluN2U3bWplaWJpIn0.Gn_jtK6x2GHnV94yfnryyQ'; 
+mapboxgl.accessToken = ACCESS_TOKEN;
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v12',
+center: [120.9842, 14.5995], // coordinates for Manila, Philippines
+zoom: 8.8
+}); 
+
+const searchJS = document.getElementById('search-js');
+searchJS.onload = function () {
+const searchBox = new MapboxSearchBox();
+searchBox.accessToken = ACCESS_TOKEN;
+searchBox.options = {
+types: 'address,poi',
+proximity: [14.371700,-239.060808] // coordinates for Manila, Philippines
+};
+searchBox.marker = true;
+searchBox.mapboxgl = mapboxgl;
+map.addControl(searchBox);
+};
+
+map.on('click', function(e) {
+new mapboxgl.Marker()
+.setLngLat(e.lngLat)
+.addTo(map);
+});
+
+function animateValue(obj, start, end, duration) {
+let startTimestamp = null;
+const step = (timestamp) => {
+if (!startTimestamp) startTimestamp = timestamp;
+const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+obj.innerHTML = Math.floor(progress * (start - end ) + end);
+if (progress < 1) {
+  window.requestAnimationFrame(step);
+}
+};
+window.requestAnimationFrame(step);
+}
+
+const obj = document.getElementById("value");
+animateValue(obj, 2000, 0, 5000);
+
+var pictureList = ["/energ/4.png", "/energ/3.png", "/energ/2.png", "/energ/1.png",];
+
+$('#picDD').change(function () {
+    var val = parseInt($('#picDD').val());
+    $('#selectedImage').addClass('hide'); // Add 'hide' class to fade out
+    setTimeout(function () {
+        $('#selectedImage').attr('src', pictureList[val]);
+        $('#selectedImage').removeClass('hide'); // Remove 'hide' class to fade in
+    }, 500); // Adjust the delay (in milliseconds) to match the transition duration
+});
+
+$('#costPerKwh').on('input', function () {
+    calculateTotalCost();
+});
+
+function updateDistanceDisplay() {
+    const distanceDisplay = document.getElementById('distanceDisplay');
+    const distanceInput = document.getElementById('distance');
+    distanceDisplay.value = distanceInput.value;
+    calculateTotalCost(); // Added to update result when the distance changes
+}
+
+function calculateTotalCost() {
+    const distanceInput = document.getElementById('distance');
+    const costPerKwhInput = document.getElementById('costPerKwh');
+    const resultInput = document.getElementById('result');
+
+    const distance = parseFloat(distanceInput.value);
+    const costPerKwh = parseFloat(costPerKwhInput.value);
+
+    if (isNaN(distance) || isNaN(costPerKwh)) {
+        resultInput.value = 'Please enter valid numbers for distance and cost per kWh.';
+    } else {
+        const distanceInMiles = distance * 0.621371;
+        const energyConsumption = 3.26; // miles per kWh
+        const totalCost = (distanceInMiles / energyConsumption) * costPerKwh;
+
+        resultInput.value = `P ${distance.toFixed(2)} approximately`;
+    }
+}
+
+</script> 
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
