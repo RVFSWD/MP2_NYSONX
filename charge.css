@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.e-trans {
+    background-image: url('energ/aerial-shot-field-covered-palm-trees-bushes-sunlight.jpg'),
+    linear-gradient(3deg, #000 2.58%, rgba(0, 0, 0, 0.00) 91.73%);
+    width: 100%;
+    padding: 230px 100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+    background-blend-mode: multiply;
+}
+
+.e-trans h1 {
+    background: linear-gradient(114deg, #1c83d2 32.75%, rgb(70, 96, 141) 107.45%, rgba(255, 255, 255, 0.00) 107.45%);
+    text-align: center;
+    text-shadow: 0px 4px 4px #0216252e;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 110.767%;
+    letter-spacing: -3.2px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.e-trans p, .e-con i {
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 90.767%;
+    letter-spacing: -1.68px;
+}
+
+.e-trans p {
+    padding-top: 20px;
+}
+
+.icon-wrapper {
+    padding-top: 20px;
+}
+
+.e-con {
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* carbon */
+
+#nextSection {
+  display: flex;
+  justify-content: flex-start;
+  margin: 280px 0 150px 80px;
+}
+
+h2 .highlight {
+  color: #1c83d2;
+}
+
+.c-carbon h2 {
+  color: #161616;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 90.767%;
+  letter-spacing: -3.2px;
+}
+
+/* image carbon */
+
+.e-carbon {
+  margin-top: 400px;
+}
+
+.e-carbon-img {
+  width: 500px;
+  height: 500px;
+}
+.e-carbon-text {
+  width: 500px;
+  height: 500px;
+  border-radius: 0px 0px 0px 0px;
+  padding: 50px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.e-carbon-text p {
+  padding-bottom: 20px;
+}
+#button-order {
+  border-radius: 4px;
+}
+.e-carbon-text h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 90.767%;
+  letter-spacing: -1.2px;
+  margin-bottom: 20px;
+}
+/* image solar */
+.e-solar{
+  margin-top: 200px;
+}
+  /* Media query for mobile devices */
+  @media only screen and (max-width: 500px){
+
+    .e-trans {
+      padding-left: 100px !important;
+      padding-right: 100px !important;
+      /* other styles */
+  }
+    .e-trans {
+      text-align: center;
+      font-size: 16px; /* adjust as needed */
+      font-style: normal;
+      font-weight: 400; /* adjust as needed */
+      line-height: 1.6; /* adjust as needed */
+      letter-spacing: -1.68px;
+    }
+
+    .e-trans h1 {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 800;
+    }
+    #nextSection {
+      display: flex;
+      justify-content: flex-start;
+      margin: auto;
+      font-size: 16px;
+    }
+    .c-carbon h2 {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 800;
+    }
+  }
