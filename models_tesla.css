@@ -19,17 +19,31 @@ body {
     font-family: sans-serif;
 }
 
-/* tesla1-content ################################ */
+/* tesla-navtab ################################# */
 
-.tesla1-content {
+.tesla-tab {
+    font-weight: 700;
+    font-family: sans-serif;
+    margin: 25px 30px;
+    border: 2px solid; 
+    border-color: #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+
+/* models1-content ################################ */
+
+.models1-content {
     display: flex;
     justify-content: center;
     color: black;
     padding: 0px 0px;
 }
 
-.tesla1-content h3 {
-    font-size: 45px;
+.models1-content h3 {
+    font-size: 35px;
     display: flex;
     justify-content: center;
     color: black;
@@ -39,7 +53,7 @@ body {
     font-weight: 1000;
 }
 
-.tesla1-content h4 {
+.models1-content h4 {
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -50,7 +64,7 @@ body {
     font-weight: 1000; */
 }
 
-.tesla1-content h5 {
+.models1-content h5 {
     font-size: 17px;
     display: flex;
     justify-content: center;
@@ -61,120 +75,92 @@ body {
     font-weight: 1000; */
 }
 
-/* tesla1 - section ############################## */
+/* models2-image - section ############################## */
 
-.tesla1-section {
+.models2-image-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #212529;
-    padding: 20px 10px;
+    /* background-color: #ddd; */
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+
+.models2-image-section .models2-image img {
+    max-width: 100%;
+    height: auto;
     margin: 10px 0px;
 }
 
-.tesla1-section .tesla1-image img {
-    border-radius: 5px;
-    position: relative;
-    /* background: url(./Models/images/tesla1_v3.jpg) no-repeat center center/cover;
-    position: relative;
-    height: 80vh;
-    width: 100vw;   */
-}
-
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; */
-
-    /* padding: 20px 50px;
-    margin: 5px 100px; */
-
-.tesla1-section .tesla1-row {
-    margin: 0px 10px;
-    padding: 20px 0px;  
-}
-
-.tesla1-section h3 {
+.models2-image-section h3 {
     color: #fff;
     font-size: 25px;
-    padding: 2px 0px;
-    margin-bottom: 2px;
+    /* padding: 0px 0px;
+    margin-bottom: 0px; */
 }
 
-.tesla1-section h4 {
+.models2-image-section h4 {
     color: #fff;
     font-size: 15px;
     padding: 2px 0px;
     margin-bottom: 2px;
 }
 
-.tesla1-section hr {
-    color: #fff;
-    width: 70%;
+/* models3-specs ###################################### */
+
+.models3-specs {
+    background-color: #ddd;
+    padding: 20px 10px;
+    margin: 0px;
 }
 
-.tesla1-btn {
-    display: flex;
-    justify-content: center;
-    color: black;
-    padding: 5px 0px;
-    height: 100%;
+.models3-specs .models3-specs-row {
+    margin: 0px 50px;
+    padding: 50px 10px;
+    
 }
 
-.tesla1-caption {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    padding: 0 20px;
+.models3-specs h2 {
+    color: #17b890;
+    font-size: 30px;
+    padding-bottom: 5px;
 }
-/* 
- .tesla1-caption::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-  } */
-  
-  /* .tesla1-caption * {
-    z-index: 10;
-  }  */
 
 
-/* tesla1details1 ###################################### */
+.models3-specs p {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
 
-.tesla1details-section {
+/* models4-details ###################################### */
+
+.models4-details-section {
     /* background-color: #e1e0dc; */
     padding: 20px 10px;
     margin: 0px;
 }
 
-.tesla1details-section .tesla1details-row {
+.models4-details-section .models4-details-row {
     margin: 0px 20px;
     padding: 20px 100px;
     
 }
 
-.tesla1details-section h2 {
+.models4-details-section h2 {
     color: #17b890;
     font-size: 25px;
     padding-bottom: 5px;
     /* margin-left: 140px; */
 }
 
-.tesla1details-section p {
+.models4-details-section p {
     font-size: 15px;
     padding-bottom: 5px;
     /* margin-right: 50px; */
 }
 
-.tesla1details-btn {
+.models4-details-btn {
     width: 70%;
     margin-left: 0px;
     /* display: flex;
@@ -183,75 +169,205 @@ body {
     padding: 5px 0px; */
 }
 
-/* tesla1-specs ###################################### */
 
-.tesla1-specs {
-    background-color: #e1e0dc;
-    padding: 20px 10px;
-    margin: 0px;
-}
+/* models5-fullspecs ##############################  */ 
 
-.tesla1-specs .tesla1-specs-row {
-    margin: 0px 50px;
-    padding: 50px 10px;
-    
-}
-
-.tesla1-specs h2 {
-    color: #17b890;
-    font-size: 30px;
-    padding-bottom: 5px;
-}
-
-
-.tesla1-specs p {
-    font-size: 20px;
-    padding-bottom: 15px;
-}
-
-
-/* tesla2 - section ##############################  */ 
-
-.tesla2-specs {
+.mstable-container {
     background-color: #212529;
     padding: 20px 10px;
     margin: 0px;
 }
 
-.tesla2-specs .tesla2-row {
+.mstable-container img {
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.mstable-container .mstable-row {
     margin: 0px 100px;
     padding: 20px 10px;
     
     
 }
 
-.tesla2-specs h1 {
+.mstable-container h1 {
     color: #fff;
-    font-size: 25px;
+    font-size: 35px;
     padding: 2px 0px;
     margin-bottom: 2px;
 }
 
-/* .caption-section h6 {
-    font-size: 20px;
-    padding-bottom: 10px;
-} */
-
-.tesla2-specs h4 {
+.mstable-container h4 {
     color: #fff;
     font-size: 15px;
     padding: 2px 0px;
     margin-bottom: 2px;
 }
 
-.tesla2-specs hr {
+.mstable-container hr {
     color: #fff;
     width: 70%;
 }
 
-.tesla2-btn {
+.mstable-container-btn {
     display: flex;
     justify-content: center;
     color: #fff;
     padding: 5px 0px;
 }
+
+/* Model S Plaid ################################# */
+
+/* plaid1-content ################################ */
+
+.plaid1-content {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px 0px;
+}
+
+.plaid1-content h3 {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    font-family: Ubuntu;
+    font-weight: 1000;
+}
+
+.plaid1-content h4 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    /* font-family: Ubuntu;
+    font-weight: 1000; */
+}
+
+.plaid1-content h5 {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    /* font-family: Ubuntu;
+    font-weight: 1000; */
+}
+
+/* plaid2-image - section ############################## */
+
+.plaid2-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #ddd; */
+    padding: 20px 10px;
+    margin: 10px 0px;
+}
+
+.plaid2-section .plaid2-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.plaid2-section .plaid2-row {
+    margin: 0px 10px;
+    padding: 20px 0px;  
+}
+
+.plaid2-section h3 {
+    color: #fff;
+    font-size: 25px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.plaid2-section h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.plaid2-section hr {
+    color: #fff;
+    width: 70%;
+}
+
+.plaid2-btn {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 5px 0px;
+    height: 100%;
+}
+
+.plaid2-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+/* plaid3-fullspecs ##############################  */ 
+
+/* .plaid3-fullspecs {
+    background-color: #212529;
+    padding: 20px 10px;
+    margin: 0px;
+}
+
+.plaid3-fullspecs img {
+    border-radius: 5px;
+}
+
+.plaid3-fullspecs .plaid3-fullspecs-row {
+    margin: 0px 100px;
+    padding: 20px 10px;
+    
+    
+}
+
+.plaid3-fullspecs h1 {
+    color: #fff;
+    font-size: 25px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+} */
+
+/* .caption-section h6 {
+    font-size: 20px;
+    padding-bottom: 10px;
+} */
+
+/* .plaid3-fullspecs h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.plaid3-fullspecs hr {
+    color: #fff;
+    width: 70%;
+}
+
+.plaid3-fullspecs-btn {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 5px 0px;
+} */
+
+
