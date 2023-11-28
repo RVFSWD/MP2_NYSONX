@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-weight: 800;
+}
+
+p {
+    font-weight: 500;
+}
+
+body {
+    background-color: #fff;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* tesla-navtab ################################# */
+
+.rivian-tab {
+    font-weight: 700;
+    font-family: sans-serif;
+    margin: 25px 30px;
+    border: 2px solid; 
+    border-color: #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+
+/* rivian1-header-content ################################ */
+
+.rivian1-header-content {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px 0px;
+}
+
+.rivian1-header-content h3 {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    font-family: Ubuntu;
+    font-weight: 1000;
+}
+
+.rivian1-header-content h4 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    /* font-family: Ubuntu;
+    font-weight: 1000; */
+}
+
+.rivian1-header-content h5 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 2px;
+    /* font-family: Ubuntu;
+    font-weight: 1000; */
+}
+
+/* rivian2-image ############################## */
+
+.rivian2-image .rivian2-image-col img {
+    border-radius: 5px;
+    position: relative;
+    /* background: url(./Models/images/tesla1_v3.jpg) no-repeat center center/cover;
+    position: relative;
+    height: 80vh;
+    width: 100vw;   */
+}
+
+.rivian2-image .rivian2-image-row {
+    margin: 0px 10px;
+    padding: 20px 0px;  
+}
+
+.rivian2-image h3 {
+    color: #fff;
+    font-size: 25px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.rivian2-image h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.rivian2-image hr {
+    color: #fff;
+    width: 70%;
+}
+
+.rivian2-image-btn {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 5px 0px;
+    height: 100%;
+}
+
+.rivian2-image-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+/* rivian3-specs - section ##############################  */
+
+.mstable-container {
+    background-color: #212529;
+    padding: 20px 10px;
+    margin: 0px;
+}
+
+.mstable-container img {
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.mstable-container .mstable-row {
+    margin: 0px 100px;
+    padding: 20px 10px;
+    
+    
+}
+
+.mstable-container h1 {
+    color: #fff;
+    font-size: 35px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.mstable-container h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.mstable-container hr {
+    color: #fff;
+    width: 70%;
+}
+
+.mstable-container-btn {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 5px 0px;
+}
+
+
+/* .rivian3-specs {
+    background-color: #212529;
+    padding: 20px 10px;
+    margin: 0px;
+    
+}
+
+.rivian3-specs .rivian3-specs-row {
+    margin: 0px 100px;
+    padding: 20px 10px;
+}
+
+.rivian3-specs h1 {
+    color: #fff;
+    font-size: 25px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.rivian3-specs h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+}
+
+.rivian3-specs hr {
+    color: #fff;
+    width: 70%;
+}
+
+.rivian3-specs-btn {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 5px 0px;
+} */
+
