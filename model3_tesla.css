@@ -176,7 +176,7 @@ body {
 
 .mstable-container {
     background-color: #212529;
-    padding: 20px 10px;
+    padding: 20px 40px;
     margin: 0px;
 }
 
@@ -186,7 +186,7 @@ body {
 }
 
 .mstable-container .mstable-row {
-    margin: 0px 100px;
+    margin: 0px 40px;
     padding: 20px 10px;
     
     
@@ -211,11 +211,15 @@ body {
     width: 70%;
 }
 
-.mstable-container-btn {
+.mstable-btn-row a {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     color: #fff;
-    padding: 5px 0px;
+    padding: 5px 10px;
+    margin: 10px auto;
+    width: 40%;
 }
 
 /* Model S Plaid ################################# */
