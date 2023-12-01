@@ -40,7 +40,7 @@ body {
 .models1-content {
     display: flex;
     justify-content: center;
-    color: black;
+    color: #fff;
     padding: 0px 0px;
 }
 
@@ -109,7 +109,7 @@ body {
     margin-bottom: 2px;
 }
 
-/* models3-specs ###################################### */
+/* models3-specs #17b890 ###################################### */
 
 .models3-specs {
     background-color: #ddd;
@@ -118,8 +118,8 @@ body {
 }
 
 .models3-specs .models3-specs-row {
-    margin: 0px 50px;
-    padding: 50px 10px;
+    margin: 0px 30px;
+    padding: 30px 10px;
     
 }
 
@@ -145,7 +145,7 @@ body {
 
 .models4-details-section .models4-details-row {
     margin: 0px 20px;
-    padding: 20px 100px;
+    padding: 10px 15px;
     
 }
 
@@ -176,7 +176,7 @@ body {
 
 .mstable-container {
     background-color: #212529;
-    padding: 20px 10px;
+    padding: 20px 40px;
     margin: 0px;
 }
 
@@ -186,10 +186,8 @@ body {
 }
 
 .mstable-container .mstable-row {
-    margin: 0px 100px;
-    padding: 20px 10px;
-    
-    
+    margin: 0px 40px;
+    padding: 20px 10px;  
 }
 
 .mstable-container h1 {
@@ -211,11 +209,15 @@ body {
     width: 70%;
 }
 
-.mstable-container-btn {
+.mstable-btn-row a {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     color: #fff;
-    padding: 5px 0px;
+    padding: 5px 10px;
+    margin: 10px auto;
+    width: 40%;
 }
 
 /* Model S Plaid ################################# */
@@ -277,12 +279,13 @@ body {
 .plaid2-section .plaid2-image img {
     max-width: 100%;
     height: auto;
+    /* margin: 2px 5px; */
 }
 
 
 .plaid2-section .plaid2-row {
     margin: 0px 10px;
-    padding: 20px 0px;  
+    padding: 10px 0px;  
 }
 
 .plaid2-section h3 {
