@@ -55,21 +55,21 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Charging</a>
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./storage.html" role="button" aria-expanded="false">Charging</a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="">Station</a>
+                            <a class="dropdown-item" href="./storage.html">Station</a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item" href="">Charging Calculator</a>
+                            <a class="dropdown-item" href="./storage.html">Charging Calculator</a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Energy</a>
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./charge.html" role="button" aria-expanded="false">Energy</a>
                     <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item" href="./charge.html">Home Energy</a>
@@ -84,7 +84,7 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item" href="./charge.html">Green Energy Project</a>
+                            <a class="dropdown-item" href="./greenenergy.html">Green Energy Project</a>
                         </li>
                     </ul>
                 </li>
@@ -171,7 +171,7 @@
 </section>
 
 <section class="selection">
-  <img id="selectedImage" src="energ/4.png" alt="Selected Image" />
+  <img id="selectedImage" src="/energ/4.png" alt="Selected Image" />
   <div class="spacebetween container">
     <div class="row g-2">
       <div class="col-md">
@@ -216,6 +216,7 @@
 </section>
 
 <section>
+  
 </section>
  <!-- Footer  -->
 
@@ -245,7 +246,7 @@
       <div class="footer-col col-lg-3 col-sm-12">
         <h3>More</h3>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="">CONTACT US</a></li>
+          <li class="mb-2"><a href="./contactus.html">CONTACT US</a></li>
           <li class="mb-2"><a href="">Company</a></li>
           <li class="mb-2"><a href="">Careers</a></li>
           <li class="mb-2"><a href="">Terms and Conditions</a></li>
@@ -328,7 +329,7 @@ window.requestAnimationFrame(step);
 const obj = document.getElementById("value");
 animateValue(obj, 2000, 0, 5000);
 
-var pictureList = ["energ/4.png", "energ/3.png", "energ/2.png", "energ/1.png",];
+var pictureList = ["/energ/4.png", "/energ/3.png", "/energ/2.png", "/energ/1.png",];
 
 $('#picDD').change(function () {
     var val = parseInt($('#picDD').val());
@@ -368,6 +369,7 @@ function calculateTotalCost() {
         resultInput.value = `₱ ${distance.toFixed(2)} Energy cost`;
     }
 }
+
 
 </script> 
   <script src="script.js"></script>

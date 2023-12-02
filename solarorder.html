@@ -15,7 +15,7 @@
 </head>
 <body>
        <!-- nav  -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container">
           <a class="navbar-brand" href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35" class="d-inline-block align-text-top"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Charging</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./storage.html" role="button" aria-expanded="false">Charging</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="dropdown-item" href="./storage.html">Station</a>
@@ -70,22 +70,22 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Energy</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./charge.html" role="button" aria-expanded="false">Energy</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="">Home Energy</a>
+                                <a class="dropdown-item" href="./charge.html">Home Energy</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="">Commercial</a>
+                                <a class="dropdown-item" href="./charge.html">Commercial</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="">Green Energy Project</a>
+                                <a class="dropdown-item" href="./greenenergy.html">Green Energy Project</a>
                             </li>
                         </ul>
                     </li>
@@ -102,7 +102,6 @@
           </div>
         </div>
       </nav>
-    </section>
 
 <section>
     <div class="container">
@@ -126,7 +125,7 @@
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
@@ -136,17 +135,103 @@
             </div>
             </div>
           <div class="col-lg-6 col-sm-12">
-            <h1 class="text-start">Choose a panels</h1>
-            <div class="buttonord"> 
-                 <input type="radio" class="btn-check" name="options-outlined" id="option1-outlined" autocomplete="off">
-                <label class="btn btn-outline-danger" for="option1-outlined">9</label></div>
-          
-                <div>  <input type="radio" class="btn-check" name="options-outlined" id="option1-outlined" autocomplete="off">
-                    <label class="btn btn-outline-danger" for="option1-outlined">16</label></div>
-          </div>
+            <div class="col-lg-6 col-sm-12">
+              <h1 class="text-start">Connect with our expert to get the best pricing! Before we proceed, we'll need some information from you:</h1>
+              <form>
+                <div class="mb-3">
+                  <label for="monthlyBills" class="form-label">Monthly Bills</label>
+                  <input type="text" class="form-control" id="monthlyBills">
+                </div>
+                <div class="mb-3">
+                  <label for="location" class="form-label">Location</label>
+                  <input type="text" class="form-control" id="location">
+                </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                  <label for="contactNumber" class="form-label">Contact Number</label>
+                  <input type="tel" class="form-control" id="contactNumber">
+                </div>
+                <p>Expect a call within 2-3 days. Thank you!</p>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
     </div>
+</section>
+<section class="faq">
+  <div class="container">
+    <div class="faq-header">
+      <h1 class="text-center">Frequently Asked Questions</h1>
+    </div>
+   
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            What is the lifespan of the solar panels you offer?
+
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Our solar panels are built to last</strong> , with an average lifespan of 25 years or more. Rest assured, you're making a long-term investment in clean energy.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            What kind of maintenance do the solar panels require?
+
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Solar panels are low-maintenance</strong>,but it's recommended to clean them a few times a year to ensure optimal performance. Regular inspections can easily be performed to keep them in top shape.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            How much space do I need for installing solar panels?
+
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>The space required depends on your energy needs </strong>and the efficiency of the panels. On average, you'd need about 100-200 square feet per kilowatt. Our team can help you assess your specific requirements.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+          Do you offer a warranty for the solar panels?
+        </button>
+      </h2>
+      <div id="collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Yes, we stand by the quality of our products.  </strong>Our solar panels come with a standard 10-year product warranty, and many models also include a performance warranty, ensuring you get the most out of your investment.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+        Can I connect the solar panels to the grid?
+      </button>
+    </h2>
+    <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Absolutely! </strong> Our solar panels are designed for both grid-tied and off-grid systems. If you choose to connect to the grid, you may even have the opportunity to sell excess energy back to your utility company through net metering.
+  </div>
+</div>
+  </div>
 </section>
 
     <!-- Footer  -->

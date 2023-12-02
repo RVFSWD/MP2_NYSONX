@@ -8,6 +8,16 @@ body {
     color: #333;
     line-height: 1.6;
 }
+.navbar-nav a {
+  margin-right: 30px;
+  color: black;
+  font-size: 17px;
+}
+
+.navbar-nav .join-button a {
+  padding-top: 2px;
+}
+
 
 .e-trans {
     background-image: url('energ/aerial-shot-field-covered-palm-trees-bushes-sunlight.jpg'),
@@ -22,7 +32,7 @@ body {
 }
 
 .e-trans h1 {
-    background: linear-gradient(114deg, #1c83d2 32.75%, rgb(70, 96, 141) 107.45%, rgba(255, 255, 255, 0.00) 107.45%);
+    background: linear-gradient(114deg, #14e04e 32.75%, rgb(70, 96, 141) 107.45%, rgba(255, 255, 255, 0.00) 107.45%);
     text-align: center;
     text-shadow: 0px 4px 4px #0216252e;
     font-size: 64px;
@@ -62,12 +72,13 @@ body {
 
 #nextSection {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  text-align: center;
   margin: 280px 0 150px 80px;
 }
 
 h2 .highlight {
-  color: #1c83d2;
+  color: #067827;
 }
 
 .c-carbon h2 {
@@ -86,17 +97,21 @@ h2 .highlight {
 }
 
 .e-carbon-img {
+  display: flex;
   width: 500px;
   height: 500px;
+  border-radius: 0px 0px 0px 0px;
+  margin-left: 0px;
+  justify-content: flex-end;
 }
 .e-carbon-text {
   width: 500px;
-  height: 500px;
   border-radius: 0px 0px 0px 0px;
   padding: 50px;
   font-size: 15px;
   font-weight: 500;
 }
+
 .e-carbon-text p {
   padding-bottom: 20px;
 }
@@ -114,6 +129,83 @@ h2 .highlight {
 .e-solar{
   margin-top: 200px;
 }
+
+/* commercial */
+.e-commercial {
+  display: flex;
+  align-items: center;
+}
+
+.e-commercial-text h2 {
+  margin-top: 100px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 90.767%;
+  letter-spacing: -1.2px;
+  margin-bottom: 100px;
+}
+
+.e-commercial-row .card-text {
+  text-align: justify;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.e-commercial-row .card-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.e-commercial-row a {
+  border-radius: 6px;
+}
+.e-video iframe {
+  display: flex;
+  align-items: center;
+  margin-left: 300px;
+  margin-top: 100px;
+}
+
+
+  /* Expert */
+  .e-expert {
+    display: flex;
+    align-items: center;
+    margin-top: 250px;     
+  }                                                        
+  .e-expert h2 {
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .e-expert p {
+    margin-top: 50px;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  .e-expert a  {
+    border-radius: 6px;
+    
+  }
+
+  .forms-talk {
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .e-video {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-top: 100px;
+    width: 1220px;
+    height: 600px;
+  }
   /* Media query for mobile devices */
   @media only screen and (max-width: 500px){
 
@@ -146,5 +238,11 @@ h2 .highlight {
       font-size: 12px;
       font-style: normal;
       font-weight: 800;
+    }
+    .e-video iframe {
+      display: flex;
+      align-items: center;
+      width: 520px;
+      height: 300px;
     }
   }
