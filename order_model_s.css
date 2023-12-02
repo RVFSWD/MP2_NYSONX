@@ -101,8 +101,122 @@ body {
     border-radius: 5px;
 }
 
+/* payment-section #################### */
+
+.payment-section {
+    background-color: #f5f5f5;
+    padding: 40px 25px;
+}
+
+.payment-col h4 {
+    font-size: 20px;
+}
+
+.payment-col h5 {
+    font-size: 17px;
+}
+
+/* account-section #################### */
+
+a {
+    text-decoration: none;
+}
+
+.account-container {
+    margin: 50px auto;
+    max-width: 600px;
+    background-color: #f5f5f5;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.form-box {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+.form-box h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 35px;
+}
+
+.form-box h3 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.form-box .form-group {
+    margin-top: 15px;
+}
+
+.form-box .form-group label {
+    display: block;
+    color: #666;
+}
+
+.form-box .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+}
+
+.form-box button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #198754;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-box button:hover {
+    background: green;
+}
+
+.form-box .bottom-text {
+    font-size: 13px;
+    margin-top: 20px;
+}
 
 
+.form-box .form-wrap {
+    margin-top: 15px;
+}
+
+.form-box .form-wrap input {
+    padding: 10px;
+}
+
+
+/* emailer ########################### */
+
+.emailer-container {
+    background-color: #212529;
+    padding: 20px 25px 20px 25px;
+}
+
+.emailer-col h1 {
+    font-size: 35px;
+    font-family: sans-serif;
+    color: #fff;
+    margin: 20px 50px;
+    text-align: center;
+}
+
+.box-col input { 
+    width: 100%;
+    margin: 30px 5px;
+}
+
+.emailer-btn button {
+    width: 100%;
+    margin: 30px 5px;
+}
 
 
 
