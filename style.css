@@ -223,6 +223,40 @@ body {
     padding-bottom: 10px;
     width: 100%; 
 }
+.caption-section {
+    background-image: linear-gradient(3deg, #000 2.58%, rgba(0, 0, 0, 0.312) 91.73%), url(/energ/green.png);
+    width: 1800px;
+    height: 200px;
+    padding: 330px 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+    background-blend-mode: multiply;
+}
+
+.caption-section h2 {
+    background: linear-gradient(114deg, rgb(28, 210, 67) 32.75%, rgb(70, 96, 141) 107.45%, #f1f1f19c 107.45%);
+    text-align: start;
+    text-shadow: 0px 4px 4px #0216252e;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 110.767%;
+    letter-spacing: -3.2px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.caption-section p {
+    background: white;
+    text-align: center;
+    text-shadow: 0px 4px 4px #0216252e;
+    font-size: 20px;
+    font-weight: 500;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 @media only screen and (max-width:900px) {
     .first-col img {
