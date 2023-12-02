@@ -100,17 +100,20 @@
 
       <!-- lucid-navtab  nav-justified  fs-4-->
 
-      <ul class="lucid-navtab nav justify-content-center">
-        <li class="lucid-tab nav-item">
-          <a class="nav-link active text-black" aria-current="page" href="./models_lucid.html">Air</a>
-        </li>
-        <li class="lucid-tab nav-item">
-          <a class="nav-link text-black" href="./modelsgravity_lucid.html">Gravity</a>
-        </li>
-        <!-- <li class="rivian-tab nav-item">
-          <a class="nav-link text-black" href="./models_lucid.html">Model 3</a>
-        </li> -->
-      </ul>
+      <div class="navtab-container container-{breakpoint}">
+        <div class="navtab-row row">
+          <div class="navtab-col col-md-12">
+            <ul class="lucid-navtab nav justify-content-center">
+              <li class="lucid-tab nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="./models_lucid.html">Air</a>
+              </li>
+              <li class="lucid-tab nav-item">
+                <a class="nav-link text-white" href="./modelsgravity_lucid.html">Gravity</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <!-- lucid1-header-content  mt-5 pt-5-->
 
@@ -208,7 +211,10 @@
         <img class="img-fluid" style="width: 750px;" height="400px" src="./Models images/lucid_03.png" alt="">
       </div>
       <div class="mstable-container-btn btn-container gy-5">
-        <a class="btn btn-outline-light" href="">Compare EVs</a>
+        <div class="mstable-btn-row row">
+          <a class="btn btn-outline-light" href="./order_model_s.html">Order Now</a>
+          <a class="btn btn-outline-light" href="">Compare EVs</a>
+        </div>
       </div>
     </div>
   </div>      
@@ -228,6 +234,31 @@
     </div>
 </div> 
 
+<!-- emailer ###########################  -->
+
+<div class="emailer-section">
+  <div class="emailer-container container{breakpoint}">
+    <div class="emailer-row row">
+      <div class="emailer-col col-md-6">
+        <h1><i>Stay up to Speed on the latest at Nysonx.</i></h1>
+        <h2><i></i></h2>
+      </div>
+      <div class="emailer-col col-md-6">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="box-col col-md-6 col-sm-12">
+            <input type="text" class="form-control" id="validationCustom01" placeholder="dpadilla@example.com" value="" required>
+            <div class="invalid-feedback">
+            Please provide a valid email.
+            </div>
+          </div>
+          <div class="emailer-btn col-md-6 col-sm-12">
+            <button class="e-btn btn btn-outline-light" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> 
 
 <!-- Footer  -->
 
