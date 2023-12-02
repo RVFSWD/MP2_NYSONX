@@ -18,7 +18,7 @@ body {
 }
 
 .e-trans {
-    background-image: url(/energ/green.png),
+    background-image: url(./energ/green.png),
     linear-gradient(3deg, #000 2.58%, rgba(0, 0, 0, 0.00) 91.73%);
     width: 100%;
     padding: 330px 200px;
