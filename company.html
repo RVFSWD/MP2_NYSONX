@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.18/web.js"></script>
+    <link rel="stylesheet" href="">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Careers</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+        }
+
+        .navbar-nav a {
+  margin-right: 30px;
+  color: black;
+  font-size: 17px;
+  
+}
+
+.navbar-nav .join-button a {
+  padding-top: 2px;
+  
+}
+
+        .btn-primary {
+          background-color: rgb(23, 184, 144); /* Replace #yourColor with your desired color */
+          border-color: #17b890; /* Replace #yourColor with your desired color */
+          border-radius: 6px;
+
+        }
+        .my-button {
+          background-color: gray; /* Replace #yourColor with your desired color */
+          border-color: gray; /* Replace #yourColor with your desired color */
+          border-radius: 6px;
+
+        }
+        .card-header {
+          background-color: rgb(44, 44, 44); /* Replace #yourColor with your desired color */
+          border-radius: 6px;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+        }
+        .navbar-toggler-icon {
+            background-image: url("https://api.iconify.design/mdi-menu.svg?color=%23ffffff");
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #a94c4c;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-link:hover {
+            color: #a94c4c;
+        }
+
+        .nav-link:focus {
+            color: #a94c4c;
+        }
+
+        .nav-link:active {
+            color: #a94c4c;
+        }
+
+        .nav-link.active {
+            color: #a94c4c;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #a94c4c;
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-brand:hover {
+            color: #a94c4c;
+        }
+
+        .navbar-brand:focus {
+            color: #a94c4c;
+        }
+
+        .navbar-brand:active {
+            color: #a94c4c;
+        }
+
+        .navbar-brand.active {
+            color: #a94c4c;
+        }
+
+        .navbar {
+            background-color: #000000;
+        }
+
+        .navbar .navbar-collapse {
+            text-align: center;
+        }
+
+        .navbar .navbar-collapse .navbar-nav {
+            text-align: center;
+        }
+
+        .navbar .navbar-collapse .navbar-nav .nav-link {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+
+        .navbar .navbar-collapse .navbar-nav .nav-link:last-child {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+
+        .navbar .navbar-collapse .navbar-nav .nav-link.active {
+            background-color: #000000;
+        }
+
+        .navbar .navbar-collapse .navbar-nav .nav-link.active:hover {
+            background-color: #000000;
+        }
+
+        .navbar .navbar-collapse .navbar-nav .nav-link.active:focus {
+            background-color: #000000;
+        }
+
+        .navbar .navbar-collapse .navbar-nav .nav-link.active:active {
+            background-color: #000000;
+        }
+
+        .navbar .navbar-collapse .navbar-nav .nav-link:hover {
+            background-color: #000000;}
+            
+
+
+/* about 2 - home  */
+
+.about-section h1 {
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+
+.about-section h6 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 17px;
+    padding-bottom: 15px;
+}
+
+/* emailer ########################### */
+
+.emailer-container {
+    background-color: #212529;
+    padding: 20px 25px 20px 25px;
+}
+
+.emailer-col h1 {
+    font-size: 35px;
+    font-family: sans-serif;
+    color: #fff;
+    margin: 20px 50px;
+    text-align: center;
+}
+
+.box-col input { 
+    width: 100%;
+    margin: 30px 5px;
+}
+
+.emailer-btn button {
+    width: 100%;
+    margin: 30px 5px;
+}
+
+/* footer #################### */  
+
+.followus-col ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.followus-col ul i {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    /* margin-right: 100px; */
+    margin: 5px 20px;
+}
+
+/* .followus-col a {
+    margin-right: 0px;
+} */
+
+.followus-col hr {
+    width: 100%;
+}
+
+.footer h3 {
+    font-size: 25px;
+}
+
+.footer h2 {
+    font-size: 17px;
+    color: black;
+}
+
+.footer ul a {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.footer ul i:hover {
+    color: #17b890;
+  }
+
+.footer ul, p {
+    font-size: 10px;
+}
+
+.footer .copyright-container p {
+    font-size: 10px;
+}
+.
+.btn-primary {
+    background-color: transparent !important;
+    border-color: #0d6efd !important; /* This is the default border color for .btn-primary in Bootstrap. Change it as needed. */
+}
+.company-hero {
+    position: relative;
+    padding: 100px 0;
+}
+
+.company-hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.col h1 {
+    font-size: 35px;
+    font-weight: 800;
+    color: #ffffff;
+    padding-bottom: 10px;
+    text-align: center;
+    text-shadow: #000000;
+}
+
+.col p {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    padding-bottom: 10px;
+    text-align: center;
+    text-shadow: #000000;
+}
+.aboutus h1, .aboutus p, .aboutus h2 {
+    color: black;
+    text-align: start;
+}
+ .aboutus h2 {
+    color: #053227;
+    text-align: start;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 2%;
+
+}
+.aboutus {
+    margin-top: 8%;
+}
+.aboutus p
+{
+  padding-top: 2%;
+  font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    text-shadow: #000000;
+    text-align: justify;
+}
+@media only screen and (max-width: 768px) {
+    .footer-row .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+              
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .footer-row .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+              
+    }
+
+   
+}
+     
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NYSONX</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item dropdown">  
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Models</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="./nysonxbrand.html">NYSONX Brand</a>  
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./models_tesla.html">Tesla</a>  
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./models_rivian.html">Rivian</a>  
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./models_lucid.html">Lucid</a>  
+                      </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./storage.html" role="button" aria-expanded="false">Charging</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="./storage.html">Station</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="./storage.html">Charging Calculator</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./charge.html" role="button" aria-expanded="false">Energy</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="./charge.html">Home Energy</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="./charge.html">Commercial</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="./greenenergy.html">Green Energy Project</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-items">
+                    <a href="./store.html" class="nav-link">Store</a>
+                </li>
+              </ul>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="join-button nav-items">
+                    <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
+                </li>
+              </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section  -->
+<section class="company-hero">
+    <div class="container">
+        <div class="row">
+            <video playsinline autoplay muted loop>
+                <source src="./nysonx.mp4" type="video/mp4">
+              </video>
+            <div class="col">
+                <div class="company-hero-text">
+                    <h1>NYSONX  </h1>
+                    <p> Driving Tomorrow, Today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="aboutus">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="about-section">
+                    <h1>🌱 About Us</h1>
+                    <p>NYSONX began its journey as a startup, fueled by the passionate ideas of Kodego students, our visionary founder. What started as a spark of inspiration evolved into a mission to transform the landscape of energy and transportation in the Philippines.</p>
+                    <h2>🌴Green Energy Advocacy:</h2>
+                    <p>In the early days, some forward-thinking companies recognized the potential in our vision and invested in us. Their support became the catalyst for us to establish and promote green energy solutions. We believe in the power of collaboration, and these partnerships have enabled us to pave the way for a sustainable future.</p>
+                    <h2>🚘Driving Towards Thousands of EV Stations:</h2>
+                    <p>At the core of our mission is the ambition to bring about a paradigm shift in transportation. We aspire to see thousands of Electric Vehicle (EV) stations across the Philippines, making clean and efficient transportation accessible to all. By strategically placing these stations, we aim to redefine the way people commute and contribute to a significant reduction in carbon emissions.</p>
+                    <h2>🏠Green Energy at Home:</h2>
+                    <p>But our commitment doesn't end on the roads. [Your Company Name] envisions every home powered by clean, green energy. We're on a mission to make renewable energy sources not just a choice but a way of life. From solar panels to energy-efficient solutions, we're working towards creating a sustainable ecosystem that starts right at home.</p>
+                    <h2>🌎From Ideas to Reality:</h2>
+                    <p>NYSONX is not just about dreams; it's about turning those dreams into reality. We started with an idea, and through unwavering dedication and belief, we've evolved into a driving force for change in the energy and transportation sectors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer pt-5 pb-2 mt-5">
+    <div class="container">
+      <div class="footer-row row">
+        <div class="footer-col col-lg-3 col-sm-12">
+          <a href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35"/></a>
+        </div>
+        <div class="footer-col col-lg-3 col-sm-12">
+          <h3>VISIT US</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><h2>BGC Central Plaza</h2></li>
+            <li class="mb-2"><h2>2456 West Drive Lane</h2></li>
+            <li class="mb-2"><h2>Taguig Ph</h2></li>
+          </ul>
+        </div>
+        <div class="footer-col col-lg-3 col-sm-12">
+          <h3>QUICK LINKS</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="">Models</a></li>
+            <li class="mb-2"><a href="">Charging</a></li>
+            <li class="mb-2"><a href="">Energy</a></li>
+            <li class="mb-2"><a href="">Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-col col-lg-3 col-sm-12">
+       
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="./contactus.html">CONTACT US</a></li>
+                <li class="mb-2"><a href="./company.html">Company</a></li>
+                <li class="mb-2"><a href="./careers.html">Careers</a></li>
+                <li class="mb-2"><a href="./terms.html">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="followus-container container">
+      <div class="followus-row row">
+        <div class="followus-col col-lg-12">
+          <ul class="list-unstyled flex-grow-1 pe-3">
+            <!-- <li class="mb-3 fs-3">Follow Us &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li> -->
+            <li class="mb-1 fs-6"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+            <li class="mb-1 fs-6"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+            <li class="mb-1 fs-6"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+            <li class="mb-1 fs-6"><a href="https://twitter.com/"><i class="fa-brands fa-x-twitter fa-xl"></i></a></li>
+            <li class="mb-1 fs-6"><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright-container container">
+      <div class="copyright-row row">
+        <div class="copyright-col col-md-12 text-center">
+          <p>&copy; Copyright 2023 | WD91P | Kodego</p>
+        </div>
+      </div>
+    </div>
+  </footer>   
+</body>
+</html>
