@@ -254,7 +254,7 @@
 
 <!-- emailer ###########################  -->
 
-    <div class="emailer-section">
+    <div id="emailForm">
       <div class="emailer-container container{breakpoint}">
         <div class="emailer-row row">
           <div class="emailer-col col-md-6">
@@ -262,23 +262,21 @@
             <h2><i></i></h2>
           </div>
           <div class="emailer-col col-md-6">
-            <form class="row g-3 needs-validation" novalidate>
+            <form id="submitForm" class="row g-3 needs-validation" novalidate>
               <div class="box-col col-md-6 col-sm-12">
-                <input type="text" class="form-control" id="validationCustom01" placeholder="dpadilla@example.com" value="" required>
+                <input type="email" id="email" required  class="form-control" placeholder="rmv@example.com" value="" required>
                 <div class="invalid-feedback">
                 Please provide a valid email.
                 </div>
               </div>
               <div class="emailer-btn col-md-6 col-sm-12">
-                <button class="e-btn btn btn-outline-light" type="submit">Subscribe</button>
+                <button type="button" onclick="saveEmail()" class="e-btn btn btn-outline-light">Confirm</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-    
-
     
       <!-- Footer  -->
 
