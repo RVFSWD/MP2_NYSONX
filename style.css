@@ -171,7 +171,7 @@ body {
 .caption-section {
     background-image: linear-gradient(3deg, #000 2.58%, rgba(0, 0, 0, 0.312) 91.73%), url(./energ/vehicles.png);
     width: 100%;
-    height: 200px;
+    height: 350px;
     padding: 50px 10px;
     background-position: center;
     background-size: cover;
