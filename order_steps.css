@@ -31,17 +31,7 @@ body {
     padding-top: 2px;
 }
 
-
 /* tesla-navtab ################################# */
-
-/* .navtab-container {
-    background-color: #ddd;
-} */
-
-/* .navtab-container a {
-    margin: 20px;
-    border: 1px solid;
-} */
 
 .tesla-tab {
     font-weight: 700;
@@ -60,11 +50,17 @@ body {
 
 /* order design-section ############################# */
 
+.btn-group {
+    /* margin: 5px 75px; */
+    width: 100%;
+
+}
+
 .order-header {
     margin: 50px auto;
     /* max-width: 600px; */
     max-width: 100%;
-    background: #f5f5f5;
+    background: #fff;
 }
 
 .order-box {
@@ -100,16 +96,61 @@ body {
 }
 
 .motor-col h4 {
-    font-size: 17px;
-    border: 2px solid;
-    width: 90%;
-    margin: 25px 10px;
-    padding: 8px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100%;
+    margin: 25px 0px;
+    padding: 10px;
 }
 
 .paint-col h3 {
     font-size: 20px;
     margin: 50px 10px;
+}
+
+/* ul.list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  ul.list-unstyled li {
+    margin: 0; 
+    padding: 0; 
+  } */
+
+  .paint-col .img-paint ul {
+    margin: 5px 8px;
+  } 
+
+.img-paint {
+    margin-right: 2px;
+    padding: 0px;
+}
+
+.paint-col ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-right: 0px;
+}
+
+.paint-col a{
+    margin-right: 0px;
+}
+
+.paint-col img {
+    margin-right: 2px;
+    padding: 0px;
+}
+
+.interior-col ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-right: 0px;
 }
 
 .interior-col h3 {
@@ -120,6 +161,13 @@ body {
 .wheels-col h3 {
     font-size: 20px;
     margin: 50px 10px;
+}
+
+.wheels-col ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-right: 0px;
 }
 
 .order-col img {
