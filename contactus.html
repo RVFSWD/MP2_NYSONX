@@ -157,43 +157,46 @@
                 <h2>Love to hear from you,<br>
                     Get in touch 👋
                 </h2>
-                <form>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="input-group mb-3">
-                                    <select class="form-select custom-width" aria-label="Default select example">
-                                        <option selected>Title</option>
-                                        <option value="1">Mr</option>
-                                        <option value="2">Mrs</option>
-                                        <option value="3">Miss</option>
-                                        <option value="4">Ms</option>
-                                        <option value="5">Doctor</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-                            </div>
-                            <div class="col-md-5">
-                                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                            </div>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <input type="hidden" name="access_key" value="3e06f016-3e56-4c2a-ab15-d331dd6ac299
+                  ">
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <div class="input-group mb-3">
+                          <select class="form-select custom-width" aria-label="Default select example" name="title">
+                            <option selected>Title</option>
+                            <option value="1">Mr</option>
+                            <option value="2">Mrs</option>
+                            <option value="3">Miss</option>
+                            <option value="4">Ms</option>
+                            <option value="5">Doctor</option>
+                          </select>
                         </div>
+                      </div>
+                      <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="first_name" required>
+                      </div>
+                      <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="last_name" required>
+                      </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="contact" class="form-label">Phone</label>
-                        <input type="text" class="form-control" id="contact">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    
+                  </div>
+                  <div class="mb-3">
+                    <label for="contact" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="contact" name="phone">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
+                  </div>
+                  <div class="h-captcha" data-captcha="true"></div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
 
 </section>
@@ -271,5 +274,8 @@
           </div>
         </div>
     </footer>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
 </body>
 </html>
