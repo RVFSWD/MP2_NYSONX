@@ -1,18 +1,88 @@
-// order section ####################### 
+// NEW order section ##############################################
 
-function changeImage(imageSrc, eventText) {
-  document.getElementById('carImage').src = './Models images/' + imageSrc;
-  document.getElementById('event1').innerHTML = eventText;
+// change image ####################
+
+function changeImage(imagePath) {
+  document.getElementById('carImage').src = imagePath;
 }
 
-function changeToNewImage() {
-
-  var imageElement = document.getElementById('carImage');
-
-
-  imageElement.src = 'tms_color_blue_01_v2.png';
-  imageElement.src = 'tms_color_gray_01_v2.png';
+function changeInteriorImage(imagePath) {
+  document.getElementById('interiorImage').src = imagePath;
 }
+
+function changeWheelsImage(imagePath) {
+  document.getElementById('wheelsImage').src = imagePath;
+}
+
+// order variant buttons ###############
+
+function selectOption(button, type) {
+  
+  const buttons = document.querySelectorAll(`.btn-${type}`);
+  buttons.forEach((btn) => {
+      btn.classList.remove('active');
+  });
+
+
+  button.classList.add('active');
+}
+
+// paint buttons ###################
+
+function selectPaintOption(button) {
+ 
+  const buttons = document.querySelectorAll('.paint-colors button');
+  buttons.forEach((btn) => {
+      btn.classList.remove('active');
+  });
+
+  
+  button.classList.add('active');
+}
+
+// interior buttons ################### 
+
+function selectInteriorOption(button) {
+  
+  const buttons = document.querySelectorAll('.interior-colors button');
+  buttons.forEach((btn) => {
+      btn.classList.remove('active');
+  });
+
+  
+  button.classList.add('active');
+}
+
+// wheels buttons ####################
+
+function selectWheelsOption(button) {
+  
+  const buttons = document.querySelectorAll('.wheels-colors button');
+  buttons.forEach((btn) => {
+      btn.classList.remove('active');
+  });
+
+  
+  button.classList.add('active');
+}
+
+// payment page ##############################################
+
+function selectPaymentOption(button, paymentType) {
+  
+  const buttons = document.querySelectorAll('.cash-btn button');
+  buttons.forEach((btn) => {
+      btn.classList.remove('active');
+  });
+
+  
+  button.classList.add('active');
+
+  
+  console.log(`Selected Payment Type: ${paymentType}`);
+ 
+}
+
 
 
 
@@ -39,7 +109,5 @@ function changeToNewImage() {
       }
     }
   
-
-
 
 
