@@ -60,7 +60,7 @@ body {
 }
 
 .carousel .carousel-caption h3 {
-    font-family: Ubuntu;
+    font-family: poppins;
     font-size: 75px;
     color: #fff;
 }
@@ -86,7 +86,7 @@ body {
     /* background-color: #252525; */
     margin: 20px auto 30px;
     border-radius: 5px;
-    font-family: Ubuntu;
+    font-family: poppins;
     
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
