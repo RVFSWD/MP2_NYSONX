@@ -11,19 +11,143 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.18/web.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="charge.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <title>Sign Up</title>
-  <style>
-    #btnsignup{
-      background-color: #1E90FF;
-      border-color: #1E90FF;
+    <title>Login</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-weight: 800;
+}
+
+p {
+    font-weight: 500;
+}
+
+body {
+    background-color: #fff;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* navbar  */
+
+.navbar-nav a {
+    margin-right: 30px;
+    color: black;
+    font-size: 17px;
+}
+
+.navbar-nav .join-button a {
+    padding-top: 2px;
+}
+button {
+    border-radius: 6px;
+}
+.btn {
+    border-radius: 6px;
+}
+
+.login {
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-bottom: 10%;
+}
+
+.icon {
+    font-size: 20px;
+}
+.gap-2 a {
+    text-align: center;
+    font-size: 18px;
+}
+.p-4 img {
+    margin-top: 10%;
+    margin-bottom: 4%;
+    height: ;
+}
+.p-4 h1 { 
+    font-size: 30px;
+    margin-bottom: 4%;
+}
+.login .container {
+  width:150%;
+  padding-right: 20%;
+}
+
+.sign-up .form {
+    width: 400px; /* Adjust as needed */
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.sign-up {
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-bottom: 10%;
+}
+
+.sign-up .title {
+    text-align: start;
+    margin-bottom: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.sign-up label{
+    font-size: 15px;
+    font-weight: 600;
+}
+.btn {
+    background-color: #2eaf7c; /* This is the color Tomato */
+    color: white; /* This is the text color */
+    border: none; /* Removes the default button border */
+    width: 300px;
+    font: 20px;
+    margin-top: 20px;
+}
+
+.sign-up p {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+
+}
+.sign-up a {
+    color: red;
+    font-weight: 600;
+    text-decoration: none;
+}
+.sign-up .title h1 {
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: #024d2f; /* Darker shade of Tomato for hover effect */
+}
+@media (max-width: 576px) {
+        .sign-up .form {
+            width: 100%;
+            padding: 20px;
+        }
+        .sign-up {
+            margin-top: auto;
+            margin-left: auto;
+            margin-bottom: auto;
+        }
     }
-  </style>
+
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
@@ -104,94 +228,126 @@
                         <a href="./store.html" class="nav-link">Store</a>
                     </li>
                   </ul>
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="join-button nav-items">
-                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success login-btn">Login</button></a>
-                    </li>
-                  </ul>
+                
             </div>
           </div>
         </div>
       </nav>
+<section class="sign-up">
+   <div class="form">
+    <div class="title">
+        <h1>Not Registered yet?😀</h1>
+        <h1>Sign Up Now!✍️</h1>
+    </div>
+   
+    <div class="mb-3">
+        <label for="text" class="form-label">Full Name</label>
+        <input type="text" class="form-control" placeholder="Full Name" aria-label="First Name" id="username" aria-describedby="basic-addon1">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Email Address">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+        <label class="form-check-label" for="flexCheckDefault">
+            I agree to the Privacy Policy and Terms of Service
+        </label>
+    </div>
+    <button type="submit" class="btn btn-dark" onclick="saveData(event)">Create Account</button>
+    <p>Have an account already? <a href="./login.html">Log In</a></p>
+</div>
+   
+</section>
+<footer class="footer pt-5 pb-2 mt-5">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <h1 class="text-center">Sign up✍️</h1>
-          <form class="row g-3 needs-validation" novalidate>
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" name="user" placeholder="Username" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-            </div>
-            <div class="form-group">
-              <label for="cpassword">Confirm Password</label>
-              <input type="password" class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
-            </div>
-            <div class="col-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-primary" type="submit">Submit</button>
-            </div>
-          </form>
-          <div class="text-center">
-            <p>Already have an account? <a href="./login.html">Sign in</a></p>
-          </div>
+      <div class="footer-row row">
+        <div class="footer-col col-lg-3 col-sm-12">
+          <a href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35"/></a>
+        </div>
+        <div class="footer-col col-lg-3 col-sm-12">
+          <h3>VISIT US</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><h2>BGC Central Plaza</h2></li>
+            <li class="mb-2"><h2>2456 West Drive Lane</h2></li>
+            <li class="mb-2"><h2>Taguig Ph</h2></li>
+          </ul>
+        </div>
+        <div class="footer-col col-lg-3 col-sm-12">
+          <h3>QUICK LINKS</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="">Models</a></li>
+            <li class="mb-2"><a href="">Charging</a></li>
+            <li class="mb-2"><a href="">Energy</a></li>
+            <li class="mb-2"><a href="">Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-col col-lg-3 col-sm-12">
+       
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="./contactus.html">CONTACT US</a></li>
+                <li class="mb-2"><a href="./company.html">Company</a></li>
+                <li class="mb-2"><a href="./careers.html">Careers</a></li>
+                <li class="mb-2"><a href="./terms.html">Terms and Conditions</a></li>
+                <li class="mb-2"><a href="./adminlogin.html">Admin</a></li>
+          </ul>
         </div>
       </div>
     </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        (function () {
-          'use strict'
-
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.querySelectorAll('.needs-validation')
-
-          // Loop over them and prevent submission
-          Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-              form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                  event.preventDefault()
-                  event.stopPropagation()
-                }
-
-                // Check if password and confirm password fields match and show and error
-                var password = form.querySelector('#password').value;
-                var confirmPassword = form.querySelector('#cpassword').value;
-
-                if (password !== confirmPassword) {
-                  alert('Password and Confirm Password fields do not match.');
-                  event.preventDefault()
-                  event.stopPropagation()
-                }
-
-                form.classList.add('was-validated')
-              }, false)
-              
-           })
-        })()
-    </script>
-</body>
-</html>
+    <div class="followus-container container">
+      <div class="followus-row row">
+        <div class="followus-col col-lg-12">
+          <ul class="list-unstyled flex-grow-1 pe-3">
+            <!-- <li class="mb-3 fs-3">Follow Us &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li> -->
+            <li class="mb-1 fs-6"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+            <li class="mb-1 fs-6"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+            <li class="mb-1 fs-6"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+            <li class="mb-1 fs-6"><a href="https://twitter.com/"><i class="fa-brands fa-x-twitter fa-xl"></i></a></li>
+            <li class="mb-1 fs-6"><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright-container container">
+      <div class="copyright-row row">
+        <div class="copyright-col col-md-12 text-center">
+          <p>&copy; Copyright 2023 | WD91P | Kodego</p>
+        </div>
+      </div>
+    </div>
+  </footer>  
+  <script>
+       function saveData(event){
+        event.preventDefault();
+        let name, email, password;
+        name = document.getElementById('username').value;
+        email = document.getElementById('email').value;
+        password = document.getElementById('password').value;
+    
+        
+        let user_records=new Array();
+        user_records=JSON.parse(localStorage.getItem('user'))?JSON.parse(localStorage.getItem('user')):[];
+        if(user_records.some((v)=>{
+            return v.email==email;
+        })){
+            alert('Email already exists');
+            return;
+        }
+        else{
+            user_records.push({
+                name:name,
+                email:email,
+                password:password
+            });
+            localStorage.setItem('user',JSON.stringify(user_records));
+            alert('User registered successfully');
+        }
+    }
+  </script>
 </body>
 </html>
