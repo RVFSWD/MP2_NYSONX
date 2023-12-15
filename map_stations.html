@@ -51,9 +51,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicmF5bWFwYm94LTEyMzQ1IiwiYSI6ImNscTV3cnVsZTA0M
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/light-v11',
-  center: [-96, 37.8],
-//   center: [14.599512, 120.984222],
-  zoom: 3
+  // center: [-96, 37.8],
+  center: [120.9842, 14.5995], // Manila coordinates ##############
+  zoom: 8
 });
 
 // code from the next step will go here!
@@ -65,6 +65,7 @@ const geojson = {
       geometry: {
         type: 'Point',
         coordinates: [-77.032, 38.913]
+        // coordinates: [14.55185, 121.04817]
       },
       properties: {
         title: 'Charging Station',
@@ -98,11 +99,11 @@ const geojson = {
       geometry: {
         type: 'Point',
         // coordinates: [14.5492, 121.0280]
-        coordinates: [14.599512, 120.984222]
+        coordinates: [14.55185, 121.04817]
       },
       properties: {
         title: 'Mapbox',
-        description: 'EDSA Ayala Station, Makati PH'
+        description: 'Bonifacio High Street, Taguig PH'
       }
     }
   ]
