@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sample.css">
+    <title>NYSONX | Welcome</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-weight: 800;
+}
+
+p {
+    font-weight: 500;
+}
+
+body {
+    background-color: #fff;
+    color: black;
+    font-family: sans-serif;
+}
+
+
+/* navbar ############################### */
+
+.navbar-nav a {
+    margin-right: 30px;
+    color: black;
+    font-size: 17px;
+}
+
+.navbar-nav .join-button a {
+    padding-top: 2px;
+}
+
+/* tesla-navtab ################################# */
+
+.tesla-tab {
+    font-weight: 700;
+    font-family: sans-serif;
+    margin: 8px 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;   
+}
+
+.tesla-tab a {
+    /* background-color: #f5f5f5; */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.circle-1 h4 {
+    color: #212529;
+    font-size: 20px;
+    border: 3px solid #212529;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* stations-button  */
+
+.stations-button button {
+    margin: 2px 0px 50px;
+}
+
+/* Map direction ################# */
+
+
+.map-con {
+    height: 500%;
+    width: 100%;
+    margin: 20px auto 15px;
+}
+
+/* emailer ########################### */
+
+.emailer-container {
+    background-color: #212529;
+    padding: 20px 25px 20px 25px;
+}
+
+.emailer-col h1 {
+    font-size: 35px;
+    font-family: sans-serif;
+    color: #fff;
+    margin: 20px 50px;
+    text-align: center;
+}
+
+.box-col input { 
+    width: 100%;
+    margin: 30px 5px;
+}
+
+.emailer-btn button {
+    width: 50%;
+    margin: 30px 5px;
+}
+
+
+
+/* footer  #############################*/  
+
+.followus-col ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.followus-col ul i {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    /* margin-right: 100px; */
+    margin: 5px 20px;
+}
+
+.followus-col hr {
+    width: 100%;
+}
+
+.footer h3 {
+    font-size: 25px;
+}
+
+.footer h2 {
+    font-size: 17px;
+    color: black;
+}
+
+.footer ul a {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.footer ul i:hover {
+    color: #198754;
+  }
+
+.footer ul, p {
+    font-size: 10px;
+}
+
+.footer .copyright-container p {
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-row .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+              
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .footer-row .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+              
+    }
+}
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35" class="d-inline-block align-text-top"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NYSONX</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item dropdown">  
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Models</a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="./nysonxbrand.html">NYSONX Brand</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_tesla.html">Tesla</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_rivian.html">Rivian</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_lucid.html">Lucid</a>  
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Charging</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="">Station</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Charging Calculator</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Energy</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="">Home Energy</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Commercial</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Green Energy Project</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-items">
+                        <a href="./store.html" class="nav-link">Store</a>
+                    </li>
+                  </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="join-button nav-items">
+                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+<!-- maps google direction ##########################  -->
+
+<div class="map-con container">
+  <div class="map-row row">
+    <div class="map-col col-md-12">
+        <!-- <iframe src="https://storage.googleapis.com/maps-solutions-4p965hdjno/locator-plus/mgd9/locator-plus.html"
+        width="100%" height="100%"
+        style="border:0;"
+        loading="lazy">
+        </iframe> -->
+        <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JKciAocRLREw_ixOnaUZ5StdQFcJgxc&ehbc=2E312F&noprof=1" width="1260" height="580"></iframe> -->
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JKciAocRLREw_ixOnaUZ5StdQFcJgxc&ehbc=2E312F&noprof=1" width="1260" height="580"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- dashboard btn ######################### mt-3 mb-0-->
+
+<div class="container">
+    <div class="row">
+        <div class="stations-button col-md-12">
+            <a href="./userdashboard.html" class="stations"><button type="button" class="stations-btn btn btn-outline-dark">My Dashboard</button></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- emailer ###########################  -->
+
+<div id="emailForm">
+  <div class="emailer-container container{breakpoint}">
+    <div class="emailer-row row">
+      <div class="emailer-col col-md-6">
+        <h1><i>Stay up to Speed on the latest at Nysonx.</i></h1>
+        <h2><i></i></h2>
+      </div>
+      <div class="emailer-col col-md-6">
+        <form id="submitForm" class="row g-3 needs-validation" novalidate>
+          <div class="box-col col-md-6 col-sm-12">
+            <input type="email" id="email" required  class="form-control" placeholder="rmv@example.com" value="" required>
+            <div class="invalid-feedback">
+            Please provide a valid email.
+            </div>
+          </div>
+          <div class="emailer-btn col-md-6 col-sm-12">
+            <button type="button" onclick="saveEmail()" class="e-btn btn btn-outline-light">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Footer  -->
+
+      <footer class="footer pt-5 pb-2 mt-5">
+        <div class="container">
+          <div class="footer-row row">
+            <div class="footer-col col-lg-3 col-sm-12">
+              <a href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35"/></a>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>VISIT US</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><h2>BGC Central Plaza</h2></li>
+                <li class="mb-2"><h2>2456 West Drive Lane</h2></li>
+                <li class="mb-2"><h2>Taguig Ph</h2></li>
+              </ul>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>QUICK LINKS</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="">Models</a></li>
+                <li class="mb-2"><a href="">Charging</a></li>
+                <li class="mb-2"><a href="">Energy</a></li>
+                <li class="mb-2"><a href="">Store</a></li>
+              </ul>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>More</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="">CONTACT US</a></li>
+                <li class="mb-2"><a href="">Company</a></li>
+                <li class="mb-2"><a href="">Careers</a></li>
+                <li class="mb-2"><a href="">Terms and Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="followus-container container">
+          <div class="followus-row row">
+            <div class="followus-col col-lg-12">
+              <ul class="list-unstyled flex-grow-1 pe-3">
+                <li class="mb-1 fs-6"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://twitter.com/"><i class="fa-brands fa-x-twitter fa-xl"></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="copyright-container container">
+          <div class="copyright-row row">
+            <div class="copyright-col col-md-12 text-center">
+              <p>&copy; Copyright 2023 | WD91P | Kodego</p>
+            </div>
+          </div>
+        </div>
+      </footer>   
+
+      <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+'use strict'
+
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+const forms = document.querySelectorAll('.needs-validation')
+
+// Loop over them and prevent submission
+Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+    if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+    }, false)
+})
+})()
+</script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
