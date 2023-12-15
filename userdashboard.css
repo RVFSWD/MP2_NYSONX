@@ -37,13 +37,13 @@ body {
 /* user dashboard - section ######################## */
 
 .user-container {
-    margin: 60px 95px;
+    margin: 60px auto;
     /* border-radius: 5px; */
     /* padding: 30px 20px; */
 }
 
 .usertabs-col {
-    background-color: #212529;
+    background-color: #343541;
 }
 
 /* .userimage-col {
@@ -65,13 +65,13 @@ body {
 } */
 
 .usercontents-col {
-    background-color: #f5f5f5;
+    background-color: #212529;
 }
 
 .usercontents-col h4 {
-    font-size: 20px;
-    color: black;
-    margin: 30px auto;
+    font-size: 25px;
+    color: #fff;
+    margin: 60px auto 5px;
     text-align: center
 }
 
@@ -79,12 +79,12 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 17px;
-    margin: 30px 80px;
+    margin: 30px 70px;
     display: flex;
     flex-direction: column;
     /* text-align: center;
     align-items: center;
-    justify-content: center; */
+    justify-content: center; #010409*/
 }
 
 .user-container a {
@@ -92,16 +92,43 @@ body {
 }
 
 .nav {
-    margin-top: 70px;
+    margin-top: 20px;
 }
 
 .nav-link:hover {
     color: #198754;
 }
 
-/* circle progress #################### */
+.usertabs-col h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;
+    margin: 10px auto 5px;
+}
 
-/* NEW ###################################################### */
+.usertabs-col i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+    margin: 60px auto 2px;
+}
+
+/* .nav-item i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+} */
+
+
+/* circle-1 progress #################### */
+
+/* NEW ###################################################### #212529 */
 
 .prog-container {
     height: 60vh;
@@ -109,13 +136,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    /* background-color: #212529; */
 }
 
 .prog-container {
     width: 420px;
-    padding: 50px 0;
-    margin: 20px 25px;
+    /* padding: 20px 0; */
+    margin: 20px auto 5px;
     border-radius: 8px;
     row-gap: 30px;
 }
@@ -137,7 +164,7 @@ body {
     height: 210px;
     width: 210px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #212529;
 }
 
 .progress-value {
@@ -150,7 +177,7 @@ body {
 .text {
     font-size: 25px;
     font-weight: 500;
-    color: #212529;
+    color: #fff;
 }
 
 /* prog2 ############### */
@@ -161,13 +188,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    /* background-color: #212529; */
 }
 
 .prog2-container {
     width: 420px;
-    padding: 50px 0;
-    margin: 20px 25px;
+    /* padding: 20px 0; */
+    margin: 20px auto 5px;
     border-radius: 8px;
     row-gap: 30px;
 }
@@ -189,7 +216,7 @@ body {
     height: 210px;
     width: 210px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #212529;
 }
 
 .progress2-value {
@@ -202,12 +229,112 @@ body {
 .text2 {
     font-size: 25px;
     font-weight: 500;
-    color: #212529;
+    color: #fff;
 }
 
+/* circle-3 progress #################### */
 
+.prog3-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #212529; */
+}
 
+.prog3-container {
+    width: 420px;
+    /* padding: 20px 0; */
+    margin: 5px auto 30px;
+    border-radius: 8px;
+    row-gap: 30px;
+}
 
+.circular3-progress {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#8f08ae 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular3-progress::before {
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #212529;
+}
+
+.progress3-value {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #8f08ae;
+}
+
+.text3 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* prog4 ############### */
+
+.prog4-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #212529; */
+}
+
+.prog4-container {
+    width: 420px;
+    /* padding: 20px 0; */
+    margin: 5px auto 30px;
+    border-radius: 8px;
+    row-gap: 30px;
+}
+
+.circular4-progress {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#a9f339 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular4-progress::before {
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #212529;
+}
+
+.progress4-value {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #a9f339;
+}
+
+.text4 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+}
 
 
 
@@ -368,7 +495,7 @@ body {
 }
 
 .emailer-btn button {
-    width: 100%;
+    width: 50%;
     margin: 30px 5px;
 }
 
