@@ -127,13 +127,13 @@
   </div>
 </div>    
 
-<!-- account-section  ########################-->
+<!-- account-section  ####################################-->
 
 <div class="account-container container">
     <div class="form-box row">
       <div class="form-col col-md-5 gy-5">  
       <h3>Enter Account Details</h3>
-      <form class="row g-3 needs-validation" novalidate>
+      <form class="row g-3 needs-validation" novalidate onsubmit="saveAccountDetails(event)">
         <div class="col-md-12">
             <label for="validationCustom01" class="form-label">First name</label>
             <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -150,17 +150,29 @@
         </div>
         <div class="col-md-12">
             <label for="validationCustom02" class="form-label">Email</label>
-            <input type="text" class="form-control" id="validationCustom02" value="" required>
+
+            <input type="email" id="email" required  class="form-control" placeholder="rmv@example.com" value="" required>
+            <div class="invalid-feedback">
+            Please provide a valid email.
+            </div>
+
+            <!-- <input type="email" class="form-control" id="validationCustom02" value="" required>
             <div class="invalid-feedback">
                 Please provide an Email.
-            </div>
+            </div> -->
         </div>
         <div class="col-md-12">
             <label for="validationCustom02" class="form-label">Confirm Email</label>
-            <input type="text" class="form-control" id="validationCustom02" value="" required>
+
+            <input type="email" id="email" required  class="form-control" placeholder="rmv@example.com" value="" required>
+            <div class="invalid-feedback">
+            Please confirm email.
+            </div>
+
+            <!-- <input type="email" class="form-control" id="validationCustom02" value="" required>
             <div class="invalid-feedback">
                 Please Confirm Email.
-            </div>
+            </div> -->
         </div>
         <div class="col-md-12">
             <label for="validationCustom02" class="form-label">Enter Delivery ZIP code</label>
@@ -181,10 +193,10 @@
             <h4></h4>
         </div>
 
-        <!-- card ############# -->
+        <!-- card #################################### -->
 
         <div class="form-col col-md-5 gy-5">
-        <form class="row g-3 needs-validation" novalidate>
+        <form class="row g-3 needs-validation" novalidate onsubmit="saveAccountDetails(event)">
             <h3>Card</h3>
             <div class="col-md-12">
                 <img class="img-fluid pt-3 pb-3" style="width: 350px;" height="200px" src="./logo images/payment.png" alt="">
@@ -292,7 +304,7 @@
                   <li class="mb-2"><a href="">Models</a></li>
                   <li class="mb-2"><a href="">Charging</a></li>
                   <li class="mb-2"><a href="">Energy</a></li>
-                  <li class="mb-2"><a href="./shop.html">Store</a></li>
+                  <li class="mb-2"><a href="">Store</a></li>
                 </ul>
               </div>
               <div class="footer-col col-lg-3 col-sm-12">
@@ -353,7 +365,51 @@
   </script>
   
       <script src="script.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+      </script>
+
+
+
+<!-- saving data in local storage ############################## -->
+
+<script>
+
+function saveAccountDetails(event) {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  // Gather input values
+  const firstName = document.getElementById("validationCustom01").value;
+  const lastName = document.getElementById("validationCustom02").value;
+  const email = document.getElementById("validationCustom02").value;
+  const confirmEmail = document.getElementById("validationCustom02").value;
+  const zipCode = document.getElementById("validationCustom02").value;
+  const cardNumber = document.getElementById("validationCustom05").value;
+  const expiryDate = document.getElementById("validationCustom05").value;
+  const cvv = document.getElementById("validationCustom05").value;
+
+  // Validate values (optional, customize based on your requirements)
+  // ... your validation logic ...
+
+  // Save data to local storage
+  const accountData = {
+    firstName,
+    lastName,
+    email,
+    zipCode,
+    cardNumber: cardNumber.substr(-4), // Only save last 4 digits of card number for security
+    expiryDate,
+    cvv,
+  };
+  localStorage.setItem("accountDetails", JSON.stringify(accountData));
+
+  // Display confirmation message (optional)
+  alert("Your account details have been saved successfully!");
+
+  // Redirect to next page or perform other actions based on your workflow
+  // ... your code after successful saving ...
+}
+
+</script>
   
   </body>
   </html>
