@@ -90,7 +90,7 @@
                   </ul>
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="join-button nav-items">
-                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
+                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign Out</button></a>
                     </li>
                   </ul>
             </div>
@@ -136,11 +136,11 @@
           <div class="cash-btn col-md-4">
             <button class="c-btn btn btn-outline-dark" type="submit" onclick="selectPaymentOption(this, 'cash')">Cash</button>
           </div>  
-            <h5>Vehicle Price &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp 79,990</h5>
-            <h5>Destination Fee &nbsp&nbsp&nbsp&nbsp&nbsp $1,390</h5>
+            <h5>Vehicle Price &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp $79,990</h5>
+            <h5>Destination Fee &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp $1,390</h5>
             <h5>Order Fee &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp $250</h5>
             <hr>
-            <h5>Your Model S &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp $81,630</h5>
+            <h5>Your Model S &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp $81,630</h5>
         </div>
         <div class="payment-col col-md-4 gy-5">
             <div class="cash-btn col-md-4">
@@ -289,7 +289,37 @@
   </script>
   
       <script src="script.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">      
+      </script>
+
+<!-- saving data to local storage ########################### -->
+
+<script>
+
+function selectPaymentOption(button, selectedOption) {
+  // Update button styles (optional)
+  // ... your code to handle active selection ...
+
+  // Save selected option to local storage
+  localStorage.setItem("selectedPayment", selectedOption);
+
+  // Update display with selected option (modify element selectors based on your actual HTML)
+  const displayElement = document.querySelector("#paymentDisplay");
+  displayElement.textContent = `Selected Payment Option: ${selectedOption.toUpperCase()}`;
+}
+
+
+window.onload = function() {
+  const storedPayment = localStorage.getItem("selectedPayment");
+  if (storedPayment) {
+    const displayElement = document.querySelector("#paymentDisplay");
+    displayElement.textContent = `Selected Payment Option: ${storedPayment.toUpperCase()}`;
+  }
+};
+
+
+
+</script>
   
   </body>
   </html>
