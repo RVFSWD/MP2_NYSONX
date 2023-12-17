@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Data</title>
+  
+</head>
+<body>
+  <h1>Order Data</h1>
+  <ul id="data-list"></ul>
+
+
+  
+  <script>
+// const dataList = document.getElementById('data-list');
+
+// window.onload = function() {
+//   if (localStorage.length === 0) {
+//     dataList.innerHTML = '<li>No data found in local storage.</li>';
+//     return;
+//   }
+
+//   for (let i = 0; i < localStorage.length; i++) {
+//     const value = localStorage.getItem(localStorage.key(i));
+//     const listItem = document.createElement('li');
+//     listItem.textContent = value;
+//     dataList.appendChild(listItem);
+//   }
+// };
+
+
+// ############################################################ 
+
+
+const dataList = document.getElementById('data-list');
+
+window.onload = function() {
+  if (localStorage.length === 0) {
+    dataList.innerHTML = '<p>No data found in local storage.</p>';
+    return;
+  }
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+    const listItem = document.createElement('li');
+    listItem.textContent = `Key: ${key}, Value: ${value}`;
+    dataList.appendChild(listItem);
+  }
+};
+
+
+
+  </script>
+</body>
+</html>
