@@ -8,6 +8,96 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./shop.css">
     <title>NYSONX | Welcome</title>
+
+<style>
+
+/* pop up ######################### #3c5077*/
+
+.container {
+    width: 100%;
+    /* height: 100vh; */
+    background: #fff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-btn {
+    margin-top: 30px;
+    padding: 10px 60px;
+    background: #198754;
+    color: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.popup {
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #212529;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 60%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    /* border-radius: 5000px;
+    height: 100px;
+    width: 100px; */
+    width: 100px;
+    margin-top: -15%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    color: #212529;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 30px 0 10px;
+}
+
+.popup p {
+    color: #212529;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background: #198754;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+</style>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
@@ -156,10 +246,10 @@
             </div>
         </div>
         <div class="col-md-12">
-            <label for="validationCustom02" class="form-label">Address 2</label>
-            <input type="text" class="form-control" id="validationCustom02" value="" required>
+            <label for="validationCustom02" class="form-label">Contact Number</label>
+            <input type="number" class="form-control" id="validationCustom02" value="" required>
             <div class="invalid-feedback">
-                Please provide an Address.
+                Please provide a valid number.
             </div>
         </div>
         <div class="col-md-12">
@@ -232,6 +322,18 @@
     </div>
     </div>
   </div>
+
+<!-- pop up section ############################# width="140" height="110"   width="140" height="140"-->
+
+<div class="container">
+  <button type="submit" class="pop-btn" onclick="openPopup()">Place Order</button>
+  <div class="popup" id="popup">
+    <img src="./logo images/ev_popup.jpg">
+    <h2>Thank You!</h2>
+    <p>Your transaction is now complete. Est. Delivery 7-10 days. Thanks!</p>
+    <button type="button" onclick="closePopup()">Ok</button> 
+  </div>
+</div>
 
   <!-- pagination ############################## -->
 
@@ -457,8 +559,22 @@ form.addEventListener('submit', (event) => {
 
 });
 
-// ################################################## 
+</script>
 
+<!-- popup ##################################### -->
+
+<script>
+
+  let popup = document.getElementById("popup");
+  
+  function openPopup(){
+    popup.classList.add("open-popup");
+  }
+  
+  function closePopup(){
+    popup.classList.remove("open-popup");
+  }
+  
 </script>
 
   
