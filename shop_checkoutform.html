@@ -24,20 +24,21 @@
 }
 
 .pop-btn {
-    margin-top: 30px;
+    margin-top: 5px;
     padding: 10px 60px;
     background: #198754;
     color: #fff;
     border: 0;
     outline: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     border-radius: 5px;
+    width: 53%;
 }
 
 .popup {
-    width: 500px;
+    width: 400px;
     height: 300px;
     background: #fff;
     border: 1px solid black;
@@ -55,7 +56,7 @@
 
 .open-popup {
     visibility: visible;
-    top: 60%;
+    top: 150%;
     transform: translate(-50%, -50%) scale(1);
 }
 
@@ -221,7 +222,7 @@
 
 <div class="account-container container">
     <div class="form-box row">
-      <div class="form-col col-md-5 gy-5">  
+      <div class="form-col col-md-12">  
       <h3>Enter Delivery Details</h3>
       <form class="row g-3 needs-validation" novalidate>
         <div class="col-md-12">
@@ -259,22 +260,22 @@
                 Please Confirm zip code.
             </div>
         </div>
-        <div class="col-12">
+        <!-- <div class="col-12">
             <button class="btn btn-outline-dark" type="submit">Confirm</button>
         </div>
         </form>
-        </div>
+        </div> -->
 
         <!-- middle col ######## -->
 
-        <div class="form-col col-md-2 gy-5">
+        <!-- <div class="form-col col-md-2 gy-5">
             <h4></h4>
-        </div>
+        </div> -->
 
         <!-- card ############# -->
 
-        <div class="form-col col-md-5 gy-5">
-        <form class="row g-3 needs-validation" novalidate>
+        <!-- <div class="form-col col-md-5 gy-5">
+        <form class="row g-3 needs-validation" novalidate> -->
             <h3>Card</h3>
             <div class="col-md-12">
                 <img class="img-fluid pt-3 pb-3" style="width: 350px;" height="200px" src="./logo images/payment.png" alt="">
@@ -314,7 +315,7 @@
             </div>
             </div>
             <div class="card-button col-12">
-            <button class="card-btn btn btn-outline-dark" type="submit" id="placeOrderButton">Place Order</button>
+            <button class="card-btn btn btn-outline-dark" type="submit" id="placeOrderButton">Confirm</button>
             </div>
         </div>
     </form>
@@ -326,13 +327,17 @@
 <!-- pop up section ############################# width="140" height="110"   width="140" height="140"-->
 
 <div class="container">
-  <button type="submit" class="pop-btn" onclick="openPopup()">Place Order</button>
-  <div class="popup" id="popup">
-    <img src="./logo images/ev_popup.jpg">
-    <h2>Thank You!</h2>
-    <p>Your transaction is now complete. Est. Delivery 7-10 days. Thanks!</p>
-    <button type="button" onclick="closePopup()">Ok</button> 
-  </div>
+  <!-- <div class="pop-row row">
+    <div class="pop-col col-md-12"> -->
+      <button type="submit" class="pop-btn" onclick="openPopup()">Place Order</button>
+      <div class="popup" id="popup">
+        <img src="./logo images/ev_popup.jpg">
+        <h2>Thank You!</h2>
+        <p>Your transaction is now complete. Est. Delivery 7-10 days. Thanks!</p>
+        <button type="button" onclick="closePopup()">Ok</button> 
+      </div>
+    <!-- </div>
+  </div> -->
 </div>
 
   <!-- pagination ############################## -->
