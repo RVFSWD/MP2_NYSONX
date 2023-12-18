@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="admin1.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Admin</title>
+
+</head>
+<body>
+          <!-- Header -->
+    <div class="grid-container">
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+              <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-right">
+                <div style="position: relative; display: inline-block;">
+                    <img src="./logo images/profile.jpg" style="width: 50px; height: 50px; border-radius: 80px;" alt="logo">
+                    <span style="position: absolute; right: 0; bottom: 0; background-color: limegreen; border-radius: 50%; width: 15px; height: 15px; border: 2px solid white;"></span>
+                </div>
+                <span style="margin-left: 10px; color: #000;">Jade Tindoy</span>
+            </div>
+        </header>
+          <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="./logo images/NYSONX_logo2.png" style="width: 200px; height: auto;" alt="logo">
+            </div>
+            <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <a href="./admin/admindashboard.html" class="list-group-item list-group-item-action active" aria-current="true">
+                    <i class="bi bi-person"></i> &nbsp; Account
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/update.html" class="list-group-item">
+                    <i class="bi bi-bell-fill"></i> &nbsp; Update
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/insight.html" class="list-group-item">
+                    <i class="bi bi-graph-up"></i> &nbsp; Insight
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/reports.html" class="list-group-item">
+                    <i class="bi bi-flag"></i> &nbsp; Reports
+                    <span class="position-absolute top-23 start-102 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/orders.html" class="list-group-item">
+                    <i class="bi bi-cart"></i> &nbsp; Orders
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/Request.html" class="list-group-item">
+                    <i class="bi bi-person-workspace"></i> &nbsp; Request
+                </a>
+            </li>
+            <div class="settings">
+                <h5>Settings</h5>
+            </div>
+            <li class="sidebar-list-item">
+                <a href="#" class="list-group-item sets">
+                    <i class="bi bi-gear-fill"></i> &nbsp; Settings
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./login.html" class="list-group-item sets">
+                    <i class="bi bi-box-arrow-right"></i> &nbsp; Log out
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main class="main-container">
+        <div class="main-title">
+            <h2>Request</h2>
+          </div>   
+          <div class="col-md">
+            <div class="search">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+        <div class="main-cards">
+            <div class="row">
+                <!-- Inbox list -->
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <ul class="list-group">
+                        <li class="list-group-item" onclick="displayMessage('Message 1', 'Full content of message 1...')">
+                            <h5>Justin Ong</h5>
+                            <p>The documents will be send to you to night</p>
+                        </li>
+                        <li class="list-group-item" onclick="displayMessage('Message 2', 'Full content of message 2...')">
+                            <h5>Message 2</h5>
+                            <p>Excerpt from message 2...</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Message display -->
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function displayMessage(title, content) {
+                // Get the card title and text elements
+                var cardTitle = document.querySelector('.card-title');
+                var cardText = document.querySelector('.card-text');
+
+                // Set the card title and text to the title and full content of the message
+                cardTitle.textContent = title;
+                cardText.textContent = content;
+            }
+        </script>
+</body>
+</html>

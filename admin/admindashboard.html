@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="admin1.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Admin</title>
+
+    <style>
+      .card {
+        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+        color: #000; /* Black text */
+      }
+     .card-body .add-task {
+        margin-left: 70%;
+        background-color: #000;
+        color: #fff;
+        border-radius: 05px;
+        border: none;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .card-body .add-task:hover {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+      }
+
+    </style>
+</head>
+<body>
+          <!-- Header -->
+    <div class="grid-container">
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+              <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-right">
+                <div style="position: relative; display: inline-block;">
+                    <img src="./logo images/profile.jpg" style="width: 50px; height: 50px; border-radius: 80px;" alt="logo">
+                    <span style="position: absolute; right: 0; bottom: 0; background-color: limegreen; border-radius: 50%; width: 15px; height: 15px; border: 2px solid white;"></span>
+                </div>
+                <span style="margin-left: 10px; color: #000;">  <h4>
+                  <script>
+                      document.write(localStorage.getItem('name'));
+                  </script>
+              </h4></span>
+            </div>
+        </header>
+          <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="./logo images/NYSONX_logo2.png" style="width: 200px; height: auto;" alt="logo">
+            </div>
+            <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <a href="./admin/admindashboard.html" class="list-group-item list-group-item-action active" aria-current="true">
+                    <i class="bi bi-person"></i> &nbsp; Account
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/update.html" class="list-group-item">
+                    <i class="bi bi-bell-fill"></i> &nbsp; Update
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/insight.html" class="list-group-item">
+                    <i class="bi bi-graph-up"></i> &nbsp; Insight
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/reports.html" class="list-group-item">
+                    <i class="bi bi-flag"></i> &nbsp; Reports
+                    <span class="position-absolute top-23 start-102 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/orders.html" class="list-group-item">
+                    <i class="bi bi-cart"></i> &nbsp; Orders
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./admin/Request.html" class="list-group-item">
+                    <i class="bi bi-person-workspace"></i> &nbsp; Request
+                </a>
+            </li>
+            <div class="settings">
+                <h5>Settings</h5>
+            </div>
+            <li class="sidebar-list-item">
+                <a href="#" class="list-group-item sets">
+                    <i class="bi bi-gear-fill"></i> &nbsp; Settings
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="./login.html" class="list-group-item sets">
+                    <i class="bi bi-box-arrow-right"></i> &nbsp; Log out
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+          <!-- Main -->
+    <main class="main-container">
+            <div class="main-title">
+              <h2>DASHBOARD</h2>
+            </div>
+        <section class="main-cards">
+            <div class="card-body trees">
+                <h5 class="card-title">NYSONX GREEN PROJECT</h5>
+                <p class="card-text">Every month, we do tree planting.</p>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+              </div>
+        </section class="main-cards2">
+        <div class="row sectionary">
+            <div class="col-sm-4 mb-3 mb-sm-0">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="prog4-container col-md-6">
+                      <div class="Employees">
+                        <canvas id="Employees" width="160" height="125"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+        <section class="orderssummary" style=" margin-top: 20px;">
+          <div class="row">
+              <div class="col-sm-8 mb-3 mb-sm-0">
+                <div class="card">
+                  <div class="card-body">
+
+                    <table class="table align-middle mb-0">
+                      <thead class="bg-light">
+                        <tr>
+                          <th>Products</th>
+                          <th>Name</th>
+                          <th>Status</th>
+                          <th>Payments</th>
+                        </tr>
+                      </thead>
+                        <tbody>
+                          <tr class="order1">
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                    src="./4.png"
+                                    alt=""
+                                    style="width: 45px; height: 45px"
+                                    class="rounded-circle"
+                                    />
+                                <div class="ms-3">
+                                  <p class="fw-bold mb-1">Tesla</p>
+                                  <p class="text-muted mb-0">Model S</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="fw-normal mb-1">Micheal Lopez</p>
+                              <p class="text-muted mb-0">m.lopez@gmail.com</p>
+                            </td>
+                            <td>
+                              <span class="badge bg-danger">Need Replacement</span>
+                            </td>
+                            <td id="status-payments">Paid</td>
+                          </tr>
+                          <tr class="order2">
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                    src="./3.png"
+                                    class="rounded-circle"
+                                    alt=""
+                                    style="width: 45px; height: 45px"
+                                    />
+                                <div class="ms-3">
+                                  <p class="fw-bold mb-1">Rivian sample</p>
+                                  <p class="text-muted mb-0">R1t</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="fw-normal mb-1">Alvin Magno</p>
+                              <p class="text-muted mb-0">magno.a@outlook.com</p>
+                            </td>
+                            <td>
+                              <span class="badge bg-success">Shipped</span>
+                                
+                            </td>
+                            <td id="status-payments">Partially Paid</td>
+                          </tr>
+                          <tr class="order3">
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                    src="./2.png"
+                                    class="rounded-circle"
+                                    alt=""
+                                    style="width: 45px; height: 45px"
+                                    />
+                                <div class="ms-3">
+                                  <p class="fw-bold mb-1">Lucid</p>
+                                  <p class="text-muted mb-0">Air</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="fw-normal mb-1">Justin Ray Aroyo</p>
+                              <p class="text-muted mb-0">justinaroyo@yahoo.com</p>
+                            </td>
+                            <td>
+                              <span class="badge bg-primary">Awaiting</span>
+                            </td>
+                            <td id="status-payments">Paid</td>
+                          </tr>
+                          <tr class="order4">
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                    src="./4.png"
+                                    alt=""
+                                    style="width: 45px; height: 45px"
+                                    class="rounded-circle"
+                                    />
+                                <div class="ms-3">
+                                  <p class="fw-bold mb-1">Tesla</p>
+                                  <p class="text-muted mb-0">Model S</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="fw-normal mb-1">Micheal Lopez</p>
+                              <p class="text-muted mb-0">m.lopez@gmail.com</p>
+                            </td>
+                            <td>
+                              <span class="badge bg-danger">Need Replacement</span>
+                            </td>
+                            <td id="status-payments">Paid</td>
+                          </tr>
+
+                        </tbody>
+
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <tr class="card-title">Task List</tr>
+                      <button type="submit" class="btn add-task" data-bs-toggle="modal" data-bs-target="#add-taskmod">Add</button>
+                      <!-- Modal -->
+                              <div class="modal fade" id="add-taskmod" tabindex="-1" aria-labelledby="add-taskmod" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="add-task">Add Task</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form>
+                                        <select class="form-select" aria-label="Default select example">
+                                          <option selected>Type</option>
+                                          <option value="1">Reports</option>
+                                          <option value="2">Orders</option>
+                                          <option value="3">others</option>
+                                        </select>
+                                        <div class="mb-3">
+                                          <label for="recipient-name" class="col-form-label">Head:</label>
+                                          <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="message-text" class="col-form-label">Task:</label>
+                                          <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                      </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Add</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                      <div class="card text-bg-light  mb-0" style="max-width: 28rem;" id="card-task">
+                        <td class="card-header">Reports</td>
+                        <div class="card-body">
+                          <td class="card-title">Check Reports</td>
+                          <td class="card-text">Check all the reports and finished withen a day</td>
+                          <br>
+                          <div>
+                            <a id="comple-task" class="btn btn-primary">Complete Task</a>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <br>
+                      <div class="card text-bg-light mb-0" style="max-width: 28rem;" id="card-task">
+                        <td class="card-header">Orders</td>
+                        <div class="card-body">
+                          <td class="card-title">Pending Orders</td>
+                          <td class="card-text">
+                            Prioritize, communicate, follow up, document, track, update, resolve promptly, escalate if needed.w</td>
+                            <br>
+                            <div>
+                              <a id="comple-task" class="btn btn-primary">Complete Task</a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </section>
+    </main>
+    
+    </div>
+    <script src="dashboard.js">
+      var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+  return new bootstrap.Dropdown(dropdownToggleEl)
+})
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  $(document).on("click", "#add-newtask", function () {
+    var empty = false;
+    var input = $("#add-taskmod input, #add-taskmod textarea, #add-taskmod select");
+    input.each(function () {
+        if (!$(this).val()) {
+            $(this).addClass("error");
+            empty = true;
+        } else {
+            $(this).removeClass("error");
+        }
+    });
+
+    if (!empty) {
+        var cardType = $("#add-taskmod select").val();
+        var cardName = $("#add-taskmod #recipient-name").val();
+        var cardDescription = $("#add-taskmod #message-text").val();
+
+        var cardHtml = '<div class="card text-bg-light mb-0" style="max-width: 28rem;">' +
+            '<div class="card-header">' + cardType + '</div>' +
+            '<div class="card-body">' +
+            '<div class="card-title">' + cardName + '</div>' +
+            '<div class="card-text">' + cardDescription + '</div>' +
+            '<div><a class="btn btn-primary complete-task">Complete Task</a></div>' +
+            '</div>' +
+            '</div>';
+
+        $(".card-body").eq(0).append(cardHtml);
+
+        // Clear form inputs
+        $("#add-taskmod input, #add-taskmod textarea").val("");
+        $("#add-taskmod select").val("Type");
+
+        // Close the modal
+        $("#add-taskmod").modal("hide");
+    }
+});
+
+
+const ctx2 = document.getElementById('Employees');
+new Chart(ctx2, {
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+            label: 'Number of Employees',
+            data: [50, 55, 60, 58, 63, 65],
+            borderWidth: 1,
+            borderColor: 'blue',
+            backgroundColor: 'rgba(0, 0, 255, 0.2)'
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+
+</script>
+
+    </script>
+    <!-- JavaScript Bundle with Popper for Bootstrap 5 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</html>
