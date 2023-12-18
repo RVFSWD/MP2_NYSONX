@@ -72,6 +72,14 @@ let products = [
 
 let listCards = [];
 function initApp(){
+
+    // Check for existing cart data in local storage ##################
+    const savedCartData = JSON.parse(localStorage.getItem("cartData"));
+     if (savedCartData) {
+    listCards = savedCartData;
+    } else {
+
+
     products.forEach((value, key)=>{
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
@@ -84,6 +92,12 @@ function initApp(){
         list.appendChild(newDiv);
     })
 }
+
+} // ###################################################
+
+reloadCard(); // ######################################
+
+
 initApp();
 
 function addToCard(key){
@@ -92,6 +106,11 @@ function addToCard(key){
         listCards[key].quantity = 1; 
     }
     reloadCard();
+
+// Save updated cart data to local storage ####################
+
+    localStorage.setItem("cartData", JSON.stringify(listCards));
+
 }
 function reloadCard(){
     listCard.innerHTML = '';
@@ -130,5 +149,56 @@ function changeQuantity(key, quantity){
         listCards[key].price = quantity * products[key].price;
     }
     reloadCard();
+
+    // Save updated cart data to local storage ##########################
+    localStorage.setItem("cartData", JSON.stringify(listCards));
+
 }
+
+
+// sample proceed to check out btn ###################################
+
+// Add Proceed to Checkout button
+let checkoutButton = document.createElement('button');
+checkoutButton.innerText = 'Proceed to Checkout';
+checkoutButton.addEventListener('click', () => {
+    // Add any additional logic for checkout if needed
+    alert('Proceeding to Checkout!');
+});
+
+// Append the Checkout button to the body
+body.appendChild(checkoutButton);
+
+
+// emialer #########################
+
+
+function saveEmail() {
+      
+    var emailInput = document.getElementById('email');
+    var email = emailInput.value;
+
+   
+    if (email.trim() !== "") {
+      
+      localStorage.setItem('userEmail', email);
+
+      
+      alert('Email saved successfully!');
+      
+      
+      emailInput.value = "";
+    } else {
+      alert('Please enter a valid email address.');
+    }
+  }
+
+
+
+
+
+
+
+
+
 
