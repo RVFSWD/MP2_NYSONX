@@ -6,8 +6,542 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./order_tms.css">
+    <!-- <link rel="stylesheet" href="./order_tms.css"> -->
     <title>NYSONX | Welcome</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-weight: 800;
+}
+
+p {
+    font-weight: 500;
+}
+
+body {
+    background-color: #fff;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* navbar  */
+
+.navbar-nav a {
+    margin-right: 30px;
+    color: black;
+    font-size: 17px;
+}
+
+.navbar-nav .join-button a {
+    padding-top: 2px;
+}
+
+/* tesla-navtab ################################# */
+
+.tesla-tab {
+    font-weight: 700;
+    font-family: sans-serif;
+    margin: 8px 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;   
+}
+
+.tesla-tab a {
+    /* background-color: #f5f5f5; */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.circle-1 h4 {
+    color: #212529;
+    background-color: #198754;
+    font-size: 20px;
+    border: 3px solid #212529;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-2 h4 {
+    color: #212529;
+    font-size: 20px;
+    border: 3px solid #212529;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-3 h4 {
+    color: #212529;
+    font-size: 20px;
+    border: 3px solid #212529;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* NEW order section ####################################### */
+
+.order-model {
+    color: black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.order-motor h4 {
+    color: black;
+    font-size: 20px; 
+    margin: 20px 0px;
+}
+
+.btn-variant {
+    margin: 5px auto;
+    width: 100%;
+}
+
+/* paint ###################### */
+
+.paint-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.paint-group h4 {
+    color: black;
+    font-size: 17px;
+    margin: 0px 10px;
+}
+
+.paint-order h4 {
+    color: black;
+    font-size: 20px; 
+    margin: 20px 0px;
+}
+
+.paint-colors {
+    margin: 5px 10px;
+}
+
+.btn-red {
+    border: 1px solid black;
+    border-radius: 5000px;
+    background-color: #9f090d;
+    height: 25px;
+    width: 25px;
+}
+
+.btn-blue {
+    border: 1px solid black;
+    border-radius: 5000px;
+    background-color: #193f90;
+    height: 25px;
+    width: 25px;
+}
+
+.btn-black {
+    border: 1px solid black;
+    border-radius: 5000px;
+    background-color: #030305;
+    height: 25px;
+    width: 25px;
+}
+
+.btn-white {
+    border: 1px solid black;
+    border-radius: 5000px;
+    background-color: #e5e5e5;
+    height: 25px;
+    width: 25px;
+}
+
+.btn-gray {
+    border: 1px solid black;
+    border-radius: 5000px;
+    background-color: #3b3c46;
+    height: 25px;
+    width: 25px;
+}
+
+/* interior ##################### */
+
+.interior-design {
+    margin-top: 80px;
+}
+
+.interior-order {
+    /* color: black;
+    font-size: 20px; */
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.interior-order h4 {
+    color: black;
+    font-size: 20px; 
+    margin: 20px 0px;
+}
+
+.btn-cream-interior {
+    border: 1px solid black;
+    border-radius: 5000px;
+    background-color: #eae1d3;
+    height: 25px;
+    width: 25px;
+}
+
+.btn-black-interior {
+    border: 1px solid black;
+    border-radius: 5000px;
+    background-color: black;
+    height: 25px;
+    width: 25px;
+}
+
+.btn-white-interior {
+    border: 1px solid black;
+    border-radius: 5000px;
+    background-color: #e2e2e2;
+    height: 25px;
+    width: 25px;
+}
+
+.interior-group h4 {
+    color: black;
+    font-size: 20px;
+    margin: 0px 10px 20px;
+}
+
+.interior-colors h4 {
+    color: black;
+    font-size: 17px;
+}
+
+.interior-group {
+    margin-bottom: 80px;
+}
+
+.interior-colors {
+    margin: 5px 10px;
+}
+
+/* wheels ###################### */
+
+.wheels-design {
+    margin-top: 80px;
+}
+
+.wheels-order {
+    /* color: black;
+    font-size: 20px; */
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.wheels-order h4 {
+    color: black;
+    font-size: 20px; 
+    margin: 20px 0px;
+}
+
+.btn-silver-wheels {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: silver;
+    height: 35px;
+    width: 100%;
+}
+
+.btn-black-wheels {
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #fff;
+    background-color: black;
+    height: 35px;
+    width: 100%;
+}
+
+.wheels-group h4 {
+    color: black;
+    font-size: 20px;
+    margin: 0px 10px 20px;
+}
+
+.wheels-colors h4 {
+    color: black;
+    font-size: 17px;
+}
+
+.wheels-group {
+    margin-bottom: 80px;
+}
+
+.wheels-colors {
+    margin: 5px 10px;
+}
+
+/* pagination ####################################### */
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.pagination li a {
+    color: black;
+}
+
+
+
+
+
+/* payment-section ####################################### */
+
+.c-btn {
+    color: black;
+    width: 100%;
+    font-size: 20px;
+}
+
+.hr {
+    width: 50%;
+}
+
+.payment-section {
+    background-color: #f5f5f5;
+    padding: 40px 25px;
+}
+
+.payment-col h4 {
+    font-size: 20px;
+    color: black;
+    margin: 5px;
+}
+
+.payment-col h5 {
+    font-size: 17px;
+    margin: 5px;
+}
+
+/* account-section ####################################### */
+
+a {
+    text-decoration: none;
+}
+
+.form-col {
+    /* margin: 5px; */
+    padding: 10px 20px;
+}
+
+.account-container {
+    margin: 50px auto;
+    max-width: 1300px;
+    /* background-color: #f5f5f5; */
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.form-box {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+.form-box h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 35px;
+}
+
+.form-box h3 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.form-box .form-group {
+    margin-top: 15px;
+}
+
+.form-box .form-group label {
+    display: block;
+    color: #666;
+}
+
+.form-box .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+}
+
+.form-box button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    /* background: #212529; */
+    color: black;
+    cursor: pointer;
+}
+
+.form-box button:hover {
+    background: green;
+}
+
+.form-box .bottom-text {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+.form-box .form-wrap {
+    margin-top: 15px;
+}
+
+.form-box .form-wrap input {
+    padding: 10px;
+}
+
+.card-button {
+    margin-top: 70px;
+}
+
+/* emailer ########################### */
+
+.emailer-container {
+    background-color: #212529;
+    padding: 20px 25px 20px 25px;
+}
+
+.emailer-col h1 {
+    font-size: 35px;
+    font-family: sans-serif;
+    color: #fff;
+    margin: 20px 50px;
+    text-align: center;
+}
+
+.box-col input { 
+    width: 100%;
+    margin: 30px 5px;
+}
+
+.emailer-btn button {
+    width: 50%;
+    margin: 30px 5px;
+}
+
+/* footer #################### */  
+
+.followus-col ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.followus-col ul i {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    /* margin-right: 100px; */
+    margin: 5px 20px;
+}
+
+/* .followus-col a {
+    margin-right: 0px;
+} */
+
+.followus-col hr {
+    width: 100%;
+}
+
+.footer h3 {
+    font-size: 25px;
+}
+
+.footer h2 {
+    font-size: 17px;
+    color: black;
+}
+
+.footer ul a {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.footer ul i:hover {
+    color: #17b890;
+  }
+
+.footer ul, p {
+    font-size: 10px;
+}
+
+.footer .copyright-container p {
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-row .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+              
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .footer-row .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+              
+    }
+}
+
+</style>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
@@ -111,13 +645,13 @@
           <a class="nav-link active text-black" aria-current="page" href="./order_tms_01.html">Design</a>
         </li>
         <li class="tesla-tab nav-item">
-          <div class="circle-1">
+          <div class="circle-2">
             <h4>2</h4>
           </div>
           <a class="nav-link text-black" href="./order_tms_02.html">Payment</a>
         </li>
         <li class="tesla-tab nav-item">
-          <div class="circle-1">
+          <div class="circle-3">
             <h4>3</h4>
           </div>
           <a class="nav-link text-black" href="./order_tms_03.html">Account</a>
@@ -126,140 +660,6 @@
     </div>
   </div>
 </div>   
-
-<!-- order section  ####################-->   
-
-<!-- <div class="order-header">      
-<div class="order-container container">
-<div class="order-box row"> -->
-
-  <!-- dropdown ########################### -->
-  <!-- models ############################# -->
-
-  <!-- <div class="order-col col-md-4 ">
-    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-    
-      <div class="btn-group" role="group">
-        <button type="button" class="model-btn btn btn-outline-dark dropdown-toggle btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
-          Models
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Nysonx Brand</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#" onclick="changeImage('modelSblack.png', 'Model S - $71,090*')">Tesla Model S</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#" onclick="changeImage('modelxred.png', 'Model X - $68,590*')">Tesla Model X</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#" onclick="changeImage('model3blue.png', 'Model 3 - $71,090*')">Tesla Model 3</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#" onclick="changeImage('rivianr1t_01_v2.png', 'Rivian R1T - $71,090*')">Rivian R1T</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#" onclick="changeImage('rivianr1s_05_v2.png', 'Rivian R1S - $71,090*')">Rivian R1S</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#" onclick="changeImage('lucidair_silver_01_v2.png', 'Lucid Air - $71,090*')">Lucid Air</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#" onclick="changeImage('lucidgravity_silver_01_v2.png', 'Lucid Gravity - $71,090*')">Lucid Gravity</a></li>
-        </ul>
-      </div>
-    </div> -->
-
-      <!-- event1 ###############################################  -->
-
-      <!-- <div class="motor-col col-md-12">
-        <h3>Dual Motor All-Wheel Drive</h3>
-        <h4 id="event1">EVs</h4>
-      </div> -->
-
-      <!-- paint-section ###################################### -->
-
-      <!-- <div class="paint-col col-md-12">
-        <h3>Paint</h3>
-        <ul class="list-unstyled">
-          <li>
-            <a href="" onclick="changeImage('tms_color_black_01_v2.png', 'Model S - $71,090*')"><img class="img-paint mt-0" src="./Mcolors/tms_paint_black_01.png" alt="" width="100" height="60"/></a>
-          </li>
-          <li>
-            <a href="" onclick="changeImage('tms_color_white_01_v2.png', 'Model S - $71,090*')"><img class="img-paint mt-0" src="./Mcolors/tms_paint_white_01.png" alt="" width="100" height="60"/></a>
-          </li>
-          <li>
-            <a href="" onclick="changeImage('tms_color_red_01_v2.png', 'Model S - $71,090*')"><img class="img-paint mt-0" src="./Mcolors/tms_paint_red_01.png" alt="" width="100" height="60"/></a>
-          </li>
-        </ul>
-      </div>
-      <div class="paint-col col-md-12">
-        <ul class="list-unstyled">
-          <li>
-            <a href="" onclick="changeToNewImage()"><img class="img-paint mt-0" src="./Mcolors/tms_paint_blue_01.png" alt="" width="100" height="60"/></a>
-          </li>
-          <li>
-            <a href="" onclick="changeToNewImage()"><img class="img-paint mt-0" src="./Mcolors/tms_paint_gray_01.png" alt="" width="100" height="60"/></a>
-          </li>
-        </ul>
-      </div> -->
-
-      <!-- interior #####################################  -->
-
-      <!-- <div class="interior-col col-md-12">
-        <h3>Interior</h3>
-        <ul class="list-unstyled">
-          <li>
-            <a href=""><img class="img-paint mt-0" src="./Mcolors/tms_interior_walnut_01_v2.png" alt="" width="180" height="100"/></a>
-          </li>
-          <li>
-            <a href=""><img class="img-paint mt-0" src="./Mcolors/tms_interior_blacknwhite_01_v2.png" alt="" width="180" height="100"/></a>
-          </li>
-        </ul>
-      </div> -->
-
-      <!-- wheels ############################################  -->
-
-      <!-- <div class="wheels-col col-md-12">
-        <h3>Wheels</h3>
-        <ul class="list-unstyled">
-          <li>
-            <a href=""><img class="img-paint mt-0" src="./Mcolors/tms_wheels_arachnid_01_v2.png" alt="" width="180" height="100"/></a>
-          </li>
-          <li>
-            <a href=""><img class="img-paint mt-0" src="./Mcolors/tms_wheels_tempest_01_v2.png" alt="" width="180" height="100"/></a>
-          </li>
-        </ul>
-      </div>
-      <h4>Est. Delivery: Dec 2023 - Jan 2024</h4>
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-12">
-          <label for="validationCustom01" class="form-label">Enter delivery ZIP code</label>
-          <input type="text" class="form-control" id="validationCustom01" value="" required>
-          <div class="invalid-feedback">
-          Please provide your Zip Code.
-          </div>
-        </div>
-        <div class="btn-col col-12">
-          <button class="btn-col btn btn-outline-success" type="submit">Confirm</button>
-        </div>
-      </form>
-  </div>
-  <div class="order-col col-md-8">
-    <div id="list-example" class="list-group">
-    <img id="carImage" src="./Models images/modelSblack.png" class="rounded mx-auto d-block w-100" alt="" /></a>
-    </div>
-  </div>
-</div>
-</div>
-</div> -->
 
 <!-- NEW order section ########################### -->
 
