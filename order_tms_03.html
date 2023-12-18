@@ -101,6 +101,16 @@
           justify-content: center;
           align-items: center;
       }
+
+      /* .tab-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin: 40px 30px;
+          border-radius: 5px;
+          font-size: 20px;
+      } */
       
       
       /* NEW order section ####################################### */
@@ -367,8 +377,8 @@
       }
       
       .account-container {
-          margin: 50px auto;
-          max-width: 1300px;
+          margin: 50px auto 5px;
+          max-width: 800px;
           /* background-color: #f5f5f5; */
           padding: 20px 30px;
           border-radius: 5px;
@@ -419,7 +429,7 @@
       }
       
       .form-box button:hover {
-          background: green;
+          background: #198754;
       }
       
       .form-box .bottom-text {
@@ -460,9 +470,10 @@
     border: 0;
     outline: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     border-radius: 5px;
+    width: 53%;
 }
 
 .popup {
@@ -484,7 +495,7 @@
 
 .open-popup {
     visibility: visible;
-    top: 100%;
+    top: 165%;
     transform: translate(-50%, -50%) scale(1);
 }
 
@@ -738,7 +749,7 @@
         </li>
         <li class="tesla-tab nav-item">
           <div class="circle-3">
-            <h4>3</h4>
+            <h4><i class="fa-solid fa-arrow-right"></i></h4>
           </div>
           <a class="nav-link text-black" href="./order_tms_03.html">Account</a>
         </li>
@@ -751,7 +762,7 @@
 
 <div class="account-container container">
     <div class="form-box row">
-      <div class="form-col col-md-5 gy-5">  
+      <div class="form-col col-md-12">  
       <h3>Enter Account Details</h3>
       <form class="row g-3 needs-validation" novalidate onsubmit="saveAccountDetails(event)">
         <div class="col-md-12">
@@ -782,11 +793,11 @@
             </div> -->
         </div>
         <div class="col-md-12">
-            <label for="validationCustom02" class="form-label">Confirm Email</label>
+            <label for="validationCustom02" class="form-label">Contact Number</label>
 
-            <input type="email" id="email" required  class="form-control" placeholder="rmv@example.com" value="" required>
+            <input type="number"  required  class="form-control"  value="" required>
             <div class="invalid-feedback">
-            Please confirm email.
+            Please confirm number.
             </div>
 
             <!-- <input type="email" class="form-control" id="validationCustom02" value="" required>
@@ -801,22 +812,22 @@
                 Please Confirm zip code.
             </div>
         </div>
-        <div class="col-12">
+        <!-- <div class="col-12">
             <button class="btn btn-outline-dark" type="submit">Confirm</button>
-        </div>
-        </form>
-        </div>
+        </div> -->
+        <!-- </form>
+        </div> -->
 
         <!-- middle col ######## -->
 
-        <div class="form-col col-md-2 gy-5">
+        <!-- <div class="form-col col-md-2 gy-5">
             <h4></h4>
-        </div>
+        </div> -->
 
         <!-- card #################################### -->
 
-        <div class="form-col col-md-5 gy-5">
-        <form class="row g-3 needs-validation" novalidate onsubmit="saveAccountDetails(event)">
+        <!-- <div class="form-col col-md-5 gy-5">
+        <form class="row g-3 needs-validation" novalidate onsubmit="saveAccountDetails(event)"> -->
             <h3>Card</h3>
             <div class="col-md-12">
                 <img class="img-fluid pt-3 pb-3" style="width: 350px;" height="200px" src="./logo images/payment.png" alt="">
