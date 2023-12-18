@@ -125,7 +125,17 @@
         <img src="./User dashboard images/Prof1.jpg" class="img-fluid" style="width: 350px;" height="100px" alt="my image">
       </div> -->
       <i class="fa-regular fa-user"></i>
-      <h4>My Dashboard</h4>
+      <h3>Welcome</h3>
+            <h4>
+                <script>
+                    document.write(localStorage.getItem('name'));
+                </script>
+            </h4>
+            <h6> Your Email is:
+                <script>
+                    document.write(localStorage.getItem('email'));
+                </script>
+            </h6>
         <ul class="nav flex-column">
           <!-- <li class="nav-item">
             <i class="fa-regular fa-user"></i>
