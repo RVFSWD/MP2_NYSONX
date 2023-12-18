@@ -6,8 +6,628 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./order_tms.css">
+    <!-- <link rel="stylesheet" href="./order_tms.css"> -->
     <title>NYSONX | Welcome</title>
+
+    <style>
+
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          
+      }
+      
+      h1 {
+          font-weight: 800;
+      }
+      
+      p {
+          font-weight: 500;
+      }
+      
+      body {
+          background-color: #fff;
+          color: black;
+          font-family: sans-serif;
+      }
+      
+      /* navbar  */
+      
+      .navbar-nav a {
+          margin-right: 30px;
+          color: black;
+          font-size: 17px;
+      }
+      
+      .navbar-nav .join-button a {
+          padding-top: 2px;
+      }
+      
+      /* tesla-navtab ################################# */
+      
+      .tesla-tab {
+          font-weight: 700;
+          font-family: sans-serif;
+          margin: 8px 30px;
+          border-radius: 5px;
+          font-size: 20px;
+          margin-bottom: 1px;
+          padding-bottom: 1px;   
+      }
+      
+      .tesla-tab a {
+          /* background-color: #f5f5f5; */
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+      }
+      
+      .circle-1 h4 {
+          color: #212529;
+          font-size: 20px;
+          border: 3px solid #212529;
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .circle-2 h4 {
+          color: #212529;
+          font-size: 20px;
+          border: 3px solid #212529;
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .circle-3 h4 {
+          color: #212529;
+          background-color: #198754;
+          font-size: 20px;
+          border: 3px solid #212529;
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      
+      /* NEW order section ####################################### */
+      
+      .order-model {
+          color: black;
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+      }
+      
+      .order-motor h4 {
+          color: black;
+          font-size: 20px; 
+          margin: 20px 0px;
+      }
+      
+      .btn-variant {
+          margin: 5px auto;
+          width: 100%;
+      }
+      
+      /* paint ###################### */
+      
+      .paint-group {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          width: 100%;
+          margin: 5px 0px;
+      }
+      
+      .paint-group h4 {
+          color: black;
+          font-size: 17px;
+          margin: 0px 10px;
+      }
+      
+      .paint-order h4 {
+          color: black;
+          font-size: 20px; 
+          margin: 20px 0px;
+      }
+      
+      .paint-colors {
+          margin: 5px 10px;
+      }
+      
+      .btn-red {
+          border: 1px solid black;
+          border-radius: 5000px;
+          background-color: #9f090d;
+          height: 25px;
+          width: 25px;
+      }
+      
+      .btn-blue {
+          border: 1px solid black;
+          border-radius: 5000px;
+          background-color: #193f90;
+          height: 25px;
+          width: 25px;
+      }
+      
+      .btn-black {
+          border: 1px solid black;
+          border-radius: 5000px;
+          background-color: #030305;
+          height: 25px;
+          width: 25px;
+      }
+      
+      .btn-white {
+          border: 1px solid black;
+          border-radius: 5000px;
+          background-color: #e5e5e5;
+          height: 25px;
+          width: 25px;
+      }
+      
+      .btn-gray {
+          border: 1px solid black;
+          border-radius: 5000px;
+          background-color: #3b3c46;
+          height: 25px;
+          width: 25px;
+      }
+      
+      /* interior ##################### */
+      
+      .interior-design {
+          margin-top: 80px;
+      }
+      
+      .interior-order {
+          /* color: black;
+          font-size: 20px; */
+          margin-top: 100px;
+          margin-bottom: 30px;
+      }
+      
+      .interior-order h4 {
+          color: black;
+          font-size: 20px; 
+          margin: 20px 0px;
+      }
+      
+      .btn-cream-interior {
+          border: 1px solid black;
+          border-radius: 5000px;
+          background-color: #eae1d3;
+          height: 25px;
+          width: 25px;
+      }
+      
+      .btn-black-interior {
+          border: 1px solid black;
+          border-radius: 5000px;
+          background-color: black;
+          height: 25px;
+          width: 25px;
+      }
+      
+      .btn-white-interior {
+          border: 1px solid black;
+          border-radius: 5000px;
+          background-color: #e2e2e2;
+          height: 25px;
+          width: 25px;
+      }
+      
+      .interior-group h4 {
+          color: black;
+          font-size: 20px;
+          margin: 0px 10px 20px;
+      }
+      
+      .interior-colors h4 {
+          color: black;
+          font-size: 17px;
+      }
+      
+      .interior-group {
+          margin-bottom: 80px;
+      }
+      
+      .interior-colors {
+          margin: 5px 10px;
+      }
+      
+      /* wheels ###################### */
+      
+      .wheels-design {
+          margin-top: 80px;
+      }
+      
+      .wheels-order {
+          /* color: black;
+          font-size: 20px; */
+          margin-top: 100px;
+          margin-bottom: 30px;
+      }
+      
+      .wheels-order h4 {
+          color: black;
+          font-size: 20px; 
+          margin: 20px 0px;
+      }
+      
+      .btn-silver-wheels {
+          border: 1px solid black;
+          border-radius: 5px;
+          background-color: silver;
+          height: 35px;
+          width: 100%;
+      }
+      
+      .btn-black-wheels {
+          border: 1px solid black;
+          border-radius: 5px;
+          color: #fff;
+          background-color: black;
+          height: 35px;
+          width: 100%;
+      }
+      
+      .wheels-group h4 {
+          color: black;
+          font-size: 20px;
+          margin: 0px 10px 20px;
+      }
+      
+      .wheels-colors h4 {
+          color: black;
+          font-size: 17px;
+      }
+      
+      .wheels-group {
+          margin-bottom: 80px;
+      }
+      
+      .wheels-colors {
+          margin: 5px 10px;
+      }
+      
+      /* pagination ####################################### */
+      
+      .pagination {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-top: 50px;
+          margin-bottom: 100px;
+      }
+      
+      .pagination li a {
+          color: black;
+      }
+      
+      
+      
+      
+      
+      /* payment-section ####################################### */
+      
+      .c-btn {
+          color: black;
+          width: 100%;
+          font-size: 20px;
+      }
+      
+      .hr {
+          width: 50%;
+      }
+      
+      .payment-section {
+          background-color: #f5f5f5;
+          padding: 40px 25px;
+      }
+      
+      .payment-col h4 {
+          font-size: 20px;
+          color: black;
+          margin: 5px;
+      }
+      
+      .payment-col h5 {
+          font-size: 17px;
+          margin: 5px;
+      }
+      
+      /* account-section ####################################### */
+      
+      a {
+          text-decoration: none;
+      }
+      
+      .form-col {
+          /* margin: 5px; */
+          padding: 10px 20px;
+      }
+      
+      .account-container {
+          margin: 50px auto;
+          max-width: 1300px;
+          /* background-color: #f5f5f5; */
+          padding: 20px 30px;
+          border-radius: 5px;
+      }
+      
+      .form-box {
+          background: #fff;
+          color: #333;
+          padding: 20px;
+      }
+      
+      .form-box h1 {
+          text-align: center;
+          font-family: sans-serif;
+          font-size: 35px;
+      }
+      
+      .form-box h3 {
+          text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 20px;
+      }
+      
+      .form-box .form-group {
+          margin-top: 15px;
+      }
+      
+      .form-box .form-group label {
+          display: block;
+          color: #666;
+      }
+      
+      .form-box .form-group input {
+          width: 100%;
+          padding: 10px;
+          border: #ddd 1px solid;
+          border-radius: 5px;
+      }
+      
+      .form-box button {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin-top: 20px;
+          /* background: #212529; */
+          color: black;
+          cursor: pointer;
+      }
+      
+      .form-box button:hover {
+          background: green;
+      }
+      
+      .form-box .bottom-text {
+          font-size: 13px;
+          margin-top: 20px;
+      }
+      
+      
+      .form-box .form-wrap {
+          margin-top: 15px;
+      }
+      
+      .form-box .form-wrap input {
+          padding: 10px;
+      }
+      
+      .card-button {
+          margin-top: 70px;
+      }
+
+/* pop up ######################### #3c5077*/
+
+.container {
+    width: 100%;
+    /* height: 100vh; */
+    background: #fff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-btn {
+    margin-top: 0px;
+    padding: 10px 60px;
+    background: #198754;
+    color: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.popup {
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #212529;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 100%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    /* border-radius: 5000px;
+    height: 100px;
+    width: 100px; */
+    width: 100px;
+    margin-top: -15%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    color: #212529;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 30px 0 10px;
+}
+
+.popup p {
+    color: #212529;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background: #198754;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+      
+      /* emailer ########################### */
+      
+      .emailer-container {
+          background-color: #212529;
+          padding: 20px 25px 20px 25px;
+      }
+      
+      .emailer-col h1 {
+          font-size: 35px;
+          font-family: sans-serif;
+          color: #fff;
+          margin: 20px 50px;
+          text-align: center;
+      }
+      
+      .box-col input { 
+          width: 100%;
+          margin: 30px 5px;
+      }
+      
+      .emailer-btn button {
+          width: 50%;
+          margin: 30px 5px;
+      }
+      
+      /* footer #################### */  
+      
+      .followus-col ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          text-align: center;
+          margin: 20px auto;
+      }
+      
+      .followus-col ul i {
+          color: black;
+          text-decoration: none;
+          font-size: 30px;
+          /* margin-right: 100px; */
+          margin: 5px 20px;
+      }
+      
+      /* .followus-col a {
+          margin-right: 0px;
+      } */
+      
+      .followus-col hr {
+          width: 100%;
+      }
+      
+      .footer h3 {
+          font-size: 25px;
+      }
+      
+      .footer h2 {
+          font-size: 17px;
+          color: black;
+      }
+      
+      .footer ul a {
+          color: black;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+      .footer ul i:hover {
+          color: #17b890;
+        }
+      
+      .footer ul, p {
+          font-size: 10px;
+      }
+      
+      .footer .copyright-container p {
+          font-size: 10px;
+      }
+      
+      @media only screen and (max-width: 768px) {
+          .footer-row .footer-col {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+                    
+          }
+      }
+      
+      @media only screen and (max-width: 991px) {
+          .footer-row .footer-col {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+                    
+          }
+      }
+      
+      </style>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
@@ -111,13 +731,13 @@
           <a class="nav-link active text-black" aria-current="page" href="./order_tms_01.html">Design</a>
         </li>
         <li class="tesla-tab nav-item">
-          <div class="circle-1">
+          <div class="circle-2">
             <h4>2</h4>
           </div>
           <a class="nav-link text-black" href="./order_tms_02.html">Payment</a>
         </li>
         <li class="tesla-tab nav-item">
-          <div class="circle-1">
+          <div class="circle-3">
             <h4>3</h4>
           </div>
           <a class="nav-link text-black" href="./order_tms_03.html">Account</a>
@@ -236,7 +856,7 @@
             </div>
             </div>
             <div class="card-button col-12">
-            <button class="card-btn btn btn-outline-dark" type="submit">Place Order</button>
+            <button class="card-btn btn btn-outline-dark" type="submit">Confirm</button>
             </div>
         </div>
     </form>
@@ -244,6 +864,18 @@
     </div>
     </div>
   </div>
+
+  <!-- pop up section ############################# width="140" height="110"   width="140" height="140"-->
+
+<div class="container">
+  <button type="submit" class="pop-btn" onclick="openPopup()">Place Order</button>
+  <div class="popup" id="popup">
+    <img src="./logo images/ev_popup.jpg">
+    <h2>Thank You!</h2>
+    <p>Your transaction is now complete. Our Sales Team will get back to you soon. Thanks!</p>
+    <button type="button" onclick="closePopup()">Ok</button> 
+  </div>
+</div>
 
   <!-- pagination ############################## -->
 
@@ -409,6 +1041,22 @@ function saveAccountDetails(event) {
   // ... your code after successful saving ...
 }
 
+</script>
+
+<!-- popup ##################################### -->
+
+<script>
+
+  let popup = document.getElementById("popup");
+  
+  function openPopup(){
+    popup.classList.add("open-popup");
+  }
+  
+  function closePopup(){
+    popup.classList.remove("open-popup");
+  }
+  
 </script>
   
   </body>
