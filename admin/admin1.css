@@ -33,7 +33,7 @@ body {
     height: 70px;
     width: 100%;
     display: flex;
-    align-items: center; /* align-items: start; changed to align-items: center; to vertically center the items */
+    align-items: center; 
     justify-content: space-between;
     padding: 0 30px 0 30px;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 .menu-icon {
-    display: none; /* display: none; changed to display: block; to make the menu icon visible */
+    display: none; 
 }
 .material-icons-outlined {
     display: none;;
