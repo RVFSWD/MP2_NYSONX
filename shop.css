@@ -101,7 +101,7 @@ header .shopping span {
 
 .card button {
     color: #fff;
-    background-color: crimson;
+    background-color: #198754;
     width: 200%;
     padding: 5px;
 }
@@ -154,7 +154,7 @@ header .shopping span {
 }
 
 .card .checkout div {
-    background-color: #198754;
+    background-color: #fff;
     width: 100%;
     height: 40px;
     display: flex;
@@ -236,6 +236,57 @@ header .shopping span {
 
 /* checkout ##################### */
 
+a {
+    text-decoration: none;
+}
+
+.form-col {
+    /* margin: 5px; */
+    padding: 10px 20px;
+}
+
+.account-container {
+    margin: 50px auto 5px;
+    max-width: 800px;
+    /* background-color: #f5f5f5; */
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.form-box {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+.form-box h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 35px;
+}
+
+.form-box h3 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.form-box .form-group {
+    margin-top: 15px;
+}
+
+.form-box .form-group label {
+    display: block;
+    color: #666;
+}
+
+.form-box .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+}
+
 .form-box button {
     display: block;
     width: 100%;
@@ -246,10 +297,47 @@ header .shopping span {
     cursor: pointer;
 }
 
+.form-box button:hover {
+    background: #198754;
+}
+
+.form-box .bottom-text {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+.form-box .form-wrap {
+    margin-top: 15px;
+}
+
+.form-box .form-wrap input {
+    padding: 10px;
+}
+
+.card-button {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+/* .form-box button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: black;
+    cursor: pointer;
+}
+
 .card-button button {
     margin-top: 70px;
     width: 100%;
-}
+} */
 
 
 
