@@ -35,6 +35,18 @@ body {
 
 /* carousel  */
 
+.tms-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 50%;
+}
+
+.gs-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 50%;
+}
+
 .carousel::before {
     content: "";
     position: absolute;
@@ -60,6 +72,7 @@ body {
 }
 
 .carousel .carousel-caption h3 {
+    margin-top: 150px;
     font-family: poppins;
     font-size: 75px;
     color: #fff;
@@ -328,7 +341,7 @@ body {
 }
 
 .emailer-btn button {
-    width: 50%;
+    width: 100%;
     margin: 30px 5px;
 }
 
