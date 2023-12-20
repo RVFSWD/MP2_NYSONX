@@ -319,7 +319,7 @@ tbody, td, tfoot, th, thead, tr {
                 </a>
             </li>
             <li class="sidebar-list-item">
-                <a href="./users.html" class="list-group-item">
+                <a href="./update.html" class="list-group-item">
                     <i class="bi bi-bell-fill"></i> &nbsp; Users
                 </a>
             </li>
@@ -334,20 +334,20 @@ tbody, td, tfoot, th, thead, tr {
                 </a>
             </li>
             <div class="settings">
-                <h5>Settings</h5>
+              <h5>Settings</h5>
+          </div>
+          <li class="sidebar-list-item">
+            <div class="dropdown" style="color: aliceblue;">
+              <a class="list-group-item sets dropdown-toggle" href="#" role="button" id="settingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear-fill"></i> &nbsp; Settings
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="settingsDropdown">
+                <li><a class="dropdown-item" href="#">Change Password</a></li>
+                <li><a class="dropdown-item" href="#">Update Email</a></li>
+                <li><a class="dropdown-item" href="#">Disabled</a></li>
+              </ul>
             </div>
-            <li class="sidebar-list-item">
-              <div class="dropdown" style="color: aliceblue;">
-                <a class="list-group-item sets dropdown-toggle" href="#" role="button" id="settingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-gear-fill"></i> &nbsp; Settings
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="settingsDropdown">
-                  <li><a class="dropdown-item" href="#">Change Password</a></li>
-                  <li><a class="dropdown-item" href="#">Update Email</a></li>
-                  <li><a class="dropdown-item" href="#">Disabled</a></li>
-                </ul>
-              </div>
-            </li>
+          </li>
             <li class="sidebar-list-item">
                 <a href="login.html" class="list-group-item sets">
                     <i class="bi bi-box-arrow-right"></i> &nbsp; Log out
@@ -359,54 +359,80 @@ tbody, td, tfoot, th, thead, tr {
 
 <!-- Main -->
 <section class="main">
-    <h1>List of Pending Reports</h1>
+    <h1>Users</h1>
 <!-- updates -->
-
-<section class="recent-updates">
-    <div class="card" style="height: auto; width: 79%;">
-        <div class="card-body r-updates">
-            <div class="row" style="margin-bottom: 20px;">
-                <div class="col-sm-8"><h5 class="card-title r-update">List of Users</h5></div>
+<section>
+    <div class="main-cards card-totals">
+        <div class="card" style="background-color: #0e9d58;">
+            <div class="card-body">
+                <h5 class="card-title">Total Trees Planted</h5>
+                <p class="card-text">12,000</p>
             </div>
-            <div class="mb-3">
-                <input type="text" class="form-control" style=" width: 99.9%;" id="formGroupExampleInput" placeholder="Search">
-              </div>
-            <table class="users">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                                <th>Concern</th>
-                                <th>Edit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jade Tindoy</td>
-                                <td>ade@admin.com</td>
-                                <td>Pending</td>
-                                <td>This is Sampe</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          Update
-                                        </a>
-                                      
-                                        <ul class="dropdown-menu">
-                                          <li><a class="dropdown-item" id="changepassword" href="#">Pending</a></li>
-                                          <li><a class="dropdown-item" id="updateemail" href="#">Escalation</a></li>
-                                          <li><a class="dropdown-item" id="disabled" href="#">Remove</a></li>
-                                        </ul>
-                                      </div>
-                                </td>
-                            </tr>   
-                        </tbody>
-                    </table>
-</table>
-</div>
-</div>
+        </div>
+        <div class="card" style="background-color: #4296e9;">
+            <div class="card-body">
+                <h5 class="card-title">School GoSolar Project</h5>
+                <p class="card-text">1,000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color: #ddc667;">
+            <div class="card-body">
+                <h5 class="card-title">Solar Homes</h5>
+                <p class="card-text">400k</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="recent-updates">
+  <div class="card" style="height: auto; width: 79%;">
+    <div class="card-body r-updates">
+      <div class="row" style="margin-bottom: 20px;">
+        <div class="col-sm-8">
+          <h5 class="card-title r-update">New Users</h5>
+        </div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add New Users
+          </button>
+        </div>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" style="width: 99.9%;" id="formGroupExampleInput" placeholder="Search">
+      </div>
+      <table class="users table" id="usertable">
+        <tr>
+          <th>Username</th>
+          <th>Car Model</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Edit</th>
+        </tr>
+        <!-- User data will be dynamically added here -->
+      </table>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div id="addnewusers">
+              <form id="newaccount">
+                <label for="recipient-name">Username:</label>
+                <input type="text" id="recipient-name" required>
+                <label for="modelscar">Car Model:</label>
+                <input type="text" id="modelscar" required>
+                <label for="useremail">Email:</label>
+                <input type="email" id="useremail" required>
+                <label for="userpassword">Password:</label>
+                <input type="password" id="userpassword" required>
+                <div class="modal-footer">
+                  <button type="button" id="btn" onclick="registerUser()" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 </body>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
@@ -415,61 +441,120 @@ tbody, td, tfoot, th, thead, tr {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
-<script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-    var edit = $("table td:last-child").html();
-    // Append table with add row form on add new button click
-    $(".add-new").click(function(){
-        $(this).attr("disabled", "disabled");
-        var index = $("table tbody tr:last-child").index();
-        var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-            '<td><input type="text" class="form-control" name="models" id="models"></td>' +
-            '<td><input type="text" class="form-control" name="email" id="email"></td>' +
-            '<td><input type="password" class="form-control" name="password" id="password"></td>' +
-            '<td>' + edit + '</td>' +
-        '</tr>';
-    	$("table").append(row);		
-        $("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-    // Add row on add button click
-    $(document).on("click", ".add", function(){
-        var empty = false;
-        var input = $(this).parents("tr").find('input[type="text"]');
-        input.each(function(){
-            if(!$(this).val()){
-                $(this).addClass("error");
-                empty = true;
-            } else{
-                $(this).removeClass("error");
-            }
-        });
-        $(this).parents("tr").find(".error").first().focus();
-        if(!empty){
-            input.each(function(){
-                $(this).parent("td").html($(this).val());
-            });			
-            $(this).parents("tr").find(".add, .edit").toggle();
-            $(".add-new").removeAttr("disabled");
-        }		
-    });
-    // Edit row on edit button click
-    $(document).on("click", ".edit", function(){		
-        $(this).parents("tr").find("td:not(:last-child)").each(function(){
-            $(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
-        });		
-        $(this).parents("tr").find(".add, .edit").toggle();
-        $(".add-new").attr("disabled", "disabled");
-    });
-    // Delete row on delete button click
-    $(document).on("click", ".delete", function(){
-        $(this).parents("tr").remove();
-        $(".add-new").removeAttr("disabled");
-    });
-});
-</script>
+  <script>
+ function registerUser() {
+        const username = document.getElementById('recipient-name').value;
+        const carModel = document.getElementById('modelscar').value;
+        const email = document.getElementById('useremail').value;
+        const password = document.getElementById('userpassword').value;
 
-</script>
+        const userData = {
+            username: username,
+            carModel: carModel,
+            email: email,
+            password: password 
+        };
+
+        localStorage.setItem('user_data', JSON.stringify(userData));
+
+        const table = document.querySelector('.users');
+        const newRow = table.insertRow(-1);
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
+        const cell4 = newRow.insertCell(3);
+        const cell5 = newRow.insertCell(4);
+        cell1.innerHTML = username;
+        cell2.innerHTML = carModel;
+        cell3.innerHTML = email;
+        cell4.innerHTML = '******';
+        cell5.innerHTML = '<div class="dropdown" id="settingseach">' +
+            '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">' +
+            '<i class="bi bi-gear"></i>' +
+            '</button>' +
+            '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">' +
+            '<li><a class="dropdown-item"  onclick="changePassword()">Change Password</a></li>' +
+            '<li><a class="dropdown-item" onclick="updateEmail()" >Update Email</a></li>' +
+            '<li><a class="dropdown-item disableaccount" onclick="disableAccount()">Disable Account</a></li>' +
+            '</ul>' +
+            '</div>'; 
+            }
+    function changePassword() {
+        const newPassword = prompt('Enter your new password:');
+        if (newPassword) {
+            let userData = JSON.parse(localStorage.getItem('user_data'));
+            if (userData) {
+                userData.password = newPassword;
+                localStorage.setItem('user_data', JSON.stringify(userData));
+                alert('Password changed successfully!');
+            } else {
+                alert('Error: User data not found in local storage. Please try again later.');
+            }
+        } else {
+            alert('Error: No password entered. Please try again.');
+        }
+    }
+
+    function updateEmail() {
+        const newEmail = prompt('Enter your new email:');
+        if (newEmail) {
+            let userData = JSON.parse(localStorage.getItem('user_data'));
+            if (userData) {
+                userData.email = newEmail;
+                localStorage.setItem('user_data', JSON.stringify(userData));
+                alert('Email changed successfully!');
+            } else {
+                alert('Error: User data not found in local storage. Please try again later.');
+            }
+        } else {
+            alert('Error: No Email entered. Please try again.');
+        }
+        
+    }
+
+    function disableAccount() {
+      document.querySelectorAll('.disableaccount').forEach((btn) => {
+        btn.addEventListener('click', function() {
+          let tr = btn.closest('tr');
+          const username = tr.cells[0].innerHTML;
+          const confirmation = confirm(`Are you sure you want to disable the account for ${username}?`);
+          if (confirmation) {
+            tr.remove();
+          }
+        });
+      });
+    }
+
+    function saveTableData() {
+        const table = document.getElementById('.users'); 
+        const tableData = [];
+        for (let r = 1, n = table.rows.length; r < n; r++) {
+            const row = table.rows[r];
+            const rowData = {};
+            for (let c = 0, m = row.cells.length; c < m; c++) {
+                rowData[c] = row.cells[c].innerHTML;
+            }
+            tableData.push(rowData);
+        }
+        localStorage.setItem('user_data', JSON.stringify(tableData));
+    }
+
+    function loadTableData() {
+        const tableData = JSON.parse(localStorage.getItem('user_data'));
+        if (tableData) {
+            const table = document.getElementById('usertable'); 
+            for (let i = 0; i < tableData.length; i++) {
+                const newRow = table.insertRow(-1);
+                for (let j = 0; j < Object.keys(tableData[i]).length; j++) {
+                    const newCell = newRow.insertCell(j);
+                    newCell.innerHTML = tableData[i][j];
+                }
+            }
+        }
+    }
+    window.onload = loadTableData;
+    window.onbeforeunload = saveTableData;
+  </script>
+
+
 </html>

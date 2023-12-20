@@ -175,7 +175,7 @@ body {
   }
 .main-cards .trees {
     padding: 40px;
-    background-image: url(./tre.jpg);
+    background-color: #ffffff;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
