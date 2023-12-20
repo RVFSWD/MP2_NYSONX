@@ -35,6 +35,12 @@ body {
 
 /* carousel  */
 
+.tms-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 50%;
+}
+
 .carousel::before {
     content: "";
     position: absolute;
