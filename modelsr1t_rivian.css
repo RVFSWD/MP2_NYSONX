@@ -175,9 +175,20 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    padding: 5px 10px;
-    margin: 10px auto;
-    width: 40%;
+    padding: 10px 15px;
+    margin: 100px auto;
+    width: 30%;
+}
+
+/* two images ######################### */
+
+.aboutrivian-section {
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+
+.aboutrivian-image img {
+    margin-top: 0px;
 }
 
 /* emailer ########################### */
