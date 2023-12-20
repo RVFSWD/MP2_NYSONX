@@ -215,9 +215,9 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    padding: 5px 10px;
-    margin: 10px auto;
-    width: 40%;
+    padding: 10px 15px;
+    margin: 100px auto;
+    width: 30%;
 }
 
 /* Model S Plaid ################################# */
@@ -346,7 +346,7 @@ body {
 }
 
 .emailer-btn button {
-    width: 50%;
+    width: 100%;
     margin: 30px 5px;
 }
 
