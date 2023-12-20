@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.18/web.js"></script>
+    <link rel="stylesheet" href="">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Energy</title>
+
+    <style>
+        .contact {
+            padding: 100px 0;
+            background: #f9f9f9;
+        }
+        .contact h2 {
+            text-align: start;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            color: #333333;
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 90.767%;
+            letter-spacing: -1.68px;
+        }
+        .contact p {
+            text-align: start;
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #666666;
+        }
+        .custom-width {
+            width: 20px; /* adjust as needed */
+        }
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+.navbar-nav a {
+  margin-right: 30px;
+  color: black;
+  font-size: 17px;
+}
+
+.navbar-nav .join-button a {
+  padding-top: 2px;
+}
+
+    </style>
+</head>
+<body>
+       <!-- nav  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35" class="d-inline-block align-text-top"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NYSONX</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item dropdown">  
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Models</a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="./nysonxbrand.html">NYSONX Brand</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_tesla.html">Tesla</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_rivian.html">Rivian</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_lucid.html">Lucid</a>  
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./storage.html" role="button" aria-expanded="false">Charging</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./storage.html">Station</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./storage.html">Charging Calculator</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./charge.html" role="button" aria-expanded="false">Energy</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./charge.html">Home Energy</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./charge.html">Commercial</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./greenenergy.html">Green Energy Project</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-items">
+                        <a href="./store.html" class="nav-link">Store</a>
+                    </li>
+                  </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="join-button nav-items">
+                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+
+
+
+<section class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Hey,<br>
+                    What's going on? 🥹
+                </h2>
+                <form action="./success.html" method="POST">
+                  <input type="hidden" name="access_key" value="3e06f016-3e56-4c2a-ab15-d331dd6ac299
+                  ">
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <div class="input-group mb-3">
+                          <select class="form-select custom-width" aria-label="Default select example" name="title">
+                            <option selected>Title</option>
+                            <option value="1">Mr</option>
+                            <option value="2">Mrs</option>
+                            <option value="3">Miss</option>
+                            <option value="4">Ms</option>
+                            <option value="5">Doctor</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="first_name" required>
+                      </div>
+                      <div class="col-md-5">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="last_name" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contact" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="contact" name="phone">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
+                  </div>
+                  <div class="h-captcha" data-captcha="true"></div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+</section>
+
+
+
+<section class="map">
+
+
+</section>
+
+
+
+ <!-- Footer  -->
+      <footer class="footer pt-5 pb-2 mt-5">
+        <div class="container">
+          <div class="footer-row row">
+            <div class="footer-col col-lg-3 col-sm-12">
+              <a href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35"/></a>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>VISIT US</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><h2>BGC Central Plaza</h2></li>
+                <li class="mb-2"><h2>2456 West Drive Lane</h2></li>
+                <li class="mb-2"><h2>Taguig Ph</h2></li>
+              </ul>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>QUICK LINKS</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="">Models</a></li>
+                <li class="mb-2"><a href="">Charging</a></li>
+                <li class="mb-2"><a href="">Energy</a></li>
+                <li class="mb-2"><a href="">Store</a></li>
+              </ul>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>More</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="./contactus.html">CONTACT US</a></li>
+                <li class="mb-2"><a href="./company.html">Company</a></li>
+                <li class="mb-2"><a href="./careers.html">Careers</a></li>
+                <li class="mb-2"><a href="./terms.html">Terms and Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="followus-container icon-contain">
+          <div class="followus-row row">
+            <div class="followus-col col-sm-12 text-center">
+              <ul class="list-unstyled flex-grow-1 pe-3 d-flex justify-content-lg-center">
+                <li class="mb-1 fs-6"><a href="https://www.facebook.com/"><i class="fab fa-facebook fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.instagram.com/"><i class="fab fa-instagram fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.linkedin.com/login"><i class="fab fa-linkedin fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://twitter.com/"><i class="fab fa-twitter fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.youtube.com/"><i class="fab fa-youtube fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      
+      
+        <hr />
+        <div class="copyright-container container">
+          <div class="copyright-row row">
+            <div class="copyright-col col-md-12 text-center">
+              <p>&copy; Copyright 2023 | WD91P | Kodego</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+</body>
+</html>
