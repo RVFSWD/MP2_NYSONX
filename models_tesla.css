@@ -16,7 +16,7 @@ p {
 body {
     background-color: #fff;
     color: black;
-    font-family: sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 
 /* tesla-navtab ################################# */
@@ -27,7 +27,7 @@ body {
 
 .tesla-tab {
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: 'poppins', sans-serif;
     margin: 8px 30px;
     border-radius: 5px;
     font-size: 20px;
@@ -51,7 +51,7 @@ body {
     color: black;
     padding: 0px;
     margin-bottom: 2px;
-    font-family: Ubuntu;
+    font-family: poppins;
     font-weight: 1000;
 }
 
@@ -238,7 +238,7 @@ body {
     color: black;
     padding: 0px;
     margin-bottom: 2px;
-    font-family: Ubuntu;
+    font-family: poppins;
     font-weight: 1000;
 }
 
