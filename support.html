@@ -157,15 +157,12 @@
                 <h2>Hey,<br>
                     What's going on? 🥹
                 </h2>
-                <form action="./success.html" method="POST">
-                  <input type="hidden" name="access_key" value="3e06f016-3e56-4c2a-ab15-d331dd6ac299
-                  ">
-
+                <form id="usersconcerns">
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-2">
                         <div class="input-group mb-3">
-                          <select class="form-select custom-width" aria-label="Default select example" name="title">
+                          <select class="form-select custom-width" aria-label="Default select example" name="title" id="usertitle">
                             <option selected>Title</option>
                             <option value="1">Mr</option>
                             <option value="2">Mrs</option>
@@ -176,16 +173,16 @@
                         </div>
                       </div>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="first_name" required>
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="name" id="name" required>
                       </div>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="last_name" required>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="last_name" id="userlastname" required>
                       </div>
                     </div>
                   </div>
                   <div class="mb-3">
                     <label for="contact" class="form-label">Phone</label>
-                    <input type="text" class="form-control" id="contact" name="phone">
+                    <input type="text" class="form-control" id="contact" name="phone" id="">
                   </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
@@ -196,14 +193,11 @@
                     <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
                   </div>
                   <div class="h-captcha" data-captcha="true"></div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" onclick="usersubmit()">Submit</button>
                 </form>
 
 </section>
 
-
-
-<section class="map">
 
 
 </section>
@@ -276,6 +270,33 @@
     </footer>
 
     <script src="https://web3forms.com/client/script.js" async defer></script>
-
+    
 </body>
+<script>
+    <script>
+
+      function usersubmit() {
+        const title = document.getElementById('usertitle').value;
+        const name = document.getElementById('name').value;
+        const lastname = document.getElementById('userlastname').value;
+        const contact = document.getElementById('contact').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const existingData = JSON.parse(localStorage.getItem('concern')) || [];
+        const newData = {
+          title: title,
+          name: name,
+          lastname: lastname,
+          contact: contact,
+          email: email,
+          message: message
+        };
+
+        existingData.push(newData);
+        localStorage.setItem('concern', JSON.stringify(existingData));
+      }
+      
+    </script>
+</script>
 </html>
