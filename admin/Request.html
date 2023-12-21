@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Insight</title>
+    <title>User Concern</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -372,37 +372,17 @@ tbody, td, tfoot, th, thead, tr {
                 <input type="text" class="form-control" style=" width: 99.9%;" id="formGroupExampleInput" placeholder="Search">
               </div>
             <table class="users">
-                    <table class="table table-bordered">
-                        <thead>
+                    <table class="table table-bordered users-concern" id="userssides">
                             <tr>
-                                <th>Name</th>
+                              
+                                <th>First Name</th>
+                                <th>Contact</th>
                                 <th>Email</th>
-                                <th>Status</th>
                                 <th>Concern</th>
+                                <th>Status</th>
                                 <th>Edit</th>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jade Tindoy</td>
-                                <td>ade@admin.com</td>
-                                <td>Pending</td>
-                                <td>This is Sampe</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          Update
-                                        </a>
-                                      
-                                        <ul class="dropdown-menu">
-                                          <li><a class="dropdown-item" id="changepassword" href="#">Pending</a></li>
-                                          <li><a class="dropdown-item" id="updateemail" href="#">Escalation</a></li>
-                                          <li><a class="dropdown-item" id="disabled" href="#">Remove</a></li>
-                                        </ul>
-                                      </div>
-                                </td>
-                            </tr>   
-                        </tbody>
+                                    <!-- User concern will be dynamically added here -->
                     </table>
 </table>
 </div>
@@ -416,59 +396,36 @@ tbody, td, tfoot, th, thead, tr {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
 <script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-    var edit = $("table td:last-child").html();
-    // Append table with add row form on add new button click
-    $(".add-new").click(function(){
-        $(this).attr("disabled", "disabled");
-        var index = $("table tbody tr:last-child").index();
-        var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-            '<td><input type="text" class="form-control" name="models" id="models"></td>' +
-            '<td><input type="text" class="form-control" name="email" id="email"></td>' +
-            '<td><input type="password" class="form-control" name="password" id="password"></td>' +
-            '<td>' + edit + '</td>' +
-        '</tr>';
-    	$("table").append(row);		
-        $("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-    // Add row on add button click
-    $(document).on("click", ".add", function(){
-        var empty = false;
-        var input = $(this).parents("tr").find('input[type="text"]');
-        input.each(function(){
-            if(!$(this).val()){
-                $(this).addClass("error");
-                empty = true;
-            } else{
-                $(this).removeClass("error");
-            }
-        });
-        $(this).parents("tr").find(".error").first().focus();
-        if(!empty){
-            input.each(function(){
-                $(this).parent("td").html($(this).val());
-            });			
-            $(this).parents("tr").find(".add, .edit").toggle();
-            $(".add-new").removeAttr("disabled");
-        }		
-    });
-    // Edit row on edit button click
-    $(document).on("click", ".edit", function(){		
-        $(this).parents("tr").find("td:not(:last-child)").each(function(){
-            $(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
-        });		
-        $(this).parents("tr").find(".add, .edit").toggle();
-        $(".add-new").attr("disabled", "disabled");
-    });
-    // Delete row on delete button click
-    $(document).on("click", ".delete", function(){
-        $(this).parents("tr").remove();
-        $(".add-new").removeAttr("disabled");
-    });
-});
+window.onload = function() {
+  const data = JSON.parse(localStorage.getItem('concern'));
+  
+    const table = document.querySelector('.users-concern');
+    const newRow = table.insertRow(-1);
+    const cellName = newRow.insertCell(0);
+    const cellContact = newRow.insertCell(1);
+    const cellEmail = newRow.insertCell(2);
+    const cellMessage = newRow.insertCell(3);
+    const cellStatus = newRow.insertCell(4);
+    const cellEdit = newRow.insertCell(5);
+
+    cellName.innerHTML = data.name || '';
+    cellContact.innerHTML = data.contact || '';
+    cellEmail.innerHTML = data.email || '';
+    cellMessage.innerHTML = data.message || '';
+    cellStatus.innerHTML = data.status || 'Pending';
+    cellEdit.innerHTML = '<div class="dropdown" id="settingseach">' +
+      '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">' +
+      '<i class="bi bi-gear"></i>' +
+      '</button>' +
+      '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">' +
+      '<li><a class="dropdown-item"  onclick="changePassword()">Change Password</a></li>' +
+      '<li><a class="dropdown-item" onclick="updateEmail()">Update Email</a></li>' +
+      '<li><a class="dropdown-item disableaccount" onclick="disableAccount()">Disable Account</a></li>' +
+      '</ul>' +
+      '</div>';
+  }
+
+
 </script>
 
 </script>

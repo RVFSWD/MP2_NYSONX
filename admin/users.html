@@ -412,9 +412,8 @@ tbody, td, tfoot, th, thead, tr {
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div id="addnewusers">
-              <form id="newaccount">
+            <div class="modal-content">
+                <form id="newaccount">
                 <label for="recipient-name">Username:</label>
                 <input type="text" id="recipient-name" required>
                 <label for="modelscar">Car Model:</label>
@@ -442,43 +441,43 @@ tbody, td, tfoot, th, thead, tr {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
   <script>
- function registerUser() {
-        const username = document.getElementById('recipient-name').value;
-        const carModel = document.getElementById('modelscar').value;
-        const email = document.getElementById('useremail').value;
-        const password = document.getElementById('userpassword').value;
+  function registerUser() {
+            const username = document.getElementById('recipient-name').value;
+            const carModel = document.getElementById('modelscar').value;
+            const email = document.getElementById('useremail').value;
+            const password = document.getElementById('userpassword').value;
 
-        const userData = {
-            username: username,
-            carModel: carModel,
-            email: email,
-            password: password 
-        };
+            const userData = {
+                username: username,
+                carModel: carModel,
+                email: email,
+                password: password
+            };
 
-        localStorage.setItem('user_data', JSON.stringify(userData));
+            localStorage.setItem('user_data', JSON.stringify(userData));
 
-        const table = document.querySelector('.users');
-        const newRow = table.insertRow(-1);
-        const cell1 = newRow.insertCell(0);
-        const cell2 = newRow.insertCell(1);
-        const cell3 = newRow.insertCell(2);
-        const cell4 = newRow.insertCell(3);
-        const cell5 = newRow.insertCell(4);
-        cell1.innerHTML = username;
-        cell2.innerHTML = carModel;
-        cell3.innerHTML = email;
-        cell4.innerHTML = '******';
-        cell5.innerHTML = '<div class="dropdown" id="settingseach">' +
-            '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">' +
-            '<i class="bi bi-gear"></i>' +
-            '</button>' +
-            '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">' +
-            '<li><a class="dropdown-item"  onclick="changePassword()">Change Password</a></li>' +
-            '<li><a class="dropdown-item" onclick="updateEmail()" >Update Email</a></li>' +
-            '<li><a class="dropdown-item disableaccount" onclick="disableAccount()">Disable Account</a></li>' +
-            '</ul>' +
-            '</div>'; 
-            }
+            const table = document.querySelector('.users');
+            const newRow = table.insertRow(-1);
+            const cellUsername = newRow.insertCell(0);
+            const cellCarModel = newRow.insertCell(1);
+            const cellEmail = newRow.insertCell(2);
+            const cellPassword = newRow.insertCell(3);
+            const cellEdit = newRow.insertCell(4);
+            cellUsername.innerHTML = username;
+            cellCarModel.innerHTML = carModel;
+            cellEmail.innerHTML = email;
+            cellPassword.innerHTML = '';
+            cellEdit.innerHTML = '<div class="dropdown" id="settingseach">' +
+                '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">' +
+                '<i class="bi bi-gear"></i>' +
+                '</button>' +
+                '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">' +
+                '<li><a class="dropdown-item"  onclick="changePassword()">Change Password</a></li>' +
+                '<li><a class="dropdown-item" onclick="updateEmail()">Update Email</a></li>' +
+                '<li><a class="dropdown-item disableaccount" onclick="disableAccount()">Disable Account</a></li>' +
+                '</ul>' +
+                '</div>';
+        }
     function changePassword() {
         const newPassword = prompt('Enter your new password:');
         if (newPassword) {
@@ -503,6 +502,7 @@ tbody, td, tfoot, th, thead, tr {
                 userData.email = newEmail;
                 localStorage.setItem('user_data', JSON.stringify(userData));
                 alert('Email changed successfully!');
+                
             } else {
                 alert('Error: User data not found in local storage. Please try again later.');
             }
@@ -526,34 +526,35 @@ tbody, td, tfoot, th, thead, tr {
     }
 
     function saveTableData() {
-        const table = document.getElementById('.users'); 
-        const tableData = [];
-        for (let r = 1, n = table.rows.length; r < n; r++) {
-            const row = table.rows[r];
-            const rowData = {};
-            for (let c = 0, m = row.cells.length; c < m; c++) {
-                rowData[c] = row.cells[c].innerHTML;
+            const table = document.getElementById('usertable');
+            const tableData = [];
+            for (let r = 1, n = table.rows.length; r < n; r++) {
+                const row = table.rows[r];
+                const rowData = {};
+                for (let c = 0, m = row.cells.length; c < m; c++) {
+                    rowData[c] = row.cells[c].innerHTML;
+                }
+                tableData.push(rowData);
             }
-            tableData.push(rowData);
+            localStorage.setItem('user_data', JSON.stringify(tableData));
         }
-        localStorage.setItem('user_data', JSON.stringify(tableData));
-    }
 
-    function loadTableData() {
-        const tableData = JSON.parse(localStorage.getItem('user_data'));
-        if (tableData) {
-            const table = document.getElementById('usertable'); 
-            for (let i = 0; i < tableData.length; i++) {
-                const newRow = table.insertRow(-1);
-                for (let j = 0; j < Object.keys(tableData[i]).length; j++) {
-                    const newCell = newRow.insertCell(j);
-                    newCell.innerHTML = tableData[i][j];
+        function loadTableData() {
+            const tableData = JSON.parse(localStorage.getItem('user_data'));
+            if (tableData) {
+                const table = document.getElementById('usertable');
+                for (let i = 0; i < tableData.length; i++) {
+                    const newRow = table.insertRow(-1);
+                    for (let j = 0; j < Object.keys(tableData[i]).length; j++) {
+                        const newCell = newRow.insertCell(j);
+                        newCell.innerHTML = tableData[i][j];
+                    }
                 }
             }
         }
-    }
-    window.onload = loadTableData;
-    window.onbeforeunload = saveTableData;
+
+        window.onload = loadTableData;
+        window.onbeforeunload = saveTableData;
   </script>
 
 
