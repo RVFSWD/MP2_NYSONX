@@ -285,6 +285,22 @@ tbody, td, tfoot, th, thead, tr {
         border: 1px solid #000;
       }
 
+      table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
 
     </style>
 </head>
@@ -342,9 +358,8 @@ tbody, td, tfoot, th, thead, tr {
                   <i class="bi bi-gear-fill"></i> &nbsp; Settings
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="settingsDropdown">
-                  <li><a class="dropdown-item" href="#">Change Password</a></li>
-                  <li><a class="dropdown-item" href="#">Update Email</a></li>
-                  <li><a class="dropdown-item" href="#">Disabled</a></li>
+                  <li><a class="dropdown-item" id="changepass" href="./admindashboard.html">Change Password</a></li>
+                  <li><a class="dropdown-item" id="adminemail" href="./admindashboard.html">Update Email</a></li>
                 </ul>
               </div>
             </li>
@@ -371,20 +386,21 @@ tbody, td, tfoot, th, thead, tr {
             <div class="mb-3">
                 <input type="text" class="form-control" style=" width: 99.9%;" id="formGroupExampleInput" placeholder="Search">
               </div>
-            <table class="users">
-                    <table class="table table-bordered users-concern" id="userssides">
-                            <tr>
-                              
-                                <th>First Name</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                                <th>Concern</th>
-                                <th>Status</th>
-                                <th>Edit</th>
-                            </tr>
-                                    <!-- User concern will be dynamically added here -->
-                    </table>
-</table>
+              <table id="adminTable">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Concern</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="adminTableBody">
+                    <!-- Concerns will be dynamically added here -->
+                </tbody>
+            </table>
 </div>
 </div>
 </section>
@@ -396,37 +412,77 @@ tbody, td, tfoot, th, thead, tr {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
 <script>
-window.onload = function() {
-  const data = JSON.parse(localStorage.getItem('concern'));
-  
-    const table = document.querySelector('.users-concern');
-    const newRow = table.insertRow(-1);
-    const cellName = newRow.insertCell(0);
-    const cellContact = newRow.insertCell(1);
-    const cellEmail = newRow.insertCell(2);
-    const cellMessage = newRow.insertCell(3);
-    const cellStatus = newRow.insertCell(4);
-    const cellEdit = newRow.insertCell(5);
+  function displayConcerns() {
+            var adminTableBody = document.getElementById("adminTableBody");
 
-    cellName.innerHTML = data.name || '';
-    cellContact.innerHTML = data.contact || '';
-    cellEmail.innerHTML = data.email || '';
-    cellMessage.innerHTML = data.message || '';
-    cellStatus.innerHTML = data.status || 'Pending';
-    cellEdit.innerHTML = '<div class="dropdown" id="settingseach">' +
-      '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">' +
-      '<i class="bi bi-gear"></i>' +
-      '</button>' +
-      '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">' +
-      '<li><a class="dropdown-item"  onclick="changePassword()">Change Password</a></li>' +
-      '<li><a class="dropdown-item" onclick="updateEmail()">Update Email</a></li>' +
-      '<li><a class="dropdown-item disableaccount" onclick="disableAccount()">Disable Account</a></li>' +
-      '</ul>' +
-      '</div>';
-  }
+            adminTableBody.innerHTML = "";
+
+            var userConcerns = JSON.parse(localStorage.getItem("userConcerns")) || [];
+
+            for (var i = 0; i < userConcerns.length; i++) {
+                var userConcern = userConcerns[i];
+
+                var row = adminTableBody.insertRow(i);
+
+                var userCell = row.insertCell(0);
+                var nameCell = row.insertCell(1);
+                var emailCell = row.insertCell(2);
+                var contactCell = row.insertCell(3);
+                var concernCell = row.insertCell(4);
+                var actionCell = row.insertCell(5);
+
+                userCell.innerHTML = "Pending" + (i + 1);
+                nameCell.innerHTML = userConcern.name;
+                emailCell.innerHTML = userConcern.address;
+                contactCell.innerHTML = userConcern.contact;
+                concernCell.innerHTML = userConcern.concern;
+                actionCell.innerHTML = '<div class="dropdown" id="settingseach">' +
+                '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">' +
+                '<i class="bi bi-gear"></i>' +
+                '</button>' +
+                '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">' +
+                '<li><a class="dropdown-item"  onclick="userstatus()">Ongoing Concern</a></li>' +
+                '<li><a class="dropdown-item" onclick="userescalation()">Escalation</a></li>' +
+                '<li><a class="dropdown-item disableaccount" onclick="solveconcern"()">Solve</a></li>' +
+                '</ul>' +
+                '</div>';
+
+            }
+
+            }
+                displayConcerns();
+
+                function userstatus() {
+                  alert("User Concern is now Ongoing");
+                  var userCell = event.target.closest("tr").cells[0];
+                  userCell.innerHTML = '<span class="badge bg-primary">Ongoing Concern</span>';
+                }
+
+                function userescalation() {
+                  alert("User Concern is now in escalation");
+                  var userCell = event.target.closest("tr").cells[0];
+                  userCell.innerHTML = '<span class="badge bg-danger">Escalation</span>';
+                }
+
+                function solveconcern() {
+                  alert("User Concern is now solved");
+                  var userCell = event.target.closest("tr").cells[0];
+                  userCell.innerHTML = '<span class="badge bg-success">Solved</span>';
+                }
 
 
-</script>
+              document.querySelectorAll('.disableaccount').forEach((btn) => {
+                btn.addEventListener('click', function() {
+                  let tr = btn.closest('tr');
+                  tr.remove();
+                });
+              });
+
+
+            </script>
+            </html>
+     
+        displayConcerns();
 
 </script>
 </html>
