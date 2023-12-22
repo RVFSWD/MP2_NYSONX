@@ -139,8 +139,11 @@
                   </ul>
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="join-button nav-items">
-                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
-                    </li>
+                      <li class="sidebar-list-item">
+                        <a href="login.html" class="list-group-item sets">
+                            <i class="bi bi-box-arrow-right"></i> &nbsp; Log out
+                        </a>
+                    </li>                    </li>
                   </ul>
             </div>
           </div>
@@ -173,24 +176,21 @@
                         </div>
                       </div>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="name" id="name" required>
-                      </div>
-                      <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="last_name" id="userlastname" required>
+                        <input type="text" class="form-control" placeholder="Full Name" aria-label="First name" name="userName" id="userName" required>
                       </div>
                     </div>
                   </div>
                   <div class="mb-3">
-                    <label for="contact" class="form-label">Phone</label>
-                    <input type="text" class="form-control" id="contact" name="phone" id="">
+                    <label for="userContact" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="userContact" name="userContact" id="">
                   </div>
                   <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                  </div>
+                    <label for="userEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                </div>
                   <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
+                    <label for="userConcern" class="form-label">Message</label>
+                    <textarea class="form-control" id="userConcern" rows="3" name="userConcern" required></textarea>
                   </div>
                   <div class="h-captcha" data-captcha="true"></div>
                   <button type="submit" class="btn btn-primary" onclick="usersubmit()">Submit</button>
@@ -269,34 +269,42 @@
         </div>
     </footer>
 
-    <script src="https://web3forms.com/client/script.js" async defer></script>
+  
     
-</body>
-<script>
-    <script>
-
+        <script>
       function usersubmit() {
-        const title = document.getElementById('usertitle').value;
-        const name = document.getElementById('name').value;
-        const lastname = document.getElementById('userlastname').value;
-        const contact = document.getElementById('contact').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+    // Getting the users details from the form
+          var userName = document.getElementById("userName").value;
+          var userEmail = document.getElementById("userEmail").value; 
+          var userContact = document.getElementById("userContact").value;
+          var userConcern = document.getElementById("userConcern").value;
 
-        const existingData = JSON.parse(localStorage.getItem('concern')) || [];
-        const newData = {
-          title: title,
-          name: name,
-          lastname: lastname,
-          contact: contact,
-          email: email,
-          message: message
-        };
+          
+          if (typeof(Storage) !== "undefined") {
+              // Retrieve existing concerns or initialize an empty array
+              var userConcerns = JSON.parse(localStorage.getItem("userConcerns")) || [];
 
-        existingData.push(newData);
-        localStorage.setItem('concern', JSON.stringify(existingData));
+              userConcerns.push({
+                  name: userName,
+                  Email: userEmail,
+                  contact: userContact,
+                  concern: userConcern
+              });
+
+              // Save the updated concerns array to local storage
+              localStorage.setItem("userConcerns", JSON.stringify(userConcerns));
+
+              // Clear the input fields
+              document.getElementById("userName").value = "";
+              document.getElementById("userEmail").value = ""; 
+              document.getElementById("userContact").value = "";
+              document.getElementById("userConcern").value = "";
+
+              alert("Concern submitted successfully!");
+          } else {
+              alert("Local storage is not supported in your browser.");
+          }
       }
-      
-    </script>
-</script>
+        </script>
+        </body>
 </html>

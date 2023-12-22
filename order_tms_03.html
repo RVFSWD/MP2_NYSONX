@@ -505,7 +505,6 @@
     width: 100px; */
     width: 100px;
     margin-top: -15%;
-    border: 1px solid black;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -559,7 +558,7 @@
       }
       
       .emailer-btn button {
-          width: 100%;
+          width: 50%;
           margin: 30px 5px;
       }
       
@@ -659,12 +658,12 @@
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Models</a>
                         <ul class="dropdown-menu">
-                          <!-- <li>
+                          <li>
                             <a class="dropdown-item" href="./nysonxbrand.html">NYSONX Brand</a>  
                           </li>
                           <li>
                             <hr class="dropdown-divider">
-                          </li> -->
+                          </li>
                           <li>
                             <a class="dropdown-item" href="./models_tesla.html">Tesla</a>  
                           </li>
@@ -672,7 +671,7 @@
                             <hr class="dropdown-divider">
                           </li>
                           <li>
-                            <a class="dropdown-item" href="./modelsr1t_rivian.html">Rivian</a>  
+                            <a class="dropdown-item" href="./models_rivian.html">Rivian</a>  
                           </li>
                           <li>
                             <hr class="dropdown-divider">
@@ -686,13 +685,13 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Charging</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="storage.html">Station</a>
+                                <a class="dropdown-item" href="">Station</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="storage.html">Charging Calculator</a>
+                                <a class="dropdown-item" href="">Charging Calculator</a>
                             </li>
                         </ul>
                     </li>
@@ -700,29 +699,29 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Energy</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="charge.html">Home Energy</a>
+                                <a class="dropdown-item" href="">Home Energy</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="charge.html">Commercial</a>
+                                <a class="dropdown-item" href="">Commercial</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="greenenergy.html">Green Energy Project</a>
+                                <a class="dropdown-item" href="">Green Energy Project</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-items">
-                        <a href="./shop.html" class="nav-link">Gear Shop</a>
+                        <a href="./shop.html" class="nav-link">Store</a>
                     </li>
                   </ul>
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="join-button nav-items">
-                        <a href="login.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
+                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
                     </li>
                   </ul>
             </div>
@@ -794,7 +793,7 @@
             </div> -->
         </div>
         <div class="col-md-12">
-            <label for="validationCustom02" class="form-label">Contact Number</label>
+            <label for="validationCustom02" class="form-label" id="contact">Contact Number</label>
 
             <input type="number"  required  class="form-control"  value="" required>
             <div class="invalid-feedback">
@@ -855,7 +854,7 @@
                 Please provide Number.
                 </div>
             </div>
-            
+            <label class="form-label pt-2">You won't be charged today</label>
             <div class="col-12">
                 <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -865,11 +864,17 @@
                 <div class="invalid-feedback">
                     You must agree before submitting.
                 </div>
-                </div>
             </div>
-            <label class="form-label pt-2 fs-5">Due Today &nbsp&nbsp&nbsp Reservation Fee &nbsp&nbsp&nbsp P13,370</label>
+            </div>
             <div class="card-button col-12">
             <button class="card-btn btn btn-outline-dark" type="submit">Confirm</button>
+            <button type="submit" class="pop-btn" onclick="openPopup()">Place Order</button>
+                <div class="popup" id="popup">
+                    <img src="./logo images/ev_popup.jpg">
+                    <h2>Thank You!</h2>
+                    <p>Your transaction is now complete. Our Sales Team will get back to you soon. Thanks!</p>
+                    <button type="button" onclick="closePopup()">Ok</button> 
+                </div>
             </div>
         </div>
     </form>
@@ -880,16 +885,7 @@
 
   <!-- pop up section ############################# width="140" height="110"   width="140" height="140"-->
 
-<div class="container">
-  <button type="submit" class="pop-btn" onclick="openPopup()">Reserve Now</button>
-  <div class="popup" id="popup">
-    <img src="./logo images/check_logo.png">
-    <h2>Thank You!</h2>
-    <p>Your transaction is now complete. Our Sales Team will get back to you within 24hrs for the application process. Have a nice day!</p>
-    <button type="button" onclick="closePopup()">Ok</button> 
-  </div>
-</div>
-
+\
   <!-- pagination ############################## -->
 
   <ul class="pagination pagination-md">
@@ -897,7 +893,7 @@
     <li class="page-item"><a class="page-link" href="./order_tms_01.html">1</a></li>
     <li class="page-item"><a class="page-link" href="./order_tms_02.html">2</a></li>
     <li class="page-item"><a class="page-link" href="./order_tms_03.html">3</a></li>
-    <li class="page-item disabled"><a class="page-link" href="">Next</a></li>
+    <li class="page-item disabled"><a class="page-link" href="./order_tms_03.html">Next</a></li>
   </ul>
 
   <!-- emailer ###########################  -->
@@ -946,19 +942,19 @@
               <div class="footer-col col-lg-3 col-sm-12">
                 <h3>QUICK LINKS</h3>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="./models_tesla.html">Models</a></li>
-                    <li class="mb-2"><a href="storage.html">Charging</a></li>
-                    <li class="mb-2"><a href="greenenergy.html">Energy</a></li>
-                    <li class="mb-2"><a href="./shop.html">Gear Shop</a></li>
+                  <li class="mb-2"><a href="">Models</a></li>
+                  <li class="mb-2"><a href="">Charging</a></li>
+                  <li class="mb-2"><a href="">Energy</a></li>
+                  <li class="mb-2"><a href="">Store</a></li>
                 </ul>
               </div>
               <div class="footer-col col-lg-3 col-sm-12">
                 <h3>More</h3>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="contactus.html">CONTACT US</a></li>
-                    <li class="mb-2"><a href="company.html">Company</a></li>
-                    <li class="mb-2"><a href="careers.html">Careers</a></li>
-                    <li class="mb-2"><a href="terms.html">Terms and Conditions</a></li>
+                  <li class="mb-2"><a href="">CONTACT US</a></li>
+                  <li class="mb-2"><a href="">Company</a></li>
+                  <li class="mb-2"><a href="">Careers</a></li>
+                  <li class="mb-2"><a href="">Terms and Conditions</a></li>
                 </ul>
               </div>
             </div>
@@ -1024,7 +1020,7 @@ function saveAccountDetails(event) {
 
   // Gather input values
   const firstName = document.getElementById("validationCustom01").value;
-  const lastName = document.getElementById("validationCustom02").value;
+  const contact = document.getElementById("contact").value;
   const email = document.getElementById("validationCustom02").value;
   const confirmEmail = document.getElementById("validationCustom02").value;
   const zipCode = document.getElementById("validationCustom02").value;
@@ -1039,6 +1035,7 @@ function saveAccountDetails(event) {
   const accountData = {
     firstName,
     lastName,
+    contact,
     email,
     zipCode,
     cardNumber: cardNumber.substr(-4), // Only save last 4 digits of card number for security
@@ -1069,6 +1066,42 @@ function saveAccountDetails(event) {
   function closePopup(){
     popup.classList.remove("open-popup");
   }
+
+function usersubmit() {
+    // Get user details
+    var userName = document.getElementById("userName").value;
+    var userAddress = document.getElementById("userEmail").value; // Change from "userAddress" to "userEmail"
+    var userContact = document.getElementById("userContact").value;
+    var userConcern = document.getElementById("userConcern").value;
+
+    // Check if local storage is supported
+    if (typeof(Storage) !== "undefined") {
+        // Retrieve existing concerns or initialize an empty array
+        var userConcerns = JSON.parse(localStorage.getItem("userConcerns")) || [];
+
+        // Add new concern to the array
+        userConcerns.push({
+            name: userName,
+            Email: userAddress,
+            contact: userContact,
+            concern: userConcern
+        });
+
+        // Save the updated concerns array to local storage
+        localStorage.setItem("userConcerns", JSON.stringify(userConcerns));
+
+        // Clear the input fields
+        document.getElementById("userName").value = "";
+        document.getElementById("userEmail").value = ""; // Change from "userAddress" to "userEmail"
+        document.getElementById("userContact").value = "";
+        document.getElementById("userConcern").value = "";
+
+        alert("Concern submitted successfully!");
+    } else {
+        alert("Local storage is not supported in your browser.");
+    }
+}
+
   
 </script>
   
