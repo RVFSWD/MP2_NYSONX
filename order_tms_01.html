@@ -561,12 +561,12 @@ a {
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Models</a>
                         <ul class="dropdown-menu">
-                          <!-- <li>
+                          <li>
                             <a class="dropdown-item" href="./nysonxbrand.html">NYSONX Brand</a>  
                           </li>
                           <li>
                             <hr class="dropdown-divider">
-                          </li> -->
+                          </li>
                           <li>
                             <a class="dropdown-item" href="./models_tesla.html">Tesla</a>  
                           </li>
@@ -574,7 +574,7 @@ a {
                             <hr class="dropdown-divider">
                           </li>
                           <li>
-                            <a class="dropdown-item" href="./modelsr1t_rivian.html">Rivian</a>  
+                            <a class="dropdown-item" href="./models_rivian.html">Rivian</a>  
                           </li>
                           <li>
                             <hr class="dropdown-divider">
@@ -588,13 +588,13 @@ a {
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Charging</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="storage.html">Station</a>
+                                <a class="dropdown-item" href="">Station</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="storage.html">Charging Calculator</a>
+                                <a class="dropdown-item" href="">Charging Calculator</a>
                             </li>
                         </ul>
                     </li>
@@ -602,29 +602,29 @@ a {
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Energy</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="charge.html">Home Energy</a>
+                                <a class="dropdown-item" href="">Home Energy</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="charge.html">Commercial</a>
+                                <a class="dropdown-item" href="">Commercial</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="greenenergy.html">Green Energy Project</a>
+                                <a class="dropdown-item" href="">Green Energy Project</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-items">
-                        <a href="./shop.html" class="nav-link">Gear Shop</a>
+                        <a href="./store.html" class="nav-link">Store</a>
                     </li>
                   </ul>
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="join-button nav-items">
-                        <a href="login.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
+                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
                     </li>
                   </ul>
             </div>
@@ -666,17 +666,17 @@ a {
 <div class="order-design container">
     <div class="order-row row">
         <div class="order-col col-md-4">
-            <div class="order-model">
+            <div class="order-model" id="models">
                 <h3>Model S</h3>
             </div>
             <div class="order-motor">
                 <h4>Dual Motor All Wheel Drive</h4>
             </div>
             <div class="btn-variant col-md-12">
-                <button class="btn-variant btn btn-outline-dark" data-bs-toggle="button" type="button" onclick="selectOption(this, 'variant')">Model S - P3,909,950</button>
+                <button class="btn-variant btn btn-outline-dark" data-bs-toggle="button" type="button" data-price="71090" onclick="selectOption(this, 'variant')">Model S - $71,090</button>
             </div>
             <div class="btn-variant col-md-12">
-                <button class="btn-variant btn btn-outline-dark" data-bs-toggle="button" type="button" onclick="selectOption(this, 'variant')">S Plaid - P4,294,950</button>
+                <button class="btn-variant btn btn-outline-dark" data-bs-toggle="button" type="button" onclick="selectOption(this, 'variant')">S Plaid - $78,090</button>
             </div>
 
 <!-- paint ################# -->
@@ -704,7 +704,7 @@ a {
         </div>
         <div class="order-col col-md-8 mb-5">
             <div class="order-image">
-                <img id="carImage" src="./Mcolors/tms_color_blue_01_v2.png" class="rounded mx-auto d-block w-100" alt="" /></a>
+                <img id="carImage" src="./Mcolors/tms_color_black_01_v2.png" class="rounded mx-auto d-block w-100" alt="" /></a>
             </div>
         </div>
     </div>
@@ -720,13 +720,13 @@ a {
                     <h4>Interior</h4>
                 </div>
                 <div class="interior-colors">
-                    <h4><button class="btn-cream-interior btn btn-light" data-bs-toggle="button" type="button" onclick=" selectInteriorOption(this); changeInteriorImage('./Mcolors/tms_interior_walnut_01_v2.png')" data-color="cream" data-price="$2,000"></button> Cream + P110,000</h4>
+                    <h4><button class="btn-cream-interior btn btn-light" data-bs-toggle="button" type="button" onclick=" selectInteriorOption(this); changeInteriorImage('./Mcolors/tms_interior_walnut_01_v2.png')" data-color="cream" data-price="$2,000"></button> Cream + $2,000</h4>
                 </div>
                 <div class="interior-colors">
                     <h4><button class="btn-black-interior btn btn-outline-dark" data-bs-toggle="button" type="button" onclick="selectInteriorOption(this); changeInteriorImage('./Mcolors/tms_interior_ebonyallblack_01_v2.png')" data-color="allblack" data-price="$2,000"></button></button> All Black - Included</h4>
                 </div>
                 <div class="interior-colors">
-                    <h4><button class="btn-white-interior btn btn-light" data-bs-toggle="button" type="button" onclick="selectInteriorOption(this);changeInteriorImage('./Mcolors/tms_interior_blacknwhite_01_v2.png')" data-color="blacknwhite" data-price="$2,000"></button> Black and White + P110,000</h4>
+                    <h4><button class="btn-white-interior btn btn-light" data-bs-toggle="button" type="button" onclick="selectInteriorOption(this);changeInteriorImage('./Mcolors/tms_interior_blacknwhite_01_v2.png')" data-color="blacknwhite" data-price="$2,000"></button> Black and White + $2,000</h4>
                 </div>
             </div>
         </div>
@@ -748,16 +748,16 @@ a {
                     <h4>Wheels</h4>
                 </div>
                 <div class="wheels-colors">
-                    <button class="btn-silver-wheels btn btn-light" data-bs-toggle="button" type="button" onclick="selectWheelsOption(this); changeWheelsImage('./Mcolors/x_cyberstream_02_v2.png')" data-color="arachnid" data-price="$4,500">Cyberstream Wheels 25" - P247,500</button> 
+                    <button class="btn-silver-wheels btn btn-light" data-bs-toggle="button" type="button" onclick="selectWheelsOption(this); changeWheelsImage('./Mcolors/tms_wheels_arachnid_01_v2.png')" data-color="arachnid" data-price="$4,500">Arachnid Wheels 25" - $4,500</button> 
                 </div>
                 <div class="wheels-colors">
-                    <button class="btn-black-wheels btn btn-outline-dark" data-bs-toggle="button" type="button" onclick="selectWheelsOption(this);    changeWheelsImage('./Mcolors/x_turbine_02_v2.png')" data-color="tempest" data-price="Included">Turbine Wheels 19" - Included</button> 
+                    <button class="btn-black-wheels btn btn-outline-dark" data-bs-toggle="button" type="button" onclick="selectWheelsOption(this);    changeWheelsImage('./Mcolors/tms_wheels_tempest_01_v2.png')" data-color="tempest" data-price="Included">Tempest Wheels 19" - Included</button> 
                 </div>
             </div>
         </div>
         <div class="order-col col-md-8 mb-5">
             <div class="wheels-image">
-                <img id="wheelsImage" src="./Mcolors/x_turbine_02_v2.png" class="rounded mx-auto d-block w-100" alt="" /></a>
+                <img id="wheelsImage" src="./Mcolors/tms_wheels_arachnid_01_v2.png" class="rounded mx-auto d-block w-100" alt="" /></a>
             </div>
         </div>
     </div>
@@ -766,10 +766,10 @@ a {
 <!-- pagination ############################## -->
 
 <ul class="pagination pagination-md">
-    <li class="page-item disabled"><a class="page-link" href="">Previous</a></li>
+    <li class="page-item disabled"><a class="page-link" href="./order_tms_01.html">Previous</a></li>
     <li class="page-item"><a class="page-link" href="./order_tms_01.html">1</a></li>
     <li class="page-item"><a class="page-link" href="./order_tms_02.html">2</a></li>
-    <li class="page-item"><a class="page-link" href="./order_tms_03.html">3</a></li>
+    <li class="page-item"><a class="page-link" href="./order_step03.html">3</a></li>
     <li class="page-item"><a class="page-link" href="./order_tms_02.html">Next</a></li>
   </ul>
 
@@ -819,19 +819,19 @@ a {
             <div class="footer-col col-lg-3 col-sm-12">
               <h3>QUICK LINKS</h3>
               <ul class="list-unstyled">
-                <li class="mb-2"><a href="./models_tesla.html">Models</a></li>
-                <li class="mb-2"><a href="storage.html">Charging</a></li>
-                <li class="mb-2"><a href="greenenergy.html">Energy</a></li>
-                <li class="mb-2"><a href="./shop.html">Gear Shop</a></li>
+                <li class="mb-2"><a href="">Models</a></li>
+                <li class="mb-2"><a href="">Charging</a></li>
+                <li class="mb-2"><a href="">Energy</a></li>
+                <li class="mb-2"><a href="">Store</a></li>
               </ul>
             </div>
             <div class="footer-col col-lg-3 col-sm-12">
               <h3>More</h3>
               <ul class="list-unstyled">
-                <li class="mb-2"><a href="contactus.html">CONTACT US</a></li>
-                <li class="mb-2"><a href="company.html">Company</a></li>
-                <li class="mb-2"><a href="careers.html">Careers</a></li>
-                <li class="mb-2"><a href="terms.html">Terms and Conditions</a></li>
+                <li class="mb-2"><a href="">CONTACT US</a></li>
+                <li class="mb-2"><a href="">Company</a></li>
+                <li class="mb-2"><a href="">Careers</a></li>
+                <li class="mb-2"><a href="">Terms and Conditions</a></li>
               </ul>
             </div>
           </div>
@@ -894,24 +894,29 @@ Array.from(forms).forEach(form => {
 <script>
 
 // order section ################################ 
-
-    function selectOption(button, type) {
+function selectOption(button, type) {
   // Existing functionality for selecting variants
   const buttons = document.querySelectorAll(`.btn-${type}`);
   buttons.forEach((btn) => {
-      btn.classList.remove('active');
+    btn.classList.remove('active');
   });
   button.classList.add('active');
 
   // Save selected variant data in local storage
   const selectedValue = button.textContent;
   const selectedPrice = button.dataset.price || button.textContent.match(/\$[\d,]+$/); // Extract price from button text if necessary
-  localStorage.setItem(`selected-${type}`, selectedValue);
-  localStorage.setItem(`selected-${type}-price`, selectedPrice); // Store price separately (optional)
+  localStorage.setItem(`selectOption`, selectedValue);
+  localStorage.setItem(`selectOption-price`, selectedPrice); // Store price separately (optional)
 
-  // You can optionally add code to update the UI based on the saved data, 
-  // for example, displaying the selected variant and price elsewhere.
+  // Debug statements
+  console.log('Button:', button);
+  console.log('Selected Option:', selectedValue);
+  console.log('Selected Price:', selectedPrice);
+  console.log('LocalStorage - Option:', localStorage.getItem('selectOption'));
+  console.log('LocalStorage - Price:', localStorage.getItem('selectOption-price'));
 }
+
+
 
 
 // paint section #############################
