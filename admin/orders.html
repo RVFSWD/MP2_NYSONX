@@ -360,59 +360,16 @@ body {
                       <table class="table align-middle mb-0">
                         <thead class="bg-light">
                           <tr>
+                            <th>Order ID</th>
                             <th>Products</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Contact</th>
                             <th>Address</th>
                             <th>Status</th>
+                            <th>View Details</th>
                             <th>Actions</th>
                           </tr>
-                        </thead>
-                        <tbody>
-                          <tr class="order4">
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <img
-                                    src="./4.png"
-                                    alt=""
-                                    style="width: 45px; height: 45px"
-                                    class="rounded-circle"
-                                    />
-                                <div class="ms-3">
-                                  <p class="fw-bold mb-1">Tesla</p>
-                                  <p class="text-muted mb-0">Model S</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <p class="fw-normal mb-1">Micheal Lopez</p>
-                              <p class="text-muted mb-0">m.lopez@gmail.com</p>
-                            </td>
-                            <td>
-                              <span class="badge bg-danger">Need Replacement</span>
-                            </td>
-                            <td id="status-payments">Paid</td>
-                            <td>
-                              <div class="btn-group">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Action
-                                </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" id="shipped">Shipped</a></li>
-                                  <li><a class="dropdown-item" id="out">Out-of-stock</a></li>
-                                  <li><a class="dropdown-item" id="pending">Pending</a></li>
-                                  <li><hr class="dropdown-divider"></li>
-                                  <li><a class="dropdown-item remove-btn" href="#">Remove</a></li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                          <tbody id="orderTableBody"></tbody>
+                        </table>
                     </div>
                   </div>
                 </div>
@@ -422,9 +379,158 @@ body {
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="./dashboard.js">
- 
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+  displayOrders();
+  attachDisableAccountListener();
+  document.getElementById('datatable-search-input').addEventListener('input', function () {
+    displayOrders(); // Call displayOrders on input change
+  });
+});
 
+function displayOrders() {
+  var orderTableBody = document.getElementById('orderTableBody');
+  orderTableBody.innerHTML = '';
+
+  var searchInput = document.getElementById('datatable-search-input').value.toLowerCase();
+
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (key.startsWith('ordercar')) {
+      var orderData = JSON.parse(localStorage.getItem(key));
+
+      // Filter based on search input
+      if (
+        orderData.orderId.toLowerCase().includes(searchInput) ||
+        orderData.userInfo.firstName.toLowerCase().includes(searchInput)
+      )  {
+        var newRow = orderTableBody.insertRow(-1);
+        var cellOrderId = newRow.insertCell(0);
+        var cellItemType = newRow.insertCell(1);
+        var cellFirstname = newRow.insertCell(2);
+        var cellEmail = newRow.insertCell(3);
+        var cellStatus = newRow.insertCell(4);
+        var cellDetails = newRow.insertCell(5);
+        var cellActions = newRow.insertCell(6);
+        var cellDelete = newRow.insertCell(7);
+
+        cellOrderId.innerHTML = orderData.orderId;
+        cellFirstname.innerHTML = orderData.userInfo.firstName;
+        cellEmail.innerHTML = orderData.userInfo.email;
+        cellItemType.innerHTML = orderData.selectedItem.type;
+        cellStatus.innerHTML = orderData.status;
+        cellDetails.innerHTML = `<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orderModal_${orderData.orderId}">View Details</button>
+                                      <!-- Modal -->
+                                      <div class="modal fade" id="orderModal_${orderData.orderId}" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog" role="document">
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                                                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      <p>Order ID: ${orderData.orderId}</p>
+                                                      <p>Product Type: ${orderData.selectedItem.type}</p>
+                                                      <p>Email: ${orderData.userInfo.email}</p>
+                                                      <p>Status: ${orderData.status}</p>
+                                                      <p>Contact: ${orderData.userInfo.contactNumber}</p>
+                                                      <p>Color: ${orderData.selectedItem.color}</p>
+                                                      <p>Wheels Details: ${orderData.selectedItem.wheels}</p>
+                                                      <!-- Add more order details as needed -->
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <!-- Add more buttons/actions if necessary -->
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>`;
+
+        cellActions.innerHTML = `<div class="dropdown" id="settingseach">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" onclick="recieved()">To Received</a></li>
+                        <li><a class="dropdown-item" onclick="updatetoship()">To ship</a></li>
+                        <li><a class="dropdown-item" onclick="delivered(event)">Delivered</a></li>
+                    </ul>
+                </div>`;
+        cellDelete.innerHTML = `<div> <button class="dropdown-item disableaccount" data-orderid="${orderData.orderId}">
+            <i class="bi bi-trash-fill"></i>
+            </button> </div>`;
+      }
+    }
+  }
+}
+
+function recieved() {
+    alert("The car is on the ship and on its way to be received.!");
+    var userCell = event.target.closest("tr").cells[4];
+    userCell.innerHTML = '<span class="badge bg-success">To Recieved</span>';
+    
+    // Get the orderId from the first cell of the row
+    var orderId = event.target.closest("tr").cells[0].innerHTML;
   
-</script>
+    // Update the status in local storage
+    var orderData = JSON.parse(localStorage.getItem(`ordercar${orderId}`));
+    if (orderData) {
+      orderData.status = "To Received";
+      localStorage.setItem(`ordercar${orderId}`, JSON.stringify(orderData));
+    }
+  }
+
+
+function updatetoship() {
+    alert("The car is on the ship and en route for delivery!");
+    var userCell = event.target.closest("tr").cells[4];
+    userCell.innerHTML = '<span class="badge bg-success">To Ship</span>';
+    
+    // Get the orderId from the first cell of the row
+    var orderId = event.target.closest("tr").cells[0].innerHTML;
+  
+    // Update the status in local storage
+    var orderData = JSON.parse(localStorage.getItem(`ordercar${orderId}`));
+    if (orderData) {
+      orderData.status = "To Ship";
+      localStorage.setItem(`ordercar${orderId}`, JSON.stringify(orderData));
+    }
+  }
+
+function delivered(event) {
+    alert("User Car is now Delivered");
+    var userCell = event.target.closest("tr").cells[4];
+    userCell.innerHTML = '<span class="badge bg-success">delivered</span>';
+    
+    // Get the orderId from the first cell of the row
+    var orderId = event.target.closest("tr").cells[0].innerHTML;
+  
+    // Update the status in local storage
+    var orderData = JSON.parse(localStorage.getItem(`ordercar${orderId}`));
+    if (orderData) {
+      orderData.status = "delivered";
+      localStorage.setItem(`ordercar${orderId}`, JSON.stringify(orderData));
+    }
+  }
+  
+function attachDisableAccountListener() {
+  document.querySelectorAll('.disableaccount').forEach((btn) => {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default behavior of anchor tag
+      let tr = btn.closest('tr');
+      const orderId = tr.cells[0].innerHTML; 
+      const confirmation = confirm(`Are you sure you want to disable the account for order ID ${orderId}?`);
+      if (confirmation) {
+        localStorage.removeItem(`ordercar${orderId}`);
+        tr.remove();
+      }
+    });
+  });
+}
+
+  </script>
+  
+  
 </html>
