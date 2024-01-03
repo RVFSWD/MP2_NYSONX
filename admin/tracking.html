@@ -1,0 +1,84 @@
+<!-- track.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <title>Order Tracking</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Order Tracking</h1>
+    <form onsubmit="return trackOrder()">
+        <label for="trackingNumber">Enter Tracking Number:</label>
+        <input type="text" id="trackingNumber" class="form-control" required>
+        <button type="submit" class="btn btn-primary">Track Order</button>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="orderModalBody"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function trackOrder() {
+        var trackingNumber = document.getElementById('trackingNumber').value;
+        var orderData = localStorage.getItem('ordercar' + trackingNumber);
+
+        if (orderData) {
+            orderData = JSON.parse(orderData);
+
+            // Display order details in modal
+            var orderModalBody = document.getElementById('orderModalBody');
+            orderModalBody.innerHTML = `<p>Order ID: ${orderData.orderId}</p>
+                                       <p>Product Type: ${orderData.productType}</p>
+                                       <p>Color: ${orderData.color}</p>
+                                       <p>Status: ${orderData.status} ${getStatusIcon(orderData.status)}</p>
+                                       <p>Payment Details: ${orderData.paymentDetails}</p>`;
+
+            // Show the modal
+            $('#orderModal').modal('show');
+        } else {
+            alert('Order not found. Please check the tracking number.');
+        }
+
+        return false;
+    }
+
+    function getStatusIcon(status) {
+        // Define icons based on order status
+        var icons = {
+            'Pending': '<i class="fas fa-clock"></i>', // Example: Clock icon for Pending
+            'Processing': '<i class="fas fa-cog"></i>', // Example: Cog icon for Processing
+            'Shipped': '<i class="fas fa-truck"></i>', // Example: Truck icon for Shipped
+            'Delivered': '<i class="fas fa-check-circle"></i>' // Example: Check-circle icon for Delivered
+        };
+
+        return icons[status] || '';
+    }
+</script>
+
+<!-- Bootstrap and Font Awesome JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

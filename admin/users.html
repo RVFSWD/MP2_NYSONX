@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.3/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.3/dist/flatpickr.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <title>Users</title>
 
@@ -455,7 +457,6 @@ tbody, td, tfoot, th, thead, tr {
                       <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary mb-2" onclick="confirmidentity">Confirm identity</button>
                   <button type="button" id="btn" onclick="registerUser()" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
                 </div>
               </form>
@@ -481,18 +482,17 @@ function registerUser() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const inputState = document.getElementById('inputState').value;
-    const validid = document.getElementById('validid').value; // assuming validid is an input field
-    const inputZip = document.getElementById('inputZip').value; // assuming inputZip is an input field
-    const phone = document.getElementById('phone').value; // assuming phone is an input field
-    const fullname = document.getElementById('fullname').value; // assuming fullname is an input field
+    const validid = document.getElementById('validid').value;
+    const inputZip = document.getElementById('inputZip').value;
+    const phone = document.getElementById('phone').value;
+    const fullname = document.getElementById('fullname').value;
 
     if (!username || !carModel || !email || !password) {
         alert('All fields must be filled out');
         return;
     }
 
-
-    const userData = {
+    const userInfo = {
         username: username,
         carModel: carModel,
         email: email,
@@ -504,95 +504,57 @@ function registerUser() {
         fullname: fullname
     };
 
+    localStorage.setItem('user_data', JSON.stringify(userInfo));
 
-    var orderData = {
-        userInfo: {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            contactNumber: contactNumber
-        },
-        paymentDetails: {
-            cardNumber: cardNumber,
-            expDate: expDate,
-            cvv: cvv,
-            agreeCheckbox: agreeCheckbox
-        },
-        selectedItem: {
-            type: itemType,
-            price: price,
-            color: color,
-            interior: interior,
-            wheels: wheels
-        },
-        status: 'Pending'
+    const table = document.querySelector('.users');
+    const newRow = table.insertRow(-1);
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    const cell3 = newRow.insertCell(2);
+    const cell4 = newRow.insertCell(3);
+    const cell5 = newRow.insertCell(4);
+    const cell6 = newRow.insertCell(5);
 
+    cell1.innerHTML = username;
+    cell2.innerHTML = carModel;
+    cell3.innerHTML = email;
+    cell4.innerHTML = '******';
+    cell5.innerHTML = '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal_' + username + '">View Details</button>' +
+        '<div class="modal fade" id="userModal_' + username + '" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">' +
+        '<div class="modal-dialog" role="document">' +
+        '<div class="modal-content">' +
+        '<div class="modal-header">' +
+        '<h5 class="modal-title" id="userModalLabel">User Details</h5>' +
+        '<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">' +
+        '<span aria-hidden="true">&times;</span>' +
+        '</button>' +
+        '</div>' +
+        '<div class="modal-body">' +
+        '<p>Username: '${orderData.orderId}'</p>' +
+        '<p>Email: ' ${orderData.orderId}'</p>' +
+        '<p>Phone: ' ${orderData.orderId}'</p>' +
+        '<p>Car Model: ' ${orderData.orderId} '</p>' +
+        '<!-- Add more user details as needed -->' +
+        '</div>' +
+        '<div class="modal-footer">' +
+        '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>' +
+        '<!-- Add more buttons/actions if necessary -->' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    cell6.innerHTML = '<div class="dropdown" id="settingsDropdown">' +
+        '<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">' +
+        '<i class="bi bi-gear"></i>' +
+        '</button>' +
+        '<ul class="dropdown-menu" aria-labelledby="settingsDropdown">' +
+        '<li><a class="dropdown-item" onclick="changePassword()">Change Password</a></li>' +
+        '<li><a class="dropdown-item" onclick="updateEmail()">Update Email</a></li>' +
+        '<li><a class="dropdown-item disableaccount" onclick="disableAccount()">Disable Account</a></li>' +
+        '</ul>' +
+        '</div>';
+}
 
-
-
-
-            localStorage.setItem('user_data', JSON.stringify(userData));
-
-            const table = document.querySelector('.users');
-            const newRow = table.insertRow(-1);
-            const cellUsername = newRow.insertCell(0);
-            const cellCarModel = newRow.insertCell(1);
-            const cellEmail = newRow.insertCell(2);
-            const cellPassword = newRow.insertCell(3);
-            const cellEdit = newRow.insertCell(4);
-            const cellProfile = newRow.insertCell(5);
-            cellUsername.innerHTML = username;
-            cellCarModel.innerHTML = carModel;
-            cellEmail.innerHTML = email;
-            cellPassword.innerHTML = '*****';
-            cellProfile.innerHTML = '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">' +
-                '<i class="bi bi-person"></i> Profile' +
-                '</button>' +
-                '<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
-                '<div class="modal-dialog">' +
-                '<div class="modal-content">' +
-                '<div class="modal-header">' +
-                '<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>' +
-                '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>' +
-                '</div>' +
-                '<div class="modal-body">' +
-                '...' +  // Add your modal body content here
-                '</div>' +
-                '<div class="modal-footer">' +
-                '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>' +
-                '<button type="button" class="btn btn-primary">Save changes</button>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>';
-            cellEdit.innerHTML = '<div class="dropdown" id="settingseach">' +
-                '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">' +
-                '<i class="bi bi-gear"></i>' +
-                '</button>' +
-                '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">' +
-                '<li><a class="dropdown-item"  onclick="changePassword()">Change Password</a></li>' +
-                '<li><a class="dropdown-item" onclick="updateEmail()">Update Email</a></li>' +
-                '<li><a class="dropdown-item disableaccount" onclick="disableAccount()">Disable Account</a></li>' +
-                '</ul>' +
-                '</div>';
-
-
-        }
-    function changePassword() {
-        const newPassword = prompt('Enter your new password:');
-        if (newPassword) {
-            let userData = JSON.parse(localStorage.getItem('user_data'));
-            if (userData) {
-                userData.password = newPassword;
-                localStorage.setItem('user_data', JSON.stringify(userData));
-                alert('Password changed successfully!');
-            } else {
-                alert('Error: User data not found in local storage. Please try again later.');
-            }
-        } else {
-            alert('Error: No password entered. Please try again.');
-        }
-    }
 
     function updateEmail() {
     const newEmail = prompt('Enter your new email:');
@@ -631,6 +593,7 @@ function registerUser() {
               });
           });
 }
+    
     function saveTableData() {
             const table = document.getElementById('usertable');
             const tableData = [];
@@ -660,6 +623,15 @@ function registerUser() {
         }
         window.onload = loadTableData;
         window.onbeforeunload = saveTableData;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+        flatpickr("#datepicker", {
+            dateFormat: "Y-m-d",
+            enableTime: false,
+        });
+    });
+
+
 
         
   </script>
