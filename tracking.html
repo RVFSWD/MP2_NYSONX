@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.18/web.js"></script>
+    <link rel="stylesheet" href="">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Energy</title>
+
+</head>
+<body>
+       <!-- nav  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35" class="d-inline-block align-text-top"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NYSONX</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item dropdown">  
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Models</a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="./nysonxbrand.html">NYSONX Brand</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_tesla.html">Tesla</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_rivian.html">Rivian</a>  
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="./models_lucid.html">Lucid</a>  
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./storage.html" role="button" aria-expanded="false">Charging</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./storage.html">Station</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./storage.html">Charging Calculator</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./charge.html" role="button" aria-expanded="false">Energy</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./charge.html">Home Energy</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./charge.html">Commercial</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./greenenergy.html">Green Energy Project</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-items">
+                        <a href="./store.html" class="nav-link">Store</a>
+                    </li>
+                  </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="join-button nav-items">
+                      <li class="sidebar-list-item">
+                        <a href="login.html" class="list-group-item sets">
+                            <i class="bi bi-box-arrow-right"></i> &nbsp; 
+                        </a>
+                    </li>                    </li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+
+
+
+
+   
+<div class="container" style=" margin-top: 10%; margin-bottom: 10%; font-size: 20px;">
+    <div style="margin-bottom: 25px; "><h1>Order Tracking</h1></div>
+    <form onsubmit="return trackOrder()">
+        <label for="trackingNumber" style="margin-bottom: 10px;">Enter Tracking Number:</label>
+        <input type="text" id="trackingNumber" class="form-control" required>
+        <button type="submit" class="btn btn-primary" style="margin-top: 50px;">Track Order</button>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="orderModalBody"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+ <!-- Footer  -->
+      <footer class="footer pt-5 pb-2 mt-5">
+        <div class="container">
+          <div class="footer-row row">
+            <div class="footer-col col-lg-3 col-sm-12">
+              <a href="./index.html"><img src="./logo images/NYSONX_logo2.png" alt="" width="140" height="35"/></a>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>VISIT US</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><h2>BGC Central Plaza</h2></li>
+                <li class="mb-2"><h2>2456 West Drive Lane</h2></li>
+                <li class="mb-2"><h2>Taguig Ph</h2></li>
+              </ul>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>QUICK LINKS</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="">Models</a></li>
+                <li class="mb-2"><a href="">Charging</a></li>
+                <li class="mb-2"><a href="">Energy</a></li>
+                <li class="mb-2"><a href="">Store</a></li>
+              </ul>
+            </div>
+            <div class="footer-col col-lg-3 col-sm-12">
+              <h3>More</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="./contactus.html">CONTACT US</a></li>
+                <li class="mb-2"><a href="./company.html">Company</a></li>
+                <li class="mb-2"><a href="./careers.html">Careers</a></li>
+                <li class="mb-2"><a href="./terms.html">Terms and Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="followus-container icon-contain">
+          <div class="followus-row row">
+            <div class="followus-col col-sm-12 text-center">
+              <ul class="list-unstyled flex-grow-1 pe-3 d-flex justify-content-lg-center">
+                <li class="mb-1 fs-6"><a href="https://www.facebook.com/"><i class="fab fa-facebook fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.instagram.com/"><i class="fab fa-instagram fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.linkedin.com/login"><i class="fab fa-linkedin fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://twitter.com/"><i class="fab fa-twitter fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+                <li class="mb-1 fs-6"><a href="https://www.youtube.com/"><i class="fab fa-youtube fa-xl" style="padding-right: 40px;
+                  "></i></a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      
+      
+        <hr />
+        <div class="copyright-container container">
+          <div class="copyright-row row">
+            <div class="copyright-col col-md-12 text-center">
+              <p>&copy; Copyright 2023 | WD91P | Kodego</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+  
+    
+        <script>
+      function trackOrder() {
+        var trackingNumber = document.getElementById('trackingNumber').value;
+        var orderData = localStorage.getItem('ordercar' + trackingNumber);
+
+        if (orderData) {
+            orderData = JSON.parse(orderData);
+
+            // Display order details in modal
+            var orderModalBody = document.getElementById('orderModalBody');
+            orderModalBody.innerHTML = `<p>Order ID: ${orderData.orderId}</p>
+                                       <p>Product Type: ${orderData.selectedItem.type}</p>
+                                       <p>Color: ${orderData.selectedItem.color}</p>
+                                       <p>Status: ${orderData.status} ${getStatusIcon(orderData.status)}</p>
+                                       <p>Payment Details: ${orderData.paymentDetails.cardNumber}</p>`;
+
+            // Show the modal
+            $('#orderModal').modal('show');
+        } else {
+            alert('Order not found. Please check the tracking number.');
+        }
+
+        return false;
+    }
+
+    function getStatusIcon(status) {
+        // Define icons based on order status
+        var icons = {
+            'Pending': '<i class="fas fa-clock"></i>', // Example: Clock icon for Pending
+            'Processing': '<i class="fas fa-cog"></i>', // Example: Cog icon for Processing
+            'Shipped': '<i class="fas fa-truck"></i>', // Example: Truck icon for Shipped
+            'Delivered': '<i class="fas fa-check-circle"></i>' // Example: Check-circle icon for Delivered
+        };
+
+        return icons[status] || '';
+    }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        </body>
+</html>
