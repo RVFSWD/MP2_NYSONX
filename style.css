@@ -31,6 +31,7 @@ body {
 
 .navbar-nav .join-button a {
     padding-top: 2px;
+    margin-right: 0px;
 }
 
 /* carousel  */
@@ -96,12 +97,9 @@ body {
 
 .showcase1 .text-center {
     color: black;
-    /* background-color: #252525; */
     margin: 20px auto 30px;
     border-radius: 5px;
     font-family: poppins;
-    
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .showcase1 .text-blank {
@@ -135,7 +133,7 @@ body {
 }
 
 .showcase-section h2 {
-    font-size: 30px;
+    font-size: 30px; 
     padding-bottom: 30px;
     color: black;
 }
@@ -148,7 +146,6 @@ body {
 
 .showcase-section .showcase-row {
     background-color: #ddd; 
-   
 }
 
 /* caption-section  #e1e0dc*/
@@ -162,7 +159,6 @@ body {
 .caption-section .caption-row {
     margin: 0px 60px;
     padding: 40px 10px;
-    
 }
 
 .caption-section h2 {
@@ -172,56 +168,15 @@ body {
     padding-bottom: 15px;
 }
 
-/* .caption-section h6 #17b890{
-    font-size: 20px;
-    padding-bottom: 10px;
-} */
-
 .caption-section p {
     font-size: 20px;
     color: #fff;
     padding-bottom: 15px;
 }
 
-/* .caption-section {
-    background-image: linear-gradient(3deg, #000 2.58%, rgba(0, 0, 0, 0.312) 91.73%), url(./energ/vehicles.png);
-    width: 100%;
-    height: 330px;
-    padding: 50px 10px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: lightgray;
-    background-blend-mode: multiply;
-} */
-
-/* .caption-section h2 {
-    background: linear-gradient(114deg, rgb(28, 210, 67) 32.75%, rgb(70, 96, 141) 107.45%, #f1f1f19c 107.45%);
-    text-align: start;
-    text-shadow: 0px 4px 4px #0216252e;
-    font-size: 44px;
-    font-weight: 600;
-    line-height: 110.767%;
-    letter-spacing: -3.2px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.caption-section p {
-    background: white;
-    text-align: center;
-    text-shadow: 0px 4px 4px #0216252e;
-    font-size: 20px;
-    font-weight: 500;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
-
 /* triple-images - section #################### */
 
 .first-col img {
-    /* background-color: #ddd; */
     height: 550px;
     width: 550px;
     position: relative;
@@ -233,7 +188,6 @@ body {
 .second-col img {
     border-radius: 20px;
     width: 510px;
-    /* margin-right: 50px; */
 }
 
 .last-row {
@@ -248,7 +202,6 @@ body {
     border-radius: 20px;
     margin-left: 5px;
     font-family: Ubuntu;
-    
 }
 
 .lastcol {
@@ -361,13 +314,8 @@ body {
     color: black;
     text-decoration: none;
     font-size: 30px;
-    /* margin-right: 100px; */
     margin: 5px 20px;
 }
-
-/* .followus-col a {
-    margin-right: 0px;
-} */
 
 .followus-col hr {
     width: 100%;
@@ -389,7 +337,7 @@ body {
   }
   
 .footer ul i:hover {
-    color: #17b890;
+    color: #198754;
   }
 
 .footer ul, p {
@@ -420,32 +368,4 @@ body {
         text-align: center;
               
     }
-}
-
-
-/* Jade Update  */
-.col-md-3 h3 {
-    font-size: 25px;
-    font-weight: 600;
-    padding-bottom: 10px;
-    color: #ddd;
-    margin-left: 95px;
-    margin-top: 20px;
-}
-.col-md-3 h4 {
-    font-size: 25px;
-    font-weight: 600;
-    padding-bottom: 10px;
-    color: #ddd;
-    margin-left: 80px;
-    margin-top: 20px;
-}
-.col-md-3 h6 {
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-    padding-bottom: 10px;
-    color: #ddd;
-    margin-left: 10px;
-    margin-top: 5px;
 }
