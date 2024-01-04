@@ -150,48 +150,29 @@ function changeQuantity(key, quantity){
     }
     reloadCard();
 
-    // Save updated cart data to local storage ##########################
+    // Save updated cart data to local storage #################
     localStorage.setItem("cartData", JSON.stringify(listCards));
 
 }
 
+//  testing beacuse of BUG ################################## 
 
-// sample proceed to check out btn ###################################
-
-// Add Proceed to Checkout button
-let checkoutButton = document.createElement('button');
-checkoutButton.innerText = 'Proceed to Checkout';
-checkoutButton.addEventListener('click', () => {
-    // Add any additional logic for checkout if needed
-    alert('Proceeding to Checkout!');
-});
-
-// Append the Checkout button to the body
-body.appendChild(checkoutButton);
-
-
-// emialer #########################
+// sample proceed to check out btn #######################
+  
+          // Add Proceed to Checkout button
+          let checkoutButton = document.createElement('button');
+          checkoutButton.innerText = 'Proceed to Checkout';
+          checkoutButton.addEventListener('click', () => {
+              // Add any additional logic for checkout if needed
+              alert('Proceeding to Checkout!');
+          });
+  
+          // Append the Checkout button to the body
+          body.appendChild(checkoutButton);
 
 
-function saveEmail() {
-      
-    var emailInput = document.getElementById('email');
-    var email = emailInput.value;
 
-   
-    if (email.trim() !== "") {
-      
-      localStorage.setItem('userEmail', email);
 
-      
-      alert('Email saved successfully!');
-      
-      
-      emailInput.value = "";
-    } else {
-      alert('Please enter a valid email address.');
-    }
-  }
 
 
 
