@@ -6,18 +6,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./sample.css">
+    <!-- <link rel="stylesheet" href="./sample.css"> -->
     <title>NYSONX | Welcome</title>
 </head>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:wght@300&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'poppins', sans-serif;
 }
 
 h1 {
@@ -31,9 +31,9 @@ p {
 body {
     background-color: #fff;
     color: black;
-    font-family: sans-serif;
+    font-family: system-ui;
+    
 }
-
 
 /* navbar ############################### */
 
@@ -47,53 +47,108 @@ body {
     padding-top: 2px;
 }
 
-/* tesla-navtab ################################# */
+/* user dashboard - section ######################## */
 
-.tesla-tab {
-    font-weight: 700;
-    font-family: sans-serif;
-    margin: 8px 30px;
-    border-radius: 5px;
-    font-size: 20px;
-    margin-bottom: 1px;
-    padding-bottom: 1px;   
+.user-container {
+    margin: 60px auto;
+    /* border-radius: 5px; */
+    /* padding: 30px 20px; */
 }
 
-.tesla-tab a {
-    /* background-color: #f5f5f5; */
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.usertabs-col {
+    background-color: #343541;
 }
 
-.circle-1 h4 {
-    color: #212529;
-    font-size: 20px;
-    border: 3px solid #212529;
+/* .userimage-col {
+    background-color: skyblue;
+} */
+
+/* .userimage-col {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.userimage-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.usercontents-col {
+    background-color: #212529;
+}
+
+.usercontents-col h4 {
+    font-size: 25px;
+    color: #fff;
+    margin: 60px auto 5px;
+    text-align: center
+}
+
+.user-container ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 30px 70px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* text-align: center;
     align-items: center;
+    justify-content: center; #010409*/
 }
 
-/* stations-button  */
-
-.stations-button button {
-    margin: 2px 0px 50px;
+.user-container a {
+    text-decoration: none;
 }
+
+.nav {
+    margin-top: 20px;
+}
+
+.nav-link:hover {
+    color: #198754;
+}
+
+.usertabs-col h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;
+    margin: 10px auto 5px;
+}
+
+.usertabs-col i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+    margin: 60px auto 2px;
+}
+
+/* .nav-item i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+} */
+
 
 /* Map direction ################# */
 
 
-.map-con {
+/* .map-con {
     height: 500%;
     width: 100%;
     margin: 20px auto 15px;
-}
+} */
+
+
 
 /* emailer ########################### */
 
@@ -116,7 +171,7 @@ body {
 }
 
 .emailer-btn button {
-    width: 50%;
+    width: 100%;
     margin: 30px 5px;
 }
 
@@ -212,12 +267,12 @@ body {
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Models</a>
                         <ul class="dropdown-menu">
-                          <li>
+                          <!-- <li>
                             <a class="dropdown-item" href="./nysonxbrand.html">NYSONX Brand</a>  
                           </li>
                           <li>
                             <hr class="dropdown-divider">
-                          </li>
+                          </li> -->
                           <li>
                             <a class="dropdown-item" href="./models_tesla.html">Tesla</a>  
                           </li>
@@ -241,12 +296,12 @@ body {
                             <li>
                                 <a class="dropdown-item" href="">Station</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
                                 <a class="dropdown-item" href="">Charging Calculator</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -258,24 +313,24 @@ body {
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="dropdown-item" href="">Commercial</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
-                            </li>
+                            </li> -->
                             <li>
                                 <a class="dropdown-item" href="">Green Energy Project</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-items">
-                        <a href="./store.html" class="nav-link">Store</a>
+                        <a href="./shop.html" class="nav-link">Gear Shop</a>
                     </li>
                   </ul>
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="join-button nav-items">
-                        <a href="./form.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
+                        <a href="signin.html" class="join nav-link"><button type="button" class="btn btn-outline-success">Sign In</button></a>
                     </li>
                   </ul>
             </div>
@@ -285,35 +340,82 @@ body {
 
 <!-- maps google direction ##########################  -->
 
+<!-- user dashboard - section ##################################### -->
+
+<div class="user-container container">
+  <div class="user-row row">
+    <div class="usertabs-col col-md-3">
+      <!-- <div class="Image-circle">
+        <img src="./User dashboard images/Prof1.jpg" class="img-fluid" style="width: 350px;" height="100px" alt="my image">
+      </div> -->
+      <i class="fa-regular fa-user"></i>
+      <h3>Welcome</h3>
+            <h4>
+                <script>
+                    document.write(localStorage.getItem('name'));
+                </script>
+            </h4>
+            <h6> Your Email is:
+                <script>
+                    document.write(localStorage.getItem('email'));
+                </script>
+            </h6>
+        <ul class="nav flex-column">
+          <!-- <li class="nav-item">
+            <i class="fa-regular fa-user"></i>
+            <a class="nav-link" href="">My Dashboard</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./userdashboard.html">Overall Stats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./map_charging_stations.html">Stations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./map_nysonxmap.html">Map</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Weather</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="./support.html">Support</a>
+          </li>
+        </ul>
+    </div>
+<div class="usercontents-col col-md-9">
 <div class="map-con container">
   <div class="map-row row">
-    <div class="map-col col-md-12">
+    <div class="map-col col-md">
         <!-- <iframe src="https://storage.googleapis.com/maps-solutions-4p965hdjno/locator-plus/mgd9/locator-plus.html"
-        width="100%" height="100%"
+        width="95%" height="330%"
         style="border:0;"
         loading="lazy">
         </iframe> -->
         <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JKciAocRLREw_ixOnaUZ5StdQFcJgxc&ehbc=2E312F&noprof=1" width="1260" height="580"></iframe> -->
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JKciAocRLREw_ixOnaUZ5StdQFcJgxc&ehbc=2E312F&noprof=1" width="1260" height="580"></iframe>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JKciAocRLREw_ixOnaUZ5StdQFcJgxc&ehbc=2E312F&noprof=1" width="950" height="720"></iframe>
     </div>
   </div>
+</div>
 </div>
 
 <!-- dashboard btn ######################### mt-3 mb-0-->
 
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="stations-button col-md-12">
             <a href="./userdashboard.html" class="stations"><button type="button" class="stations-btn btn btn-outline-dark">My Dashboard</button></a>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <!-- emailer ###########################  -->
 
 <div id="emailForm">
-  <div class="emailer-container container{breakpoint}">
+  <div class="emailer-container container{breakpoint} mt-5 pt-5">
     <div class="emailer-row row">
       <div class="emailer-col col-md-6">
         <h1><i>Stay up to Speed on the latest at Nysonx.</i></h1>
@@ -355,19 +457,19 @@ body {
             <div class="footer-col col-lg-3 col-sm-12">
               <h3>QUICK LINKS</h3>
               <ul class="list-unstyled">
-                <li class="mb-2"><a href="">Models</a></li>
-                <li class="mb-2"><a href="">Charging</a></li>
-                <li class="mb-2"><a href="">Energy</a></li>
-                <li class="mb-2"><a href="">Store</a></li>
+                <li class="mb-2"><a href="./models_tesla.html">Models</a></li>
+                <li class="mb-2"><a href="storage.html">Charging</a></li>
+                <li class="mb-2"><a href="charge.html">Energy</a></li>
+                <li class="mb-2"><a href="./shop.html">Gear Shop</a></li>
               </ul>
             </div>
             <div class="footer-col col-lg-3 col-sm-12">
               <h3>More</h3>
               <ul class="list-unstyled">
-                <li class="mb-2"><a href="">CONTACT US</a></li>
-                <li class="mb-2"><a href="">Company</a></li>
-                <li class="mb-2"><a href="">Careers</a></li>
-                <li class="mb-2"><a href="">Terms and Conditions</a></li>
+                <li class="mb-2"><a href="contactus.html">CONTACT US</a></li>
+                <li class="mb-2"><a href="company.html">Company</a></li>
+                <li class="mb-2"><a href="careers.html">Careers</a></li>
+                <li class="mb-2"><a href="terms.html">Terms and Conditions</a></li>
               </ul>
             </div>
           </div>
