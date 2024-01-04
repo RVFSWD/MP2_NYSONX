@@ -141,65 +141,6 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  $(document).on("click", "#add-newtask", function () {
-    var empty = false;
-    var input = $("#add-taskmod input, #add-taskmod textarea, #add-taskmod select");
-    input.each(function () {
-        if (!$(this).val()) {
-            $(this).addClass("error");
-            empty = true;
-        } else {
-            $(this).removeClass("error");
-        }
-    });
-
-    if (!empty) {
-        var cardType = $("#add-taskmod select").val();
-        var cardName = $("#add-taskmod #recipient-name").val();
-        var cardDescription = $("#add-taskmod #message-text").val();
-
-        var cardHtml = '<div class="card text-bg-light mb-0" style="max-width: 28rem;">' +
-            '<div class="card-header">' + cardType + '</div>' +
-            '<div class="card-body">' +
-            '<div class="card-title">' + cardName + '</div>' +
-            '<div class="card-text">' + cardDescription + '</div>' +
-            '<div><a class="btn btn-primary complete-task">Complete Task</a></div>' +
-            '</div>' +
-            '</div>';
-
-        $(".card-body").eq(0).append(cardHtml);
-
-        // Clear form inputs
-        $("#add-taskmod input, #add-taskmod textarea").val("");
-        $("#add-taskmod select").val("Type");
-
-        // Close the modal
-        $("#add-taskmod").modal("hide");
-    }
-});
-
-
-const ctx2 = document.getElementById('Employees');
-new Chart(ctx2, {
-    type: 'line',
-    data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-        datasets: [{
-            label: 'Number of Employees',
-            data: [50, 55, 60, 58, 63, 65],
-            borderWidth: 1,
-            borderColor: 'blue',
-            backgroundColor: 'rgba(0, 0, 255, 0.2)'
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
 
 
 </script>
