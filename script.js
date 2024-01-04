@@ -1,4 +1,4 @@
-// NEW order section ##############################################
+// order section ##############################################
 
 // change image ####################
 
@@ -68,25 +68,23 @@ function selectWheelsOption(button) {
 
 // payment page ##############################################
 
-function selectPaymentOption(button, paymentType) {
+// function selectPaymentOption(button, paymentType) {
   
-  const buttons = document.querySelectorAll('.cash-btn button');
-  buttons.forEach((btn) => {
-      btn.classList.remove('active');
-  });
+//   const buttons = document.querySelectorAll('.cash-btn button');
+//   buttons.forEach((btn) => {
+//       btn.classList.remove('active');
+//   });
 
   
-  button.classList.add('active');
+//   button.classList.add('active');
 
   
-  console.log(`Selected Payment Type: ${paymentType}`);
+//   console.log(`Selected Payment Type: ${paymentType}`);
  
-}
+// }
 
 
-
-
-// emialer #########################
+// emailer #########################
 
 
     function saveEmail() {
