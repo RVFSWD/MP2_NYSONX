@@ -126,16 +126,8 @@
       </div> -->
       <i class="fa-regular fa-user"></i>
       <h3>Welcome</h3>
-            <h4>
-                <script>
-                    document.write(localStorage.getItem('name'));
-                </script>
-            </h4>
-            <h6> Your Email is:
-                <script>
-                    document.write(localStorage.getItem('email'));
-                </script>
-            </h6>
+       <h4 id="usernameDisplay"></h4>
+      <h6> Your Email is: <span id="emailDisplay"></span></h6>
         <ul class="nav flex-column">
           <!-- <li class="nav-item">
             <i class="fa-regular fa-user"></i>
@@ -325,6 +317,22 @@
       }, false)
   })
   })()
+       // Jade Notes  
+     // get data from local storage user_data
+    var userData = JSON.parse(localStorage.getItem('user_data'));
+
+    // Check if user data exists
+    if (userData) {
+        var username = userData.username; 
+        var email = userData.email;
+
+        // It will Display username and email in the HTML
+        document.getElementById('usernameDisplay').textContent = 'Username: ' + username;
+        document.getElementById('emailDisplay').textContent = email;
+    } else {
+        // Handle the case when user data is not found
+        console.log('User data not found in local storage');
+    }   
   </script>
   
       <script src="userdashboard.js"></script>
